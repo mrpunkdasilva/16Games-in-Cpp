@@ -26,25 +26,30 @@ function(add_game GAME_NAME GAME_DIR)
         
         # Set output directory
         set_target_properties(${GAME_NAME} PROPERTIES
-            RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/games"
+            RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/games/${GAME_NAME}"
         )
         
-        # Copy assets if they exist
+        # Copy assets if they exist - each game gets its own asset directory
         if(EXISTS "${CMAKE_SOURCE_DIR}/${GAME_DIR}/images")
             file(COPY "${CMAKE_SOURCE_DIR}/${GAME_DIR}/images/" 
-                 DESTINATION "${CMAKE_BINARY_DIR}/games/images")
+                 DESTINATION "${CMAKE_BINARY_DIR}/games/${GAME_NAME}/images")
         endif()
         
         if(EXISTS "${CMAKE_SOURCE_DIR}/${GAME_DIR}/files")
             file(COPY "${CMAKE_SOURCE_DIR}/${GAME_DIR}/files/" 
-                 DESTINATION "${CMAKE_BINARY_DIR}/games/files")
+                 DESTINATION "${CMAKE_BINARY_DIR}/games/${GAME_NAME}/files")
+        endif()
+        
+        if(EXISTS "${CMAKE_SOURCE_DIR}/${GAME_DIR}/fonts")
+            file(COPY "${CMAKE_SOURCE_DIR}/${GAME_DIR}/fonts/" 
+                 DESTINATION "${CMAKE_BINARY_DIR}/games/${GAME_NAME}/fonts")
         endif()
         
         # Add custom target to run the game
         add_custom_target(run_${GAME_NAME}
-            COMMAND ${CMAKE_BINARY_DIR}/games/${GAME_NAME}
+            COMMAND ${CMAKE_BINARY_DIR}/games/${GAME_NAME}/${GAME_NAME}
             DEPENDS ${GAME_NAME}
-            WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/games
+            WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/games/${GAME_NAME}
             COMMENT "Running ${GAME_NAME}"
         )
         

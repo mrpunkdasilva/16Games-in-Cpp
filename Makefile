@@ -11,16 +11,19 @@ setup:
 # Build todos os jogos
 build:
 	@echo "🔨 Compilando todos os jogos..."
+	@if [ ! -d "build" ]; then cmake -B build; fi
 	@cd build && make all_games
 
 # Build específico
 build-%:
 	@echo "🔨 Compilando $*..."
+	@if [ ! -d "build" ]; then cmake -B build; fi
 	@cd build && make $*
 
 # Executar jogos
 run-%:
 	@echo "🎮 Executando $*..."
+	@if [ ! -d "build" ]; then cmake -B build; fi
 	@cd build && make run_$*
 
 # Limpeza
@@ -36,6 +39,18 @@ test:
 	@echo "🧪 Testando Tetris..."
 	@cd build && make tetris
 	@echo "✅ Tetris compilado com sucesso!"
+
+# Comandos diretos para os jogos mais populares
+doodle_jump: build-doodle_jump
+tetris: build-tetris
+snake: build-snake
+arkanoid: build-arkanoid
+
+# Executar jogos diretamente
+run_doodle_jump: run-doodle_jump
+run_tetris: run-tetris
+run_snake: run-snake
+run_arkanoid: run-arkanoid
 
 # Listar jogos disponíveis
 list:
