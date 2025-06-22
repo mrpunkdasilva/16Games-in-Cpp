@@ -3,17 +3,40 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="gc"
-                 name="Games C++"
-                 start-page="starter-topic.md">
+                 name="16 Games in C++"
+                 start-page="inicio.md">
 
-    <toc-element topic="starter-topic.md"/>
-    <toc-element topic="build-and-run.topic"/>
-    <toc-element topic="compilation-guide.topic"/>
-    <toc-element topic="environment-setup.topic"/>
-    <toc-element topic="ide-setup.topic"/>
-    <toc-element topic="games-documentation.topic"/>
-    <toc-element topic="running-games.topic"/>
-    <toc-element topic="sfml-installation.topic"/>
-    <toc-element topic="troubleshooting-setup.topic"/>
-    <toc-element topic="system-requirements.topic"/>
+    <toc-element topic="inicio.md"/>
+    <toc-element topic="configuracao-ambiente.md">
+        <toc-element topic="system-requirements.md"/>
+        <toc-element topic="sfml-installation.md"/>
+        <toc-element topic="cmake-installation.md"/>
+        <toc-element topic="ide-setup.md"/>
+        <toc-element topic="environment-setup.md"/>
+    </toc-element>
+    <toc-element topic="compilacao.md">
+        <toc-element topic="compilation-guide.md"/>
+        <toc-element topic="build-and-run.md"/>
+        <toc-element topic="running-games.md"/>
+    </toc-element>
+    <toc-element topic="estrutura-projeto.md"/>
+    <toc-element topic="jogos.md">
+        <toc-element topic="tetris.md"/>
+        <toc-element topic="doodle-jump.md"/>
+        <toc-element topic="arkanoid.md"/>
+        <toc-element topic="snake.md"/>
+        <toc-element topic="minesweeper.md"/>
+        <toc-element topic="fifteen-puzzle.md"/>
+        <toc-element topic="racing.md"/>
+        <toc-element topic="outrun.md"/>
+        <toc-element topic="xonix.md"/>
+        <toc-element topic="bejeweled.md"/>
+        <toc-element topic="netwalk.md"/>
+        <toc-element topic="mahjong.md"/>
+        <toc-element topic="tron.md"/>
+        <toc-element topic="chess.md"/>
+        <toc-element topic="volleyball.md"/>
+        <toc-element topic="asteroids.md"/>
+    </toc-element>
+    <toc-element topic="troubleshooting-setup.md"/>
 </instance-profile>
