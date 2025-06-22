@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <time.h>
 #include <list>
+#include <cmath>
 using namespace sf;
 
 const int W = 1200;

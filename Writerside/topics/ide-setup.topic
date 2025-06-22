@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="IDE Setup" id="ide-setup">
+
+    <p>
+        Choose and configure your preferred development environment for working with the 16 games collection. 
+        This guide covers popular IDEs and text editors.
+    </p>
+
+    <chapter title="Recommended IDEs" id="recommended-ides">
+        
+        <tabs>
+            <tab title="CLion">
+                <chapter title="CLion (JetBrains)" id="clion-setup">
+                    <p>CLion is a powerful C++ IDE with excellent CMake support and debugging capabilities.</p>
+                    
+                    <procedure title="Setting up CLion">
+                        <step>
+                            <p>Download and install CLion from <a href="https://www.jetbrains.com/clion/">JetBrains website</a></p>
+                        </step>
+                        <step>
+                            <p>Open the project folder in CLion</p>
+                        </step>
+                        <step>
+                            <p>CLion will automatically detect the project structure</p>
+                        </step>
+                        <step>
+                            <p>Configure CMake settings if needed:</p>
+                            <list>
+                                <li>Go to File → Settings → Build, Execution, Deployment → CMake</li>
+                                <li>Ensure SFML paths are correctly configured</li>
+                            </list>
+                        </step>
+                    </procedure>
+                    
+                    <tip>
+                        <p>CLion offers a free license for students and open-source projects!</p>
+                    </tip>
+                </chapter>
+            </tab>
+            
+            <tab title="Visual Studio">
+                <chapter title="Visual Studio (Windows)" id="vs-setup">
+                    <p>Microsoft Visual Studio is the standard IDE for Windows C++ development.</p>
+                    
+                    <procedure title="Setting up Visual Studio">
+                        <step>
+                            <p>Install Visual Studio Community (free) with C++ workload</p>
+                        </step>
+                        <step>
+                            <p>Create a new C++ console application or open existing project</p>
+                        </step>
+                        <step>
+                            <p>Configure SFML in project properties:</p>
+                            <code-block>
+                                Configuration Properties → C/C++ → General → Additional Include Directories
+                                → Add SFML include path (e.g., C:\SFML\include)
+                                
+                                Configuration Properties → Linker → General → Additional Library Directories
+                                → Add SFML lib path (e.g., C:\SFML\lib)
+                                
+                                Configuration Properties → Linker → Input → Additional Dependencies
+                                → Add: sfml-graphics.lib, sfml-window.lib, sfml-system.lib
+                            </code-block>
+                        </step>
+                        <step>
+                            <p>Copy SFML DLLs to output directory</p>
+                        </step>
+                    </procedure>
+                </chapter>
+            </tab>
+            
+            <tab title="Code::Blocks">
+                <chapter title="Code::Blocks" id="codeblocks-setup">
+                    <p>Free, open-source IDE with good C++ support.</p>
+                    
+                    <procedure title="Setting up Code::Blocks">
+                        <step>
+                            <p>Download and install Code::Blocks from <a href="http://www.codeblocks.org/">official website</a></p>
+                        </step>
+                        <step>
+                            <p>Create a new Console Application project</p>
+                        </step>
+                        <step>
+                            <p>Configure SFML:</p>
+                            <list>
+                                <li>Project → Build Options</li>
+                                <li>Search Directories → Compiler: Add SFML include path</li>
+                                <li>Search Directories → Linker: Add SFML lib path</li>
+                                <li>Linker Settings → Link libraries: Add SFML libraries</li>
+                            </list>
+                        </step>
+                    </procedure>
+                </chapter>
+            </tab>
+            
+            <tab title="Qt Creator">
+                <chapter title="Qt Creator" id="qtcreator-setup">
+                    <p>Lightweight IDE with excellent CMake support.</p>
+                    
+                    <procedure title="Setting up Qt Creator">
+                        <step>
+                            <p>Install Qt Creator (can be installed separately from Qt)</p>
+                        </step>
+                        <step>
+                            <p>Open project by opening the folder or CMakeLists.txt</p>
+                        </step>
+                        <step>
+                            <p>Configure build settings and ensure SFML is found</p>
+                        </step>
+                    </procedure>
+                </chapter>
+            </tab>
+        </tabs>
+        
+    </chapter>
+
+    <chapter title="Text Editors" id="text-editors">
+        
+        <tabs>
+            <tab title="VS Code">
+                <chapter title="Visual Studio Code" id="vscode-setup">
+                    <p>Lightweight editor with powerful C++ extensions.</p>
+                    
+                    <procedure title="Setting up VS Code">
+                        <step>
+                            <p>Install VS Code from <a href="https://code.visualstudio.com/">official website</a></p>
+                        </step>
+                        <step>
+                            <p>Install essential extensions:</p>
+                            <list>
+                                <li>C/C++ Extension Pack</li>
+                                <li>CMake Tools</li>
+                                <li>C++ Intellisense</li>
+                            </list>
+                        </step>
+                        <step>
+                            <p>Open the project folder</p>
+                        </step>
+                        <step>
+                            <p>Configure <code>c_cpp_properties.json</code>:</p>
+                            <code-block lang="json">
+                                {
+                                    "configurations": [
+                                        {
+                                            "name": "Linux/Mac",
+                                            "includePath": [
+                                                "${workspaceFolder}/**",
+                                                "/usr/include/SFML",
+                                                "/usr/local/include/SFML"
+                                            ],
+                                            "defines": [],
+                                            "compilerPath": "/usr/bin/g++",
+                                            "cStandard": "c17",
+                                            "cppStandard": "c++17"
+                                        }
+                                    ],
+                                    "version": 4
+                                }
+                            </code-block>
+                        </step>
+                        <step>
+                            <p>Configure <code>tasks.json</code> for building:</p>
+                            <code-block lang="json">
+                                {
+                                    "version": "2.0.0",
+                                    "tasks": [
+                                        {
+                                            "label": "build",
+                                            "type": "shell",
+                                            "command": "g++",
+                                            "args": [
+                                                "-g",
+                                                "${file}",
+                                                "-o",
+                                                "${fileDirname}/${fileBasenameNoExtension}",
+                                                "-lsfml-graphics",
+                                                "-lsfml-window",
+                                                "-lsfml-system"
+                                            ],
+                                            "group": {
+                                                "kind": "build",
+                                                "isDefault": true
+                                            }
+                                        }
+                                    ]
+                                }
+                            </code-block>
+                        </step>
+                    </procedure>
+                </chapter>
+            </tab>
+            
+            <tab title="Vim/Neovim">
+                <chapter title="Vim/Neovim" id="vim-setup">
+                    <p>Powerful terminal-based editors for experienced users.</p>
+                    
+                    <procedure title="Setting up Vim/Neovim">
+                        <step>
+                            <p>Install a C++ plugin manager like vim-plug or use built-in package manager</p>
+                        </step>
+                        <step>
+                            <p>Install useful plugins:</p>
+                            <list>
+                                <li>coc.nvim or YouCompleteMe for autocompletion</li>
+                                <li>vim-cmake for CMake support</li>
+                                <li>syntastic or ALE for syntax checking</li>
+                            </list>
+                        </step>
+                        <step>
+                            <p>Configure build commands in <code>.vimrc</code>:</p>
+                            <code-block lang="vim">
+                                " Quick compile command
+                                nnoremap &lt;F5&gt; :!g++ % -o %:r -lsfml-graphics -lsfml-window -lsfml-system&lt;CR&gt;
+                                " Run compiled program
+                                nnoremap &lt;F6&gt; :!./%:r&lt;CR&gt;
+                            </code-block>
+                        </step>
+                    </procedure>
+                </chapter>
+            </tab>
+            
+            <tab title="Emacs">
+                <chapter title="Emacs" id="emacs-setup">
+                    <p>Extensible editor with powerful C++ development features.</p>
+                    
+                    <procedure title="Setting up Emacs">
+                        <step>
+                            <p>Install Emacs and useful packages:</p>
+                            <list>
+                                <li>company-mode for autocompletion</li>
+                                <li>cmake-mode for CMake files</li>
+                                <li>flycheck for syntax checking</li>
+                                <li>lsp-mode for Language Server Protocol</li>
+                            </list>
+                        </step>
+                        <step>
+                            <p>Configure C++ development in <code>.emacs</code> or <code>init.el</code></p>
+                        </step>
+                    </procedure>
+                </chapter>
+            </tab>
+        </tabs>
+        
+    </chapter>
+
+    <chapter title="Build System Configuration" id="build-system">
+        
+        <chapter title="Creating CMakeLists.txt" id="cmake-config">
+            <p>For easier project management, create a <code>CMakeLists.txt</code> file:</p>
+            
+            <code-block lang="cmake">
+                cmake_minimum_required(VERSION 3.10)
+                project(16Games)
+                
+                # Set C++ standard
+                set(CMAKE_CXX_STANDARD 17)
+                set(CMAKE_CXX_STANDARD_REQUIRED ON)
+                
+                # Find SFML
+                find_package(sfml-graphics REQUIRED)
+                find_package(sfml-window REQUIRED)
+                find_package(sfml-system REQUIRED)
+                find_package(sfml-audio REQUIRED)
+                
+                # Function to create game executable
+                function(add_game GAME_NAME GAME_DIR)
+                    add_executable(${GAME_NAME} "${GAME_DIR}/main.cpp")
+                    target_link_libraries(${GAME_NAME} 
+                        sfml-graphics 
+                        sfml-window 
+                        sfml-system 
+                        sfml-audio
+                    )
+                    # Copy assets if they exist
+                    if(EXISTS "${CMAKE_SOURCE_DIR}/${GAME_DIR}/images")
+                        file(COPY "${CMAKE_SOURCE_DIR}/${GAME_DIR}/images" 
+                             DESTINATION "${CMAKE_BINARY_DIR}/${GAME_NAME}")
+                    endif()
+                endfunction()
+                
+                # Add all games
+                add_game(tetris "01 Tetris")
+                add_game(doodle_jump "02 Doodle Jump")
+                add_game(arkanoid "03 Arkanoid")
+                add_game(snake "04 Snake")
+                add_game(minesweeper "05 Minesweeper")
+                add_game(fifteen_puzzle "06 Fifteen-Puzzle")
+                add_game(racing "07 Racing (Top Down)")
+                add_game(outrun "08 Outrun")
+                add_game(xonix "09 Xonix")
+                add_game(bejeweled "10 Bejeweled")
+                add_game(netwalk "11 NetWalk (Pipe Puzzle)")
+                add_game(mahjong "12 Mahjong Solitaire")
+                add_game(tron "13 Tron")
+                add_game(chess "14 Chess")
+                add_game(volleyball "15 Volleyball")
+                add_game(asteroids "16 Asteroids")
+            </code-block>
+        </chapter>
+        
+        <chapter title="Makefile Template" id="makefile">
+            <p>For simple compilation without CMake:</p>
+            
+            <code-block lang="makefile">
+                CXX = g++
+                CXXFLAGS = -std=c++17 -Wall -Wextra
+                SFML_FLAGS = -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+                
+                # Default target
+                all: tetris snake chess
+                
+                # Individual game targets
+                tetris:
+                	$(CXX) $(CXXFLAGS) "01 Tetris/main.cpp" -o tetris $(SFML_FLAGS)
+                
+                snake:
+                	$(CXX) $(CXXFLAGS) "04 Snake/main.cpp" -o snake $(SFML_FLAGS)
+                
+                chess:
+                	$(CXX) $(CXXFLAGS) "14 Chess/main.cpp" -o chess $(SFML_FLAGS)
+                
+                clean:
+                	rm -f tetris snake chess
+                
+                .PHONY: all clean
+            </code-block>
+        </chapter>
+        
+    </chapter>
+
+    <chapter title="Debugging Configuration" id="debugging">
+        
+        <chapter title="GDB Configuration" id="gdb-config">
+            <p>For command-line debugging:</p>
+            <code-block lang="bash">
+                # Compile with debug symbols
+                g++ -g -o tetris "01 Tetris/main.cpp" -lsfml-graphics -lsfml-window -lsfml-system
+                
+                # Run with GDB
+                gdb ./tetris
+            </code-block>
+        </chapter>
+        
+        <chapter title="VS Code Debug Configuration" id="vscode-debug">
+            <p>Configure <code>launch.json</code> for debugging:</p>
+            <code-block lang="json">
+                {
+                    "version": "0.2.0",
+                    "configurations": [
+                        {
+                            "name": "Debug Game",
+                            "type": "cppdbg",
+                            "request": "launch",
+                            "program": "${fileDirname}/${fileBasenameNoExtension}",
+                            "args": [],
+                            "stopAtEntry": false,
+                            "cwd": "${workspaceFolder}",
+                            "environment": [],
+                            "externalConsole": false,
+                            "MIMode": "gdb",
+                            "preLaunchTask": "build"
+                        }
+                    ]
+                }
+            </code-block>
+        </chapter>
+        
+    </chapter>
+
+    <chapter title="Next Steps" id="next-steps">
+        <p>With your IDE configured, you can now:</p>
+        <list>
+            <li>Learn how to <a href="compilation-guide.topic">compile the games</a></li>
+            <li>Start <a href="running-games.topic">running and playing</a></li>
+            <li>Explore the <a href="code-structure.topic">code structure</a></li>
+        </list>
+    </chapter>
+
+</topic>

@@ -1,4 +1,7 @@
 #include <SFML/Graphics.hpp>
+#include <vector>
+#include <iostream>
+#include <cmath>
 #include <Box2D/Box2D.h>
 using namespace sf;
 

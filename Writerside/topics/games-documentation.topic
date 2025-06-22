@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Games Documentation" id="games-documentation">
+
+    <section-starting-page>
+        <title>Games Collection</title>
+        <description>
+            Complete documentation for all 16 classic games in the collection. 
+            Each game includes controls, gameplay mechanics, and technical details.
+        </description>
+
+        <spotlight>
+            <a href="tetris.topic" type="play" summary="The classic falling blocks puzzle game">Tetris</a>
+            <a href="chess.topic" type="mixed" summary="Full-featured chess implementation">Chess</a>
+        </spotlight>
+
+        <primary>
+            <title>Puzzle Games</title>
+            <a href="tetris.topic" summary="Classic falling blocks puzzle">Tetris</a>
+            <a href="minesweeper.topic" summary="Find mines without triggering them">Minesweeper</a>
+            <a href="fifteen-puzzle.topic" summary="Slide numbered tiles to solve">Fifteen Puzzle</a>
+            <a href="bejeweled.topic" summary="Match-3 gem puzzle game">Bejeweled</a>
+            <a href="netwalk.topic" summary="Connect pipes to complete network">NetWalk</a>
+            <a href="mahjong.topic" summary="Traditional tile-matching solitaire">Mahjong Solitaire</a>
+        </primary>
+
+        <secondary>
+            <title>Action Games</title>
+            <a href="snake.topic" summary="Control a growing snake">Snake</a>
+            <a href="doodle-jump.topic" summary="Endless jumping platform game">Doodle Jump</a>
+            <a href="arkanoid.topic" summary="Break bricks with bouncing ball">Arkanoid</a>
+            <a href="asteroids.topic" summary="Space shooter classic">Asteroids</a>
+            <a href="xonix.topic" summary="Territory claiming puzzle">Xonix</a>
+            <a href="tron.topic" summary="Light cycle racing game">Tron</a>
+        </secondary>
+
+        <misc>
+            <cards>
+                <title>Racing Games</title>
+                <a href="racing-top-down.topic" summary="Arcade-style top-down racing">Racing (Top Down)</a>
+                <a href="outrun.topic" summary="3D perspective racing game">Outrun</a>
+            </cards>
+
+            <cards>
+                <title>Board & Sports</title>
+                <a href="chess.topic" summary="Complete chess implementation">Chess</a>
+                <a href="volleyball.topic" summary="Simple volleyball simulation">Volleyball</a>
+            </cards>
+        </misc>
+    </section-starting-page>
+
+</topic>

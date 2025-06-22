@@ -1,4 +1,7 @@
 #include <SFML/Graphics.hpp>
+#include <vector>
+#include <iostream>
+#include <cmath>
 #include <time.h>
 #include "Connector.hpp"
 using namespace sf;

@@ -1,4 +1,7 @@
 #include <SFML/Graphics.hpp>
+#include <vector>
+#include <iostream>
+#include <cmath>
 #include <math.h>
 #include <bits/stdc++.h>
 using namespace sf;
@@ -114,7 +117,7 @@ int main() {
 		lines.push_back(line);
 	}
 
-	int N = lines.size();
+	int N = static_cast<int>(lines.size());
 	float playerX = 0;
 	int pos = 0;
 	int H = 1500;

@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Running Games" id="running-games">
+
+    <p>
+        Once you've compiled the games, this guide will help you run them and understand their controls and features.
+    </p>
+
+    <chapter title="Basic Execution" id="basic-execution">
+        
+        <chapter title="Command Line" id="command-line">
+            <p>Run games directly from the terminal:</p>
+            
+            <code-block lang="bash">
+                # Navigate to project directory
+                cd /path/to/16Games-in-Cpp
+                
+                # Run a compiled game
+                ./tetris
+                ./snake
+                ./chess
+            </code-block>
+        </chapter>
+        
+        <chapter title="From Game Directory" id="from-directory">
+            <p>Some games work better when run from their own directory:</p>
+            
+            <code-block lang="bash">
+                # Navigate to game directory
+                cd "01 Tetris"
+                
+                # Run the game
+                ../tetris
+                
+                # Or compile and run in one step
+                g++ -o tetris main.cpp -lsfml-graphics -lsfml-window -lsfml-system && ./tetris
+            </code-block>
+        </chapter>
+        
+    </chapter>
+
+    <chapter title="Game Controls" id="game-controls">
+        
+        <chapter title="Universal Controls" id="universal-controls">
+            <p>Most games share these common controls:</p>
+            
+            <deflist>
+                <def title="ESC Key">
+                    <p>Pause game, return to menu, or exit</p>
+                </def>
+                <def title="Arrow Keys">
+                    <p>Movement and navigation</p>
+                </def>
+                <def title="Space Bar">
+                    <p>Action button (shoot, jump, select)</p>
+                </def>
+                <def title="Enter/Return">
+                    <p>Start game, confirm selection</p>
+                </def>
+                <def title="Mouse">
+                    <p>Menu navigation and game interaction</p>
+                </def>
+            </deflist>
+        </chapter>
+        
+        <chapter title="Game-Specific Controls" id="specific-controls">
+            
+            <tabs>
+                <tab title="Puzzle Games">
+                    <deflist>
+                        <def title="Tetris">
+                            <p>Arrow Keys: Move/Rotate pieces, Space: Drop piece</p>
+                        </def>
+                        <def title="Minesweeper">
+                            <p>Mouse: Left click reveal, Right click flag</p>
+                        </def>
+                        <def title="Fifteen Puzzle">
+                            <p>Arrow Keys: Move tiles, Mouse: Click tiles</p>
+                        </def>
+                        <def title="Bejeweled">
+                            <p>Mouse: Click and drag to swap gems</p>
+                        </def>
+                    </deflist>
+                </tab>
+                
+                <tab title="Action Games">
+                    <deflist>
+                        <def title="Snake">
+                            <p>Arrow Keys: Change direction</p>
+                        </def>
+                        <def title="Asteroids">
+                            <p>Arrow Keys: Rotate/Thrust, Space: Shoot</p>
+                        </def>
+                        <def title="Doodle Jump">
+                            <p>Arrow Keys: Move left/right</p>
+                        </def>
+                        <def title="Arkanoid">
+                            <p>Arrow Keys: Move paddle, Space: Launch ball</p>
+                        </def>
+                    </deflist>
+                </tab>
+                
+                <tab title="Racing Games">
+                    <deflist>
+                        <def title="Racing (Top Down)">
+                            <p>Arrow Keys: Accelerate/Brake/Steer</p>
+                        </def>
+                        <def title="Outrun">
+                            <p>Arrow Keys: Steer left/right, Up: Accelerate</p>
+                        </def>
+                    </deflist>
+                </tab>
+                
+                <tab title="Board Games">
+                    <deflist>
+                        <def title="Chess">
+                            <p>Mouse: Click to select and move pieces</p>
+                        </def>
+                        <def title="Mahjong Solitaire">
+                            <p>Mouse: Click matching tiles to remove</p>
+                        </def>
+                    </deflist>
+                </tab>
+            </tabs>
+            
+        </chapter>
+        
+    </chapter>
+
+    <chapter title="Running with Parameters" id="parameters">
+        
+        <chapter title="Common Parameters" id="common-parameters">
+            <p>Some games support command-line parameters:</p>
+            
+            <code-block lang="bash">
+                # Fullscreen mode (if supported)
+                ./tetris --fullscreen
+                ./tetris -f
+                
+                # Window size (if supported)
+                ./tetris --width 1920 --height 1080
+                ./tetris -w 800 -h 600
+                
+                # Debug mode (if compiled with debug support)
+                ./tetris --debug
+                ./tetris -d
+                
+                # Help information
+                ./tetris --help
+                ./tetris -h
+            </code-block>
+        </chapter>
+        
+        <chapter title="Game-Specific Parameters" id="game-parameters">
+            <p>Check individual game documentation for specific parameters:</p>
+            
+            <code-block lang="bash">
+                # Chess with AI difficulty
+                ./chess --difficulty hard
+                
+                # Racing with different tracks
+                ./racing --track circuit2
+                
+                # Tetris with different levels
+                ./tetris --level 5
+            </code-block>
+        </chapter>
+        
+    </chapter>
+
+    <chapter title="Asset Management" id="asset-management">
+        
+        <chapter title="Image Files" id="image-files">
+            <p>Most games require image assets to be in the correct location:</p>
+            
+            <procedure title="Asset Location Check">
+                <step>
+                    <p>Ensure you're running games from the correct directory</p>
+                </step>
+                <step>
+                    <p>Check that <code>images/</code> folders exist in game directories</p>
+                </step>
+                <step>
+                    <p>Verify image files are not corrupted</p>
+                </step>
+            </procedure>
+            
+            <warning>
+                <p>If images don't load, the game may display blank sprites or crash. 
+                Always run games from the project root directory or ensure asset paths are correct.</p>
+            </warning>
+        </chapter>
+        
+        <chapter title="Font Files" id="font-files">
+            <p>Some games use custom fonts:</p>
+            
+            <code-block lang="bash">
+                # Common font locations
+                fonts/
+                assets/fonts/
+                resources/fonts/
+            </code-block>
+        </chapter>
+        
+        <chapter title="Audio Files" id="audio-files">
+            <p>Games with sound require audio files:</p>
+            
+            <code-block lang="bash">
+                # Common audio locations
+                sounds/
+                audio/
+                assets/sounds/
+            </code-block>
+        </chapter>
+        
+    </chapter>
+
+    <chapter title="Performance Tips" id="performance-tips">
+        
+        <chapter title="System Performance" id="system-performance">
+            <deflist>
+                <def title="Close Other Applications">
+                    <p>Free up system resources for better game performance</p>
+                </def>
+                <def title="Update Graphics Drivers">
+                    <p>Ensure OpenGL support is optimal</p>
+                </def>
+                <def title="Run in Windowed Mode">
+                    <p>If fullscreen causes issues, try windowed mode</p>
+                </def>
+                <def title="Lower Resolution">
+                    <p>Reduce window size for better performance on older hardware</p>
+                </def>
+            </deflist>
+        </chapter>
+        
+        <chapter title="Game-Specific Optimizations" id="game-optimizations">
+            <deflist>
+                <def title="Reduce Particle Effects">
+                    <p>Some games may have options to reduce visual effects</p>
+                </def>
+                <def title="Limit Frame Rate">
+                    <p>Cap FPS to reduce CPU usage: usually handled automatically</p>
+                </def>
+                <def title="Disable Sound">
+                    <p>If audio causes performance issues, games may have mute options</p>
+                </def>
+            </deflist>
+        </chapter>
+        
+    </chapter>
+
+    <chapter title="Troubleshooting Runtime Issues" id="runtime-troubleshooting">
+        
+        <chapter title="Common Problems" id="common-problems">
+            
+            <deflist>
+                <def title="Game Won't Start">
+                    <p><strong>Possible causes:</strong></p>
+                    <list>
+                        <li>Missing SFML libraries</li>
+                        <li>Wrong working directory</li>
+                        <li>Missing executable permissions</li>
+                    </list>
+                    <p><strong>Solutions:</strong></p>
+                    <code-block lang="bash">
+                        # Check executable permissions
+                        chmod +x ./tetris
+                        
+                        # Check library dependencies
+                        ldd ./tetris
+                        
+                        # Run from correct directory
+                        cd /path/to/16Games-in-Cpp
+                        ./tetris
+                    </code-block>
+                </def>
+                
+                <def title="Black/Blank Window">
+                    <p><strong>Possible causes:</strong></p>
+                    <list>
+                        <li>Missing image assets</li>
+                        <li>Graphics driver issues</li>
+                        <li>OpenGL compatibility problems</li>
+                    </list>
+                    <p><strong>Solutions:</strong></p>
+                    <code-block lang="bash">
+                        # Check graphics support
+                        glxinfo | grep "OpenGL version"
+                        
+                        # Verify assets exist
+                        ls "01 Tetris/images/"
+                        
+                        # Update graphics drivers
+                    </code-block>
+                </def>
+                
+                <def title="Game Crashes">
+                    <p><strong>Debug the issue:</strong></p>
+                    <code-block lang="bash">
+                        # Run with debugger
+                        gdb ./tetris
+                        (gdb) run
+                        (gdb) bt  # If it crashes
+                        
+                        # Or compile with debug symbols
+                        g++ -g -o tetris_debug main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+                    </code-block>
+                </def>
+                
+                <def title="Poor Performance">
+                    <p><strong>Profile and optimize:</strong></p>
+                    <code-block lang="bash">
+                        # Compile with profiling
+                        g++ -pg -o tetris_profile main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+                        ./tetris_profile
+                        gprof tetris_profile gmon.out > analysis.txt
+                    </code-block>
+                </def>
+            </deflist>
+            
+        </chapter>
+        
+    </chapter>
+
+    <chapter title="Platform-Specific Notes" id="platform-notes">
+        
+        <tabs>
+            <tab title="Linux">
+                <chapter title="Linux Specific" id="linux-specific">
+                    <deflist>
+                        <def title="X11 Display">
+                            <p>Ensure X11 is running for graphical display</p>
+                            <code-block lang="bash">
+                                echo $DISPLAY
+                                # Should show something like :0
+                            </code-block>
+                        </def>
+                        <def title="Audio System">
+                            <p>Check audio system is working</p>
+                            <code-block lang="bash">
+                                # Test audio
+                                pactl info
+                                speaker-test
+                            </code-block>
+                        </def>
+                    </deflist>
+                </chapter>
+            </tab>
+            
+            <tab title="macOS">
+                <chapter title="macOS Specific" id="macos-specific">
+                    <deflist>
+                        <def title="Gatekeeper">
+                            <p>macOS may block unsigned applications</p>
+                            <code-block lang="bash">
+                                # Allow execution
+                                xattr -d com.apple.quarantine ./tetris
+                            </code-block>
+                        </def>
+                        <def title="Retina Displays">
+                            <p>Games may appear small on high-DPI displays</p>
+                        </def>
+                    </deflist>
+                </chapter>
+            </tab>
+            
+            <tab title="Windows">
+                <chapter title="Windows Specific" id="windows-specific">
+                    <deflist>
+                        <def title="DLL Dependencies">
+                            <p>Ensure SFML DLLs are available</p>
+                            <code-block lang="bash">
+                                # Copy DLLs to executable directory
+                                copy C:\SFML\bin\*.dll .
+                            </code-block>
+                        </def>
+                        <def title="Windows Defender">
+                            <p>Antivirus may quarantine compiled executables</p>
+                        </def>
+                    </deflist>
+                </chapter>
+            </tab>
+        </tabs>
+        
+    </chapter>
+
+    <chapter title="Game Launcher Script" id="launcher-script">
+        
+        <p>Create a launcher script for easier game management:</p>
+        
+        <code-block lang="bash">
+            #!/bin/bash
+            
+            # Game launcher script
+            GAMES_DIR="/path/to/16Games-in-Cpp"
+            
+            # Available games
+            declare -A GAMES=(
+                [1]="tetris:Tetris"
+                [2]="snake:Snake"
+                [3]="chess:Chess"
+                [4]="asteroids:Asteroids"
+                # Add more games...
+            )
+            
+            cd "$GAMES_DIR" || exit 1
+            
+            echo "=== 16 Games in C++ ==="
+            echo "Choose a game to play:"
+            echo
+            
+            for key in $(echo ${!GAMES[@]} | tr ' ' '\n' | sort -n); do
+                IFS=':' read -r exec_name display_name <<< "${GAMES[$key]}"
+                echo "$key) $display_name"
+            done
+            
+            echo
+            read -p "Enter your choice (1-${#GAMES[@]}): " choice
+            
+            if [[ -n "${GAMES[$choice]}" ]]; then
+                IFS=':' read -r exec_name display_name <<< "${GAMES[$choice]}"
+                
+                if [[ -x "./$exec_name" ]]; then
+                    echo "Starting $display_name..."
+                    "./$exec_name"
+                else
+                    echo "Error: $exec_name not found or not executable"
+                    echo "Please compile the game first."
+                fi
+            else
+                echo "Invalid choice. Exiting."
+            fi
+        </code-block>
+        
+        <p>Make it executable and use:</p>
+        <code-block lang="bash">
+            chmod +x game_launcher.sh
+            ./game_launcher.sh
+        </code-block>
+        
+    </chapter>
+
+    <chapter title="Next Steps" id="next-steps">
+        <p>Now that you can run the games:</p>
+        <list>
+            <li>Explore <a href="games-documentation.topic">individual game documentation</a></li>
+            <li>Learn about <a href="development-guide.topic">customizing and developing</a></li>
+            <li>Check out <a href="best-practices.topic">best practices</a> for C++ game development</li>
+        </list>
+    </chapter>
+
+</topic>

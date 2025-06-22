@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="gc"
+                 name="Games C++"
+                 start-page="starter-topic.md">
+
+    <toc-element topic="starter-topic.md"/>
+    <toc-element topic="build-and-run.topic"/>
+    <toc-element topic="compilation-guide.topic"/>
+    <toc-element topic="environment-setup.topic"/>
+    <toc-element topic="ide-setup.topic"/>
+    <toc-element topic="games-documentation.topic"/>
+    <toc-element topic="running-games.topic"/>
+    <toc-element topic="sfml-installation.topic"/>
+    <toc-element topic="troubleshooting-setup.topic"/>
+    <toc-element topic="system-requirements.topic"/>
+</instance-profile>

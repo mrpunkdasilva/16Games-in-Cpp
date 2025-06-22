@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Build and Run" id="build-and-run">
+
+    <p>
+        Learn how to compile and run the 16 classic games. This section covers different compilation methods 
+        and provides step-by-step instructions for getting the games running on your system.
+    </p>
+
+    <chapter title="Quick Start" id="quick-start">
+        <p>Get a game running in under 2 minutes:</p>
+        
+        <procedure title="Quick Start Guide" id="quick-start-procedure">
+            <step>
+                <p>Navigate to a game directory:</p>
+                <code-block lang="bash">
+                    cd "01 Tetris"
+                </code-block>
+            </step>
+            <step>
+                <p>Compile the game:</p>
+                <code-block lang="bash">
+                    g++ -o tetris main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+                </code-block>
+            </step>
+            <step>
+                <p>Run the game:</p>
+                <code-block lang="bash">
+                    ./tetris
+                </code-block>
+            </step>
+        </procedure>
+        
+        <tip>
+            <p>Make sure you have SFML installed before running these commands. 
+            See <a href="sfml-installation.topic">SFML Installation</a> if you haven't installed it yet.</p>
+        </tip>
+    </chapter>
+
+    <chapter title="Compilation Methods" id="compilation-methods">
+        <p>Choose the compilation method that best fits your workflow:</p>
+        
+        <list>
+            <li><a href="compilation-guide.topic">Manual Compilation</a> - Direct g++ commands</li>
+            <li><a href="cmake-setup.topic">CMake Build</a> - Automated build system</li>
+            <li><a href="#makefile-build">Makefile</a> - Traditional make-based builds</li>
+        </list>
+    </chapter>
+
+    <chapter title="Build All Games" id="build-all">
+        
+        <chapter title="Using Scripts" id="build-scripts">
+            <p>Create a simple script to build all games at once:</p>
+            
+            <tabs>
+                <tab title="Linux/macOS">
+                    <p>Create <code>build_all.sh</code>:</p>
+                    <code-block lang="bash">
+                        #!/bin/bash
+                        
+                        # Array of games with their directories
+                        declare -A games=(
+                            ["tetris"]="01 Tetris"
+                            ["doodle_jump"]="02 Doodle Jump"
+                            ["arkanoid"]="03 Arkanoid"
+                            ["snake"]="04 Snake"
+                            ["minesweeper"]="05 Minesweeper"
+                            ["fifteen_puzzle"]="06 Fifteen-Puzzle"
+                            ["racing"]="07 Racing (Top Down)"
+                            ["outrun"]="08 Outrun"
+                            ["xonix"]="09 Xonix"
+                            ["bejeweled"]="10 Bejeweled"
+                            ["netwalk"]="11 NetWalk (Pipe Puzzle)"
+                            ["mahjong"]="12 Mahjong Solitaire"
+                            ["tron"]="13 Tron"
+                            ["chess"]="14 Chess"
+                            ["volleyball"]="15 Volleyball"
+                            ["asteroids"]="16 Asteroids"
+                        )
+                        
+                        # SFML libraries
+                        SFML_LIBS="-lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio"
+                        
+                        # Compiler flags
+                        CXXFLAGS="-std=c++17 -O2 -Wall"
+                        
+                        echo "Building all games..."
+                        
+                        for game in "${!games[@]}"; do
+                            echo "Building $game..."
+                            cd "${games[$game]}"
+                            
+                            if g++ $CXXFLAGS -o "../$game" main.cpp $SFML_LIBS; then
+                                echo "✓ $game built successfully"
+                            else
+                                echo "✗ Failed to build $game"
+                            fi
+                            
+                            cd ..
+                        done
+                        
+                        echo "Build complete!"
+                    </code-block>
+                    
+                    <p>Make it executable and run:</p>
+                    <code-block lang="bash">
+                        chmod +x build_all.sh
+                        ./build_all.sh
+                    </code-block>
+                </tab>
+                
+                <tab title="Windows (Batch)">
+                    <p>Create <code>build_all.bat</code>:</p>
+                    <code-block lang="batch">
+                        @echo off
+                        echo Building all games...
+                        
+                        cd "01 Tetris"
+                        g++ -std=c++17 -O2 -o ../tetris.exe main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+                        cd ..
+                        
+                        cd "02 Doodle Jump"
+                        g++ -std=c++17 -O2 -o ../doodle_jump.exe main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+                        cd ..
+                        
+                        cd "04 Snake"
+                        g++ -std=c++17 -O2 -o ../snake.exe main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+                        cd ..
+                        
+                        REM Add more games as needed...
+                        
+                        echo Build complete!
+                        pause
+                    </code-block>
+                </tab>
+                
+                <tab title="PowerShell">
+                    <p>Create <code>build_all.ps1</code>:</p>
+                    <code-block lang="powershell">
+                        $games = @{
+                            "tetris" = "01 Tetris"
+                            "snake" = "04 Snake"
+                            "chess" = "14 Chess"
+                            # Add more games as needed
+                        }
+                        
+                        $sfmlLibs = "-lsfml-graphics -lsfml-window -lsfml-system"
+                        $cxxFlags = "-std=c++17 -O2"
+                        
+                        Write-Host "Building all games..."
+                        
+                        foreach ($game in $games.Keys) {
+                            Write-Host "Building $game..."
+                            Set-Location $games[$game]
+                            
+                            $result = Start-Process -FilePath "g++" -ArgumentList "$cxxFlags -o ../$game.exe main.cpp $sfmlLibs" -Wait -PassThru
+                            
+                            if ($result.ExitCode -eq 0) {
+                                Write-Host "✓ $game built successfully" -ForegroundColor Green
+                            } else {
+                                Write-Host "✗ Failed to build $game" -ForegroundColor Red
+                            }
+                            
+                            Set-Location ..
+                        }
+                        
+                        Write-Host "Build complete!"
+                    </code-block>
+                </tab>
+            </tabs>
+        </chapter>
+        
+        <chapter title="Makefile Build" id="makefile-build">
+            <p>Create a comprehensive Makefile:</p>
+            
+            <code-block lang="makefile">
+                # Compiler settings
+                CXX = g++
+                CXXFLAGS = -std=c++17 -Wall -Wextra -O2
+                SFML_FLAGS = -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+                
+                # Game directories and executables
+                GAMES = tetris doodle_jump arkanoid snake minesweeper fifteen_puzzle \
+                        racing outrun xonix bejeweled netwalk mahjong tron chess \
+                        volleyball asteroids
+                
+                # Default target
+                all: $(GAMES)
+                
+                # Individual game targets
+                tetris:
+                	$(CXX) $(CXXFLAGS) "01 Tetris/main.cpp" -o tetris $(SFML_FLAGS)
+                
+                doodle_jump:
+                	$(CXX) $(CXXFLAGS) "02 Doodle Jump/main.cpp" -o doodle_jump $(SFML_FLAGS)
+                
+                arkanoid:
+                	$(CXX) $(CXXFLAGS) "03 Arkanoid/main.cpp" -o arkanoid $(SFML_FLAGS)
+                
+                snake:
+                	$(CXX) $(CXXFLAGS) "04 Snake/main.cpp" -o snake $(SFML_FLAGS)
+                
+                minesweeper:
+                	$(CXX) $(CXXFLAGS) "05 Minesweeper/main.cpp" -o minesweeper $(SFML_FLAGS)
+                
+                fifteen_puzzle:
+                	$(CXX) $(CXXFLAGS) "06 Fifteen-Puzzle/main.cpp" -o fifteen_puzzle $(SFML_FLAGS)
+                
+                racing:
+                	$(CXX) $(CXXFLAGS) "07 Racing (Top Down)/main.cpp" -o racing $(SFML_FLAGS)
+                
+                outrun:
+                	$(CXX) $(CXXFLAGS) "08 Outrun/main.cpp" -o outrun $(SFML_FLAGS)
+                
+                xonix:
+                	$(CXX) $(CXXFLAGS) "09 Xonix/main.cpp" -o xonix $(SFML_FLAGS)
+                
+                bejeweled:
+                	$(CXX) $(CXXFLAGS) "10 Bejeweled/main.cpp" -o bejeweled $(SFML_FLAGS)
+                
+                netwalk:
+                	$(CXX) $(CXXFLAGS) "11 NetWalk (Pipe Puzzle)/main.cpp" -o netwalk $(SFML_FLAGS)
+                
+                mahjong:
+                	$(CXX) $(CXXFLAGS) "12 Mahjong Solitaire/main.cpp" -o mahjong $(SFML_FLAGS)
+                
+                tron:
+                	$(CXX) $(CXXFLAGS) "13 Tron/main.cpp" -o tron $(SFML_FLAGS)
+                
+                chess:
+                	$(CXX) $(CXXFLAGS) "14 Chess/main.cpp" -o chess $(SFML_FLAGS)
+                
+                volleyball:
+                	$(CXX) $(CXXFLAGS) "15 Volleyball/main.cpp" -o volleyball $(SFML_FLAGS)
+                
+                asteroids:
+                	$(CXX) $(CXXFLAGS) "16 Asteroids/main.cpp" -o asteroids $(SFML_FLAGS)
+                
+                # Clean up binaries
+                clean:
+                	rm -f $(GAMES)
+                
+                # Install games to system (optional)
+                install: all
+                	cp $(GAMES) /usr/local/bin/
+                
+                # Create debug builds
+                debug: CXXFLAGS += -g -DDEBUG
+                debug: all
+                
+                # Check if SFML is available
+                check-sfml:
+                	@pkg-config --exists sfml-all && echo "SFML found" || echo "SFML not found"
+                
+                .PHONY: all clean install debug check-sfml
+            </code-block>
+            
+            <p>Usage:</p>
+            <code-block lang="bash">
+                # Build all games
+                make
+                
+                # Build specific game
+                make tetris
+                
+                # Build with debug symbols
+                make debug
+                
+                # Clean build files
+                make clean
+                
+                # Check SFML installation
+                make check-sfml
+            </code-block>
+        </chapter>
+        
+    </chapter>
+
+    <chapter title="Running Games" id="running-games-overview">
+        <p>After compilation, you can run the games directly:</p>
+        
+        <code-block lang="bash">
+            # Run individual games
+            ./tetris
+            ./snake
+            ./chess
+            
+            # Run with arguments (if supported)
+            ./game --fullscreen
+            ./game --width 1920 --height 1080
+        </code-block>
+        
+        <p>For detailed information about running games, see <a href="running-games.topic">Running Games</a>.</p>
+    </chapter>
+
+    <chapter title="Optimization and Debugging" id="optimization-debugging">
+        
+        <chapter title="Release Builds" id="release-builds">
+            <p>For optimal performance, compile with optimizations:</p>
+            <code-block lang="bash">
+                g++ -std=c++17 -O3 -DNDEBUG -o game main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+            </code-block>
+            
+            <p>Optimization flags:</p>
+            <list>
+                <li><code>-O2</code> - Good balance of speed and compilation time</li>
+                <li><code>-O3</code> - Maximum optimization</li>
+                <li><code>-Os</code> - Optimize for size</li>
+                <li><code>-DNDEBUG</code> - Disable debug assertions</li>
+            </list>
+        </chapter>
+        
+        <chapter title="Debug Builds" id="debug-builds">
+            <p>For development and debugging:</p>
+            <code-block lang="bash">
+                g++ -std=c++17 -g -O0 -DDEBUG -o game_debug main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+            </code-block>
+            
+            <p>Debug flags:</p>
+            <list>
+                <li><code>-g</code> - Include debug symbols</li>
+                <li><code>-O0</code> - No optimization (easier debugging)</li>
+                <li><code>-DDEBUG</code> - Enable debug features</li>
+                <li><code>-Wall -Wextra</code> - Enable warnings</li>
+            </list>
+        </chapter>
+        
+    </chapter>
+
+    <chapter title="Troubleshooting Builds" id="troubleshooting-builds">
+        <p>Common build issues and solutions:</p>
+        
+        <deflist>
+            <def title="SFML not found">
+                <p>See <a href="troubleshooting-setup.topic">Troubleshooting Setup</a> for SFML installation issues.</p>
+            </def>
+            
+            <def title="Compiler not found">
+                <p>Ensure g++ or clang++ is installed and in your PATH:</p>
+                <code-block lang="bash">
+                    which g++
+                    g++ --version
+                </code-block>
+            </def>
+            
+            <def title="Permission denied">
+                <p>Make sure you have write permissions in the directory:</p>
+                <code-block lang="bash">
+                    chmod +w .
+                    ls -la
+                </code-block>
+            </def>
+            
+            <def title="Out of memory">
+                <p>If compilation fails due to memory issues:</p>
+                <code-block lang="bash">
+                    # Use less aggressive optimization
+                    g++ -O1 -o game main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+                    
+                    # Or compile without optimization
+                    g++ -O0 -o game main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+                </code-block>
+            </def>
+        </deflist>
+    </chapter>
+
+    <chapter title="Next Steps" id="next-steps">
+        <p>Now that you can build the games:</p>
+        <list>
+            <li>Learn about <a href="running-games.topic">running and playing the games</a></li>
+            <li>Explore the <a href="games-documentation.topic">individual game documentation</a></li>
+            <li>Check out the <a href="development-guide.topic">development guide</a> for customization</li>
+        </list>
+    </chapter>
+
+</topic>
