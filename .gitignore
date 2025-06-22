@@ -1,1 +1,384 @@
-.dll
+# ============================================
+# .gitignore para 16 Games in C++ 
+# Projeto: Coleção de jogos clássicos em C++/SFML
+# ============================================
+
+# ==========================================
+# 🔨 BUILD & COMPILATION FILES
+# ==========================================
+
+# Build directories
+build/
+Build/
+BUILD/
+builds/
+bin/
+Bin/
+obj/
+debug/
+Debug/
+release/
+Release/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Makefile generated files
+Makefile
+makefile
+
+# ==========================================
+# 💻 EXECUTABLE FILES
+# ==========================================
+
+# Executables
+*.exe
+*.out
+*.app
+*.run
+
+# Game executables (our specific games)
+tetris
+snake
+doodle_jump
+arkanoid 
+minesweeper
+fifteen_puzzle
+racing
+outrun
+xonix
+bejeweled
+netwalk
+mahjong
+tron
+chess
+volleyball
+asteroids
+
+# Static and dynamic libraries
+*.so
+*.so.*
+*.dylib
+*.dll
+*.a
+*.lib
+
+# ==========================================
+# 🔧 COMPILER & LINKER FILES 
+# ==========================================
+
+# Object files
+*.o
+*.obj
+*.ko
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Debug information
+*.pdb
+*.idb
+*.dSYM/
+
+# Profile data
+*.prof
+*.gmon.out
+
+# ==========================================
+# 🛠️ IDE & EDITOR FILES
+# ==========================================
+
+# CLion
+.idea/
+cmake-build-*/
+.clion.source.upload.marker
+
+# Visual Studio Code
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/c_cpp_properties.json
+*.code-workspace
+
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Code::Blocks
+*.cbp
+*.layout
+*.depend
+
+# Dev-C++
+*.dev
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+
+# Eclipse CDT
+.cproject
+.project
+.metadata
+.settings/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ==========================================
+# 🖥️ SYSTEM FILES
+# ==========================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==========================================
+# 📦 PACKAGE MANAGERS & DEPENDENCIES
+# ==========================================
+
+# Conan
+conanfile.txt.user
+conan.lock
+conanbuildinfo.*
+conaninfo.txt
+
+# vcpkg
+vcpkg_installed/
+.vcpkg-root
+
+# Hunter
+_3rdParty/
+
+# CPM
+_deps/
+
+# ==========================================
+# 🎮 GAME SPECIFIC FILES
+# ==========================================
+
+# Temporary game assets (se houver)
+*.tmp
+*.temp
+*.cache
+
+# Game saves/scores (se implementado)
+saves/
+scores/
+highscores.txt
+*.save
+
+# Screenshots/recordings (se implementado)
+screenshots/
+recordings/
+*.png.bak
+*.jpg.bak
+
+# ==========================================
+# 🔧 DEVELOPMENT & TESTING
+# ==========================================
+
+# Test results
+test_results/
+Testing/
+tests/build/
+
+# Coverage reports
+coverage/
+*.gcov
+*.gcno
+*.gcda
+
+# Profiling data
+*.prof
+gmon.out
+callgrind.out.*
+
+# Documentation generated
+docs/html/
+docs/latex/
+doxygen_warnings.txt
+
+# Logs
+*.log
+logs/
+
+# ==========================================
+# 🌐 WEB & DEPLOYMENT
+# ==========================================
+
+# If using Emscripten for web builds
+*.wasm
+*.js.mem
+*.html.mem
+
+# Deployment
+dist/
+deploy/
+
+# ==========================================
+# 🔒 SECURITY & SENSITIVE DATA
+# ==========================================
+
+# API keys and secrets
+.env
+.env.local
+.env.*.local
+secrets.txt
+*.key
+*.pem
+
+# Database files (se houver)
+*.db
+*.sqlite
+*.sqlite3
+
+# ==========================================
+# 🎨 ASSET PIPELINE (OPTIONAL)
+# ==========================================
+
+# Original/source assets (keep processed ones)
+assets_src/
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# Asset processing temporary files
+.asset_cache/
+processed_assets/
+
+# ==========================================
+# 📊 ANALYSIS & METRICS
+# ==========================================
+
+# Static analysis
+cppcheck_results.xml
+clang_static_analyzer/
+pvs_studio_results/
+
+# Performance analysis
+*.perf
+*.trace
+
+# ==========================================
+# 🚀 CI/CD
+# ==========================================
+
+# GitHub Actions artifacts
+.github/workflows/artifacts/
+
+# Jenkins
+.jenkins/
+
+# GitLab CI
+.gitlab-ci-local/
+
+# ==========================================
+# 🧪 CUSTOM PROJECT FILES
+# ==========================================
+
+# Our custom build scripts outputs
+setup_log.txt
+test_results.txt
+fix_log.txt
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# ==========================================
+# 📝 DOCUMENTATION
+# ==========================================
+
+# Generated documentation
+*.pdf.generated
+*.docx.generated
+
+# ==========================================
+# END OF .gitignore
+# ==========================================
+
+# Nota: Este .gitignore foi criado especificamente para
+# o projeto "16 Games in C++" usando SFML
+# 
+# Última atualização: 2024
+# Compatível com: CLion, VS Code, Visual Studio, Linux, Windows, macOS
