@@ -1,0 +1,300 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-06-22T21:36:54.127367091"><title>Compila&ccedil;&atilde;o | 16 Games in C++</title><script type="application/json" id="virtual-toc-data">[{"id":"vis-o-geral","level":0,"title":"🎯 Visão Geral","anchor":"#vis-o-geral"},{"id":"compila-o-r-pida","level":0,"title":"⚡ Compilação Rápida","anchor":"#compila-o-r-pida"},{"id":"compila-o-por-jogo","level":0,"title":"🎮 Compilação por Jogo","anchor":"#compila-o-por-jogo"},{"id":"op-es-de-build","level":0,"title":"🔧 Opções de Build","anchor":"#op-es-de-build"},{"id":"configura-es-avan-adas","level":0,"title":"🎛️ Configurações Avançadas","anchor":"#configura-es-avan-adas"},{"id":"estrutura-de-build","level":0,"title":"📁 Estrutura de Build","anchor":"#estrutura-de-build"},{"id":"scripts-teis","level":0,"title":"🚀 Scripts Úteis","anchor":"#scripts-teis"},{"id":"debug-e-profiling","level":0,"title":"🐛 Debug e Profiling","anchor":"#debug-e-profiling"},{"id":"troubleshooting-de-compila-o","level":0,"title":"🔍 Troubleshooting de Compilação","anchor":"#troubleshooting-de-compila-o"},{"id":"monitoramento-de-build","level":0,"title":"📊 Monitoramento de Build","anchor":"#monitoramento-de-build"},{"id":"comandos-de-refer-ncia-r-pida","level":0,"title":"🎯 Comandos de Referência Rápida","anchor":"#comandos-de-refer-ncia-r-pida"},{"id":"pr-ximos-passos","level":0,"title":"🎯 Próximos Passos","anchor":"#pr-ximos-passos"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Compila&ccedil;&atilde;o | 16 Games in C++"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="16 Games in C++ Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/compilacao.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Compila&ccedil;&atilde;o | 16 Games in C++"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/compilacao.html#webpage",
+    "url": "writerside-documentation/compilacao.html",
+    "name": "Compila&ccedil;&atilde;o | 16 Games in C++",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "16 Games in C++ Help"
+}</script><!-- End Schema.org --></head><body data-id="compilacao" data-main-title="Compilação" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs=""><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>16 Games in C++  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="compilacao" id="compilacao.md">Compilação</h1><p id="-jyymdj_3">Este guia completo mostra como compilar, executar e gerenciar o build dos 16 jogos em C++. 🔨</p><section class="chapter"><h2 id="vis-o-geral" data-toc="vis-o-geral">🎯 Vis&atilde;o Geral</h2><p id="-jyymdj_16">O projeto usa <span class="control" id="-jyymdj_18">CMake</span> como sistema de build, que oferece:</p><ul class="list _bullet" id="-jyymdj_17"><li class="list__item" id="-jyymdj_19"><p id="-jyymdj_24"><span class="control" id="-jyymdj_25">Detec&ccedil;&atilde;o autom&aacute;tica</span> de depend&ecirc;ncias</p></li><li class="list__item" id="-jyymdj_20"><p id="-jyymdj_26"><span class="control" id="-jyymdj_27">Build multiplataforma</span> (Linux, macOS, Windows)</p></li><li class="list__item" id="-jyymdj_21"><p id="-jyymdj_28"><span class="control" id="-jyymdj_29">Gerenciamento de assets</span> (imagens, sons, fonts)</p></li><li class="list__item" id="-jyymdj_22"><p id="-jyymdj_30"><span class="control" id="-jyymdj_31">Targets individuais</span> para cada jogo</p></li><li class="list__item" id="-jyymdj_23"><p id="-jyymdj_32"><span class="control" id="-jyymdj_33">Comandos simplificados</span> de execu&ccedil;&atilde;o</p></li></ul></section><section class="chapter"><h2 id="compila-o-r-pida" data-toc="compila-o-r-pida">⚡ Compila&ccedil;&atilde;o R&aacute;pida</h2><section class="chapter"><h3 id="primeiro-build" data-toc="primeiro-build">Primeiro Build</h3><div class="code-block" data-lang="bash">
+# Configurar e compilar tudo
+./setup.sh
+
+# Ou manualmente:
+mkdir build &amp;&amp; cd build
+cmake ..
+make all_games
+</div></section><section class="chapter"><h3 id="builds-subsequentes" data-toc="builds-subsequentes">Builds Subsequentes</h3><div class="code-block" data-lang="bash">
+cd build
+make all_games
+</div></section></section><section class="chapter"><h2 id="compila-o-por-jogo" data-toc="compila-o-por-jogo">🎮 Compila&ccedil;&atilde;o por Jogo</h2><section class="chapter"><h3 id="jogos-dispon-veis" data-toc="jogos-dispon-veis">Jogos Dispon&iacute;veis</h3><div class="code-block" data-lang="bash">
+# Listar todos os targets disponíveis
+make help | grep -E &quot;(tetris|snake|arkanoid)&quot;
+
+# Targets dos jogos:
+tetris, doodle_jump, arkanoid, snake, minesweeper
+fifteen_puzzle, racing, outrun, xonix, bejeweled
+netwalk, mahjong, tron, chess, volleyball, asteroids
+</div></section><section class="chapter"><h3 id="compilar-jogo-espec-fico" data-toc="compilar-jogo-espec-fico">Compilar Jogo Espec&iacute;fico</h3><div class="code-block" data-lang="bash">
+# Compilar apenas o Tetris
+make tetris
+
+# Compilar Snake
+make snake
+
+# Compilar Arkanoid
+make arkanoid
+</div></section><section class="chapter"><h3 id="executar-jogos" data-toc="executar-jogos">Executar Jogos</h3><div class="code-block" data-lang="bash">
+# Método 1: Target CMake (recomendado)
+make run_tetris
+make run_snake
+make run_arkanoid
+
+# Método 2: Executar diretamente
+cd games/tetris &amp;&amp; ./tetris
+cd games/snake &amp;&amp; ./snake
+
+# Método 3: A partir do build/
+./games/tetris/tetris
+./games/snake/snake
+</div></section></section><section class="chapter"><h2 id="op-es-de-build" data-toc="op-es-de-build">🔧 Op&ccedil;&otilde;es de Build</h2><section class="chapter"><h3 id="tipos-de-build" data-toc="tipos-de-build">Tipos de Build</h3><section class="chapter"><h4 id="debug-padr-o" data-toc="debug-padr-o">Debug (Padr&atilde;o)</h4><div class="code-block" data-lang="bash">
+cmake .. -DCMAKE_BUILD_TYPE=Debug
+make all_games
+
+# Características:
+# - Símbolos de debug incluídos
+# - Otimizações desabilitadas  
+# - Assertions habilitadas
+# - Executáveis maiores
+</div></section><section class="chapter"><h4 id="release" data-toc="release">Release</h4><div class="code-block" data-lang="bash">
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make all_games
+
+# Características:
+# - Máxima otimização (-O3)
+# - Sem símbolos de debug
+# - Executáveis menores
+# - Melhor performance
+</div></section><section class="chapter"><h4 id="relwithdebinfo" data-toc="relwithdebinfo">RelWithDebInfo</h4><div class="code-block" data-lang="bash">
+cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo
+make all_games
+
+# Características:
+# - Otimizado + símbolos debug
+# - Bom para profiling
+# - Compromisso entre debug e performance
+</div></section></section><section class="chapter"><h3 id="compila-o-paralela" data-toc="compila-o-paralela">Compila&ccedil;&atilde;o Paralela</h3><div class="code-block" data-lang="bash">
+# Usar todos os cores disponíveis
+make -j$(nproc)  # Linux/macOS
+make -j%NUMBER_OF_PROCESSORS%  # Windows
+
+# Ou definir permanentemente
+export MAKEFLAGS=&quot;-j$(nproc)&quot;
+make all_games
+</div></section><section class="chapter"><h3 id="compila-o-verbose" data-toc="compila-o-verbose">Compila&ccedil;&atilde;o Verbose</h3><div class="code-block" data-lang="bash">
+# Ver comandos completos de compilação
+make VERBOSE=1
+
+# Ou configurar permanentemente
+cmake .. -DCMAKE_VERBOSE_MAKEFILE=ON
+make
+</div></section></section><section class="chapter"><h2 id="configura-es-avan-adas" data-toc="configura-es-avan-adas">🎛️ Configura&ccedil;&otilde;es Avan&ccedil;adas</h2><section class="chapter"><h3 id="compilador-espec-fico" data-toc="compilador-espec-fico">Compilador Espec&iacute;fico</h3><div class="code-block" data-lang="bash">
+# Usar GCC específico
+cmake .. -DCMAKE_CXX_COMPILER=g++-9
+
+# Usar Clang
+cmake .. -DCMAKE_CXX_COMPILER=clang++
+
+# Windows - Visual Studio
+cmake .. -G &quot;Visual Studio 16 2019&quot;
+</div></section><section class="chapter"><h3 id="flags-de-compila-o-customizadas" data-toc="flags-de-compila-o-customizadas">Flags de Compila&ccedil;&atilde;o Customizadas</h3><div class="code-block" data-lang="bash">
+# Adicionar flags extras
+cmake .. -DCMAKE_CXX_FLAGS=&quot;-Wall -Wextra -Wpedantic&quot;
+
+# Debug com sanitizers
+cmake .. -DCMAKE_BUILD_TYPE=Debug \
+         -DCMAKE_CXX_FLAGS=&quot;-fsanitize=address -fsanitize=undefined&quot;
+</div></section><section class="chapter"><h3 id="configurar-sfml-manualmente" data-toc="configurar-sfml-manualmente">Configurar SFML Manualmente</h3><div class="code-block" data-lang="bash">
+# Se SFML não for encontrado automaticamente
+cmake .. -DSFML_ROOT=/usr/local/SFML
+
+# Ou especificar bibliotecas
+cmake .. -DSFML_LIBRARIES=&quot;sfml-system;sfml-window;sfml-graphics;sfml-audio&quot;
+</div></section></section><section class="chapter"><h2 id="estrutura-de-build" data-toc="estrutura-de-build">📁 Estrutura de Build</h2><section class="chapter"><h3 id="diret-rios-gerados" data-toc="diret-rios-gerados">Diret&oacute;rios Gerados</h3><div class="code-block" data-lang="none">
+build/
+├── CMakeCache.txt          # Cache do CMake
+├── CMakeFiles/             # Arquivos internos do CMake
+├── Makefile               # Makefile principal
+├── games/                 # Executáveis e assets
+│   ├── tetris/
+│   │   ├── tetris         # Executável
+│   │   └── images/        # Assets copiados
+│   ├── snake/
+│   │   ├── snake
+│   │   └── images/
+│   └── ... (para cada jogo)
+└── cmake_install.cmake    # Script de instalação
+</div></section><section class="chapter"><h3 id="assets-automaticamente-gerenciados" data-toc="assets-automaticamente-gerenciados">Assets Automaticamente Gerenciados</h3><p id="-jyymdj_64">O CMake copia automaticamente:</p><ul class="list _bullet" id="-jyymdj_65"><li class="list__item" id="-jyymdj_66"><p id="-jyymdj_69"><span class="control" id="-jyymdj_70">images/</span> &rarr; <code class="code" id="-jyymdj_71">build/games/&lt;jogo&gt;/images/</code></p></li><li class="list__item" id="-jyymdj_67"><p id="-jyymdj_72"><span class="control" id="-jyymdj_73">fonts/</span> &rarr; <code class="code" id="-jyymdj_74">build/games/&lt;jogo&gt;/fonts/</code></p></li><li class="list__item" id="-jyymdj_68"><p id="-jyymdj_75"><span class="control" id="-jyymdj_76">files/</span> &rarr; <code class="code" id="-jyymdj_77">build/games/&lt;jogo&gt;/files/</code></p></li></ul></section></section><section class="chapter"><h2 id="scripts-teis" data-toc="scripts-teis">🚀 Scripts &Uacute;teis</h2><section class="chapter"><h3 id="build-script-personalizado" data-toc="build-script-personalizado">Build Script Personalizado</h3><div class="code-block" data-lang="bash">
+# Criar script de build personalizado
+cat &gt; quick_build.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+GAME=&quot;$1&quot;
+BUILD_TYPE=&quot;${2:-Debug}&quot;
+
+if [ -z &quot;$GAME&quot; ]; then
+    echo &quot;Uso: $0 &lt;jogo&gt; [Debug|Release]&quot;
+    echo &quot;Jogos: tetris, snake, arkanoid, etc.&quot;
+    echo &quot;Exemplo: $0 tetris Release&quot;
+    exit 1
+fi
+
+echo &quot;🔨 Compilando $GAME em modo $BUILD_TYPE...&quot;
+
+# Criar/limpar build se necessário
+if [ ! -d &quot;build&quot; ]; then
+    mkdir build
+fi
+
+cd build
+
+# Configurar se necessário
+if [ ! -f &quot;CMakeCache.txt&quot; ] || [ &quot;$BUILD_TYPE&quot; != &quot;$(cat CMakeCache.txt | grep CMAKE_BUILD_TYPE | cut -d'=' -f2)&quot; ]; then
+    echo &quot;⚙️ Configurando CMake...&quot;
+    cmake .. -DCMAKE_BUILD_TYPE=&quot;$BUILD_TYPE&quot;
+fi
+
+# Compilar jogo específico
+echo &quot;🔧 Compilando...&quot;
+make &quot;$GAME&quot; -j$(nproc)
+
+if [ $? -eq 0 ]; then
+    echo &quot;✅ $GAME compilado com sucesso!&quot;
+    echo &quot;🎮 Para executar: make run_$GAME&quot;
+else
+    echo &quot;❌ Erro na compilação!&quot;
+    exit 1
+fi
+EOF
+
+chmod +x quick_build.sh
+
+# Usar o script
+./quick_build.sh tetris Debug
+./quick_build.sh snake Release
+</div></section><section class="chapter"><h3 id="clean-build-script" data-toc="clean-build-script">Clean Build Script</h3><div class="code-block" data-lang="bash">
+# Script para limpeza completa
+cat &gt; clean_build.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+echo &quot;🧹 Limpando build anterior...&quot;
+rm -rf build
+
+echo &quot;📁 Criando diretório build...&quot;
+mkdir build
+cd build
+
+echo &quot;⚙️ Configurando CMake...&quot;
+cmake ..
+
+echo &quot;🔨 Compilando todos os jogos...&quot;
+make all_games -j$(nproc)
+
+echo &quot;✅ Build limpo concluído!&quot;
+EOF
+
+chmod +x clean_build.sh
+./clean_build.sh
+</div></section></section><section class="chapter"><h2 id="debug-e-profiling" data-toc="debug-e-profiling">🐛 Debug e Profiling</h2><section class="chapter"><h3 id="compilar-para-debug" data-toc="compilar-para-debug">Compilar para Debug</h3><div class="code-block" data-lang="bash">
+# Build com informações de debug
+cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS=&quot;-g3 -O0&quot;
+make tetris
+
+# Executar com GDB
+gdb ./games/tetris/tetris
+</div></section><section class="chapter"><h3 id="profiling-com-valgrind" data-toc="profiling-com-valgrind">Profiling com Valgrind</h3><div class="code-block" data-lang="bash">
+# Compilar com símbolos de debug
+cmake .. -DCMAKE_BUILD_TYPE=Debug
+make tetris
+
+# Executar com Valgrind
+valgrind --tool=memcheck --leak-check=full ./games/tetris/tetris
+</div></section><section class="chapter"><h3 id="an-lise-de-performance" data-toc="an-lise-de-performance">An&aacute;lise de Performance</h3><div class="code-block" data-lang="bash">
+# Compilar otimizado com símbolos
+cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo
+make tetris
+
+# Profiling com perf (Linux)
+perf record ./games/tetris/tetris
+perf report
+</div></section></section><section class="chapter"><h2 id="troubleshooting-de-compila-o" data-toc="troubleshooting-de-compila-o">🔍 Troubleshooting de Compila&ccedil;&atilde;o</h2><section class="chapter"><h3 id="erro-sfml-n-o-encontrado" data-toc="erro-sfml-n-o-encontrado">Erro: SFML n&atilde;o encontrado</h3><div class="code-block" data-lang="bash">
+# Verificar instalação
+pkg-config --exists sfml-all
+pkg-config --modversion sfml-all
+
+# Limpar cache e reconfigurar
+rm CMakeCache.txt
+cmake .. -DSFML_ROOT=/usr/local
+</div></section><section class="chapter"><h3 id="erro-compilador-n-o-suporta-c-17" data-toc="erro-compilador-n-o-suporta-c-17">Erro: Compilador n&atilde;o suporta C++17</h3><div class="code-block" data-lang="bash">
+# Verificar versão do compilador
+g++ --version
+
+# Usar compilador mais novo
+cmake .. -DCMAKE_CXX_COMPILER=g++-9
+</div></section><section class="chapter"><h3 id="erro-assets-n-o-encontrados" data-toc="erro-assets-n-o-encontrados">Erro: Assets n&atilde;o encontrados</h3><div class="code-block" data-lang="bash">
+# Verificar se assets foram copiados
+ls build/games/tetris/images/
+
+# Recompilar para forçar cópia
+make clean
+make tetris
+</div></section><section class="chapter"><h3 id="erro-make-command-not-found" data-toc="erro-make-command-not-found">Erro: &quot;make: command not found&quot;</h3><div class="code-block" data-lang="bash">
+# Linux - instalar build-essential
+sudo apt install build-essential
+
+# macOS - instalar Xcode Command Line Tools
+xcode-select --install
+
+# Windows - usar cmake --build
+cmake --build . --target all_games
+</div></section></section><section class="chapter"><h2 id="monitoramento-de-build" data-toc="monitoramento-de-build">📊 Monitoramento de Build</h2><section class="chapter"><h3 id="tempo-de-compila-o" data-toc="tempo-de-compila-o">Tempo de Compila&ccedil;&atilde;o</h3><div class="code-block" data-lang="bash">
+# Medir tempo total
+time make all_games
+
+# Medir por jogo
+time make tetris
+</div></section><section class="chapter"><h3 id="uso-de-recursos" data-toc="uso-de-recursos">Uso de Recursos</h3><div class="code-block" data-lang="bash">
+# Monitor durante build
+htop  # Em outro terminal
+
+# Compilação com limite de CPU
+make -j2 all_games  # Usar apenas 2 cores
+</div></section><section class="chapter"><h3 id="tamanho-dos-execut-veis" data-toc="tamanho-dos-execut-veis">Tamanho dos Execut&aacute;veis</h3><div class="code-block" data-lang="bash">
+# Ver tamanho de todos os jogos
+du -sh games/*/
+
+# Detalhes de um jogo específico
+ls -lah games/tetris/tetris
+file games/tetris/tetris
+</div></section></section><section class="chapter"><h2 id="comandos-de-refer-ncia-r-pida" data-toc="comandos-de-refer-ncia-r-pida">🎯 Comandos de Refer&ecirc;ncia R&aacute;pida</h2><div class="code-block" data-lang="bash">
+# Setup inicial
+./setup.sh
+
+# Compilar tudo
+make all_games
+
+# Compilar jogo específico
+make &lt;nome_do_jogo&gt;
+
+# Executar jogo
+make run_&lt;nome_do_jogo&gt;
+
+# Limpar e reconstruir
+rm -rf build &amp;&amp; mkdir build &amp;&amp; cd build &amp;&amp; cmake .. &amp;&amp; make all_games
+
+# Build otimizado
+cmake .. -DCMAKE_BUILD_TYPE=Release &amp;&amp; make all_games
+
+# Build paralelo
+make -j$(nproc) all_games
+
+# Ver comandos disponíveis
+make help
+</div></section><section class="chapter"><h2 id="pr-ximos-passos" data-toc="pr-ximos-passos">🎯 Pr&oacute;ximos Passos</h2><p id="-jyymdj_103">Agora que voc&ecirc; domina a compila&ccedil;&atilde;o:</p><ol class="list _decimal" id="-jyymdj_104" type="1"><li class="list__item" id="-jyymdj_109"><p id="-jyymdj_112">Explore <span id="-jyymdj_113">Build and Run</span> para execu&ccedil;&atilde;o pr&aacute;tica</p></li><li class="list__item" id="-jyymdj_110"><p id="-jyymdj_114">Veja <span id="-jyymdj_115">Running Games</span> para mais op&ccedil;&otilde;es de execu&ccedil;&atilde;o</p></li><li class="list__item" id="-jyymdj_111"><p id="-jyymdj_116">Consulte <span id="-jyymdj_117">Estrutura do Projeto</span> para entender o c&oacute;digo</p></li></ol><p id="-jyymdj_105">Se encontrar problemas:</p><ol class="list _decimal" id="-jyymdj_106" type="1"><li class="list__item" id="-jyymdj_118"><p id="-jyymdj_120">Verifique <a href="troubleshooting-setup.html" id="-jyymdj_121" data-tooltip="Este guia resolve os problemas mais comuns encontrados durante a configuração e execução dos 16 jogos em C++. 🔧">Troubleshooting</a></p></li><li class="list__item" id="-jyymdj_119"><p id="-jyymdj_122">Confirme que seguiu <a href="configuracao-ambiente.html" id="-jyymdj_123" data-tooltip="Este guia te ajudará a configurar completamente o ambiente de desenvolvimento para executar os 16 jogos em C++. 🛠️">Configura&ccedil;&atilde;o do Ambiente</a></p></li></ol><p id="-jyymdj_108"><span class="control" id="-jyymdj_124">Dica</span>: Use <code class="code" id="-jyymdj_125">make -j$(nproc)</code> para compila&ccedil;&atilde;o mais r&aacute;pida, e <code class="code" id="-jyymdj_126">make run_&lt;jogo&gt;</code> para executar diretamente!</p></section><div class="last-modified">22 June 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="environment-setup.html" class="navigation-links__prev">Configura&ccedil;&atilde;o Final do Ambiente</a><a href="troubleshooting-setup.html" class="navigation-links__next">Troubleshooting</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>

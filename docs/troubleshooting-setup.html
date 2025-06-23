@@ -1,0 +1,390 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-06-22T21:36:54.163712594"><title>Troubleshooting | 16 Games in C++</title><script type="application/json" id="virtual-toc-data">[{"id":"problemas-mais-comuns","level":0,"title":"🚨 Problemas Mais Comuns","anchor":"#problemas-mais-comuns"},{"id":"problemas-espec-ficos-por-sistema","level":0,"title":"🐛 Problemas Específicos por Sistema","anchor":"#problemas-espec-ficos-por-sistema"},{"id":"ferramentas-de-diagn-stico","level":0,"title":"🔍 Ferramentas de Diagnóstico","anchor":"#ferramentas-de-diagn-stico"},{"id":"ltimos-recursos","level":0,"title":"🆘 Últimos Recursos","anchor":"#ltimos-recursos"},{"id":"preven-o-de-problemas","level":0,"title":"🎯 Prevenção de Problemas","anchor":"#preven-o-de-problemas"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Troubleshooting | 16 Games in C++"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="16 Games in C++ Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/troubleshooting-setup.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Troubleshooting | 16 Games in C++"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/troubleshooting-setup.html#webpage",
+    "url": "writerside-documentation/troubleshooting-setup.html",
+    "name": "Troubleshooting | 16 Games in C++",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "16 Games in C++ Help"
+}</script><!-- End Schema.org --></head><body data-id="troubleshooting-setup" data-main-title="Troubleshooting" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs=""><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>16 Games in C++  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="troubleshooting-setup" id="troubleshooting-setup.md">Troubleshooting</h1><p id="mim5c5_3">Este guia resolve os problemas mais comuns encontrados durante a configura&ccedil;&atilde;o e execu&ccedil;&atilde;o dos 16 jogos em C++. 🔧</p><section class="chapter"><h2 id="problemas-mais-comuns" data-toc="problemas-mais-comuns">🚨 Problemas Mais Comuns</h2><section class="chapter"><h3 id="1-sfml-n-o-encontrado" data-toc="1-sfml-n-o-encontrado">1. SFML n&atilde;o encontrado</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
+CMake Error: Could not find SFML
+pkg-config: sfml-all not found
+</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="mim5c5_19"><span class="control" id="mim5c5_25">Linux:</span></p><div class="code-block" data-lang="bash">
+# Ubuntu/Debian
+sudo apt update
+sudo apt install libsfml-dev
+
+# Fedora
+sudo dnf install SFML-devel
+
+# Arch Linux
+sudo pacman -S sfml
+
+# Verificar instalação
+pkg-config --exists sfml-all &amp;&amp; echo &quot;OK&quot; || echo &quot;ERRO&quot;
+</div><p id="mim5c5_21"><span class="control" id="mim5c5_26">macOS:</span></p><div class="code-block" data-lang="bash">
+# Usando Homebrew
+brew install sfml
+
+# Se Homebrew não estiver instalado
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</div><p id="mim5c5_23"><span class="control" id="mim5c5_27">Windows:</span></p><ul class="list _bullet" id="mim5c5_24"><li class="list__item" id="mim5c5_28"><p id="mim5c5_31">Baixe SFML do <a href="https://www.sfml-dev.org/download.php" id="mim5c5_32" data-external="true" rel="noopener noreferrer" target="_blank">site oficial</a></p></li><li class="list__item" id="mim5c5_29"><p id="mim5c5_33">Extraia para <code class="code" id="mim5c5_34">C:\SFML</code></p></li><li class="list__item" id="mim5c5_30"><p id="mim5c5_35">Configure vari&aacute;vel de ambiente <code class="code" id="mim5c5_36">SFML_ROOT=C:\SFML</code></p></li></ul></section></section><section class="chapter"><h3 id="2-cmake-vers-o-muito-antiga" data-toc="2-cmake-vers-o-muito-antiga">2. CMake vers&atilde;o muito antiga</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
+CMake Error: CMake 3.5 or higher is required. You are running version 2.8.12
+</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="mim5c5_40"><span class="control" id="mim5c5_44">Ubuntu/Debian:</span></p><div class="code-block" data-lang="bash">
+# Remover versão antiga
+sudo apt remove cmake
+
+# Adicionar repositório oficial
+wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc | sudo apt-key add -
+sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
+sudo apt update
+sudo apt install cmake
+</div><p id="mim5c5_42"><span class="control" id="mim5c5_45">Compilar do c&oacute;digo fonte:</span></p><div class="code-block" data-lang="bash">
+wget https://github.com/Kitware/CMake/releases/download/v3.25.1/cmake-3.25.1.tar.gz
+tar -xzf cmake-3.25.1.tar.gz
+cd cmake-3.25.1
+./bootstrap --prefix=/usr/local
+make -j$(nproc)
+sudo make install
+</div></section></section><section class="chapter"><h3 id="3-compilador-n-o-suporta-c-17" data-toc="3-compilador-n-o-suporta-c-17">3. Compilador n&atilde;o suporta C++17</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
+error: 'auto' type specifier is a C++11 extension
+error: range-based for loop is a C++11 extension
+</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="mim5c5_49"><span class="control" id="mim5c5_53">Ubuntu/Debian:</span></p><div class="code-block" data-lang="bash">
+# Instalar GCC mais recente
+sudo apt install gcc-9 g++-9
+
+# Configurar como padrão
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 90
+
+# Verificar versão
+g++ --version
+</div><p id="mim5c5_51"><span class="control" id="mim5c5_54">For&ccedil;ar compilador no CMake:</span></p><div class="code-block" data-lang="bash">
+cmake .. -DCMAKE_CXX_COMPILER=g++-9
+</div></section></section><section class="chapter"><h3 id="4-erro-de-linking-com-sfml" data-toc="4-erro-de-linking-com-sfml">4. Erro de linking com SFML</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
+undefined reference to `sf::RenderWindow::RenderWindow()'
+undefined reference to `sf::Texture::loadFromFile()'
+</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="mim5c5_58"><span class="control" id="mim5c5_62">Verificar bibliotecas SFML:</span></p><div class="code-block" data-lang="bash">
+# Linux
+ldconfig -p | grep sfml
+find /usr -name &quot;*sfml*&quot; 2&gt;/dev/null
+
+# Verificar pkg-config
+pkg-config --cflags --libs sfml-all
+</div><p id="mim5c5_60"><span class="control" id="mim5c5_63">Reinstalar SFML:</span></p><div class="code-block" data-lang="bash">
+# Ubuntu/Debian
+sudo apt remove libsfml-dev
+sudo apt autoremove
+sudo apt install libsfml-dev
+
+# Verificar novamente
+pkg-config --modversion sfml-all
+</div></section></section><section class="chapter"><h3 id="5-jogos-n-o-iniciam-sem-janela" data-toc="5-jogos-n-o-iniciam-sem-janela">5. Jogos n&atilde;o iniciam (sem janela)</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><ul class="list _bullet" id="mim5c5_66"><li class="list__item" id="mim5c5_67"><p id="mim5c5_70">Execut&aacute;vel compila mas n&atilde;o abre janela</p></li><li class="list__item" id="mim5c5_68"><p id="mim5c5_71">Erro &quot;Failed to create OpenGL context&quot;</p></li><li class="list__item" id="mim5c5_69"><p id="mim5c5_72">Tela preta</p></li></ul></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="mim5c5_73"><span class="control" id="mim5c5_79">Verificar drivers gr&aacute;ficos:</span></p><div class="code-block" data-lang="bash">
+# Linux - informações da GPU
+lspci | grep -i vga
+glxinfo | grep &quot;OpenGL version&quot;
+
+# Instalar drivers se necessário
+# NVIDIA:
+sudo apt install nvidia-driver-470
+
+# AMD:
+sudo apt install mesa-vulkan-drivers
+
+# Intel:
+sudo apt install intel-media-va-driver
+</div><p id="mim5c5_75"><span class="control" id="mim5c5_80">Testar OpenGL:</span></p><div class="code-block" data-lang="bash">
+# Instalar mesa-utils
+sudo apt install mesa-utils
+
+# Testar OpenGL
+glxgears
+</div><p id="mim5c5_77"><span class="control" id="mim5c5_81">Executar com debug:</span></p><div class="code-block" data-lang="bash">
+# Executar com informações de debug
+DISPLAY=:0 ./games/tetris/tetris
+</div></section></section><section class="chapter"><h3 id="6-assets-n-o-encontrados" data-toc="6-assets-n-o-encontrados">6. Assets n&atilde;o encontrados</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
+Failed to load image: images/tiles.png
+Failed to load font: fonts/arial.ttf
+</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="mim5c5_85"><span class="control" id="mim5c5_89">Verificar estrutura de arquivos:</span></p><div class="code-block" data-lang="bash">
+# Ver se assets foram copiados
+ls build/games/tetris/
+ls build/games/tetris/images/
+
+# Se não existirem, recompilar
+make clean
+make tetris
+</div><p id="mim5c5_87"><span class="control" id="mim5c5_90">Executar do diret&oacute;rio correto:</span></p><div class="code-block" data-lang="bash">
+# CORRETO - executar de dentro do diretório do jogo
+cd build/games/tetris
+./tetris
+
+# INCORRETO - executar de outro lugar
+cd build
+./games/tetris/tetris  # Pode não encontrar assets
+</div></section></section><section class="chapter"><h3 id="7-erro-de-permiss-o" data-toc="7-erro-de-permiss-o">7. Erro de permiss&atilde;o</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
+Permission denied
+make: *** [CMakeFiles/tetris.dir/all] Error 2
+</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="mim5c5_94"><span class="control" id="mim5c5_98">Corrigir permiss&otilde;es:</span></p><div class="code-block" data-lang="bash">
+# Dar permissão de execução aos scripts
+chmod +x setup.sh
+chmod +x *.sh
+
+# Corrigir permissões do projeto
+chmod -R 755 .
+</div><p id="mim5c5_96"><span class="control" id="mim5c5_99">Problemas de sudo:</span></p><div class="code-block" data-lang="bash">
+# Se instalou com sudo, corrigir ownership
+sudo chown -R $USER:$USER ~/.cmake
+sudo chown -R $USER:$USER ./build
+</div></section></section></section><section class="chapter"><h2 id="problemas-espec-ficos-por-sistema" data-toc="problemas-espec-ficos-por-sistema">🐛 Problemas Espec&iacute;ficos por Sistema</h2><section class="chapter"><h3 id="ubuntu-debian-espec-ficos" data-toc="ubuntu-debian-espec-ficos">Ubuntu/Debian Espec&iacute;ficos</h3><section class="chapter"><h4 id="erro-package-sfml-all-was-not-found" data-toc="erro-package-sfml-all-was-not-found">Erro: &quot;Package sfml-all was not found&quot;</h4><div class="code-block" data-lang="bash">
+# Atualizar lista de pacotes
+sudo apt update
+
+# Verificar se universe repository está habilitado
+sudo add-apt-repository universe
+sudo apt update
+
+# Instalar SFML
+sudo apt install libsfml-dev
+</div></section><section class="chapter"><h4 id="erro-unable-to-locate-package" data-toc="erro-unable-to-locate-package">Erro: &quot;Unable to locate package&quot;</h4><div class="code-block" data-lang="bash">
+# Verificar versão do Ubuntu
+lsb_release -a
+
+# Ubuntu muito antigo - usar PPA
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt update
+</div></section></section><section class="chapter"><h3 id="fedora-centos-espec-ficos" data-toc="fedora-centos-espec-ficos">Fedora/CentOS Espec&iacute;ficos</h3><section class="chapter"><h4 id="erro-no-package-sfml-devel-available" data-toc="erro-no-package-sfml-devel-available">Erro: &quot;No package SFML-devel available&quot;</h4><div class="code-block" data-lang="bash">
+# Fedora - habilitar RPM Fusion
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+
+# CentOS - habilitar EPEL
+sudo dnf install epel-release
+</div></section></section><section class="chapter"><h3 id="macos-espec-ficos" data-toc="macos-espec-ficos">macOS Espec&iacute;ficos</h3><section class="chapter"><h4 id="erro-xcrun-error-invalid-active-developer-path" data-toc="erro-xcrun-error-invalid-active-developer-path">Erro: &quot;xcrun: error: invalid active developer path&quot;</h4><div class="code-block" data-lang="bash">
+# Instalar Command Line Tools
+xcode-select --install
+
+# Se já instalado, resetar
+sudo xcode-select --reset
+</div></section><section class="chapter"><h4 id="homebrew-n-o-funciona" data-toc="homebrew-n-o-funciona">Homebrew n&atilde;o funciona</h4><div class="code-block" data-lang="bash">
+# Reinstalar Homebrew
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+
+# Adicionar ao PATH
+echo 'export PATH=&quot;/opt/homebrew/bin:$PATH&quot;' &gt;&gt; ~/.zshrc
+source ~/.zshrc
+</div></section></section><section class="chapter"><h3 id="windows-espec-ficos" data-toc="windows-espec-ficos">Windows Espec&iacute;ficos</h3><section class="chapter"><h4 id="visual-studio-n-o-encontra-sfml" data-toc="visual-studio-n-o-encontra-sfml">Visual Studio n&atilde;o encontra SFML</h4><div class="code-block" data-lang="cmake">
+# No CMakeLists.txt, adicionar:
+set(SFML_ROOT &quot;C:/SFML&quot;)
+find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
+</div></section><section class="chapter"><h4 id="mingw-problemas-de-linking" data-toc="mingw-problemas-de-linking">MinGW problemas de linking</h4><div class="code-block" data-lang="bash">
+# Usar bibliotecas estáticas
+cmake .. -DSFML_STATIC_LIBRARIES=TRUE
+</div></section></section></section><section class="chapter"><h2 id="ferramentas-de-diagn-stico" data-toc="ferramentas-de-diagn-stico">🔍 Ferramentas de Diagn&oacute;stico</h2><section class="chapter"><h3 id="script-de-diagn-stico-completo" data-toc="script-de-diagn-stico-completo">Script de Diagn&oacute;stico Completo</h3><div class="code-block" data-lang="bash">
+# Criar script de diagnóstico
+cat &gt; diagnose.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+echo &quot;🔍 Diagnóstico do Sistema - 16 Games in C++&quot;
+echo &quot;=============================================&quot;
+
+# Sistema operacional
+echo &quot;📱 Sistema:&quot;
+uname -a
+echo &quot;&quot;
+
+# Compilador
+echo &quot;🔧 Compilador:&quot;
+if command -v g++ &amp;&gt; /dev/null; then
+    g++ --version | head -1
+    echo &quot;✅ G++ disponível&quot;
+else
+    echo &quot;❌ G++ não encontrado&quot;
+fi
+
+if command -v clang++ &amp;&gt; /dev/null; then
+    clang++ --version | head -1
+    echo &quot;✅ Clang++ disponível&quot;
+else
+    echo &quot;❌ Clang++ não encontrado&quot;
+fi
+echo &quot;&quot;
+
+# CMake
+echo &quot;🏗️ CMake:&quot;
+if command -v cmake &amp;&gt; /dev/null; then
+    cmake --version | head -1
+    echo &quot;✅ CMake disponível&quot;
+else
+    echo &quot;❌ CMake não encontrado&quot;
+fi
+echo &quot;&quot;
+
+# SFML
+echo &quot;🎮 SFML:&quot;
+if pkg-config --exists sfml-all; then
+    echo &quot;✅ SFML $(pkg-config --modversion sfml-all) encontrado&quot;
+    echo &quot;📍 Flags: $(pkg-config --cflags --libs sfml-all)&quot;
+else
+    echo &quot;❌ SFML não encontrado via pkg-config&quot;
+    
+    # Procurar manualmente
+    if find /usr -name &quot;*sfml*&quot; 2&gt;/dev/null | head -5; then
+        echo &quot;💡 SFML pode estar instalado mas não configurado para pkg-config&quot;
+    fi
+fi
+echo &quot;&quot;
+
+# OpenGL
+echo &quot;🖥️ OpenGL:&quot;
+if command -v glxinfo &amp;&gt; /dev/null; then
+    echo &quot;OpenGL: $(glxinfo | grep &quot;OpenGL version&quot; | cut -d':' -f2)&quot;
+    echo &quot;✅ OpenGL disponível&quot;
+else
+    echo &quot;⚠️ glxinfo não disponível (instale mesa-utils)&quot;
+fi
+echo &quot;&quot;
+
+# Espaço em disco
+echo &quot;💾 Espaço em disco:&quot;
+df -h . | tail -1
+echo &quot;&quot;
+
+# Resumo
+echo &quot;📋 Resumo:&quot;
+echo &quot;==========&quot;
+
+issues=0
+
+if ! command -v g++ &amp;&gt; /dev/null &amp;&amp; ! command -v clang++ &amp;&gt; /dev/null; then
+    echo &quot;❌ Nenhum compilador C++ encontrado&quot;
+    ((issues++))
+fi
+
+if ! command -v cmake &amp;&gt; /dev/null; then
+    echo &quot;❌ CMake não encontrado&quot;
+    ((issues++))
+fi
+
+if ! pkg-config --exists sfml-all; then
+    echo &quot;❌ SFML não encontrado&quot;
+    ((issues++))
+fi
+
+if [ $issues -eq 0 ]; then
+    echo &quot;🎉 Sistema parece estar configurado corretamente!&quot;
+    echo &quot;💡 Se ainda há problemas, execute: ./setup.sh&quot;
+else
+    echo &quot;⚠️ $issues problema(s) encontrado(s)&quot;
+    echo &quot;💡 Consulte a documentação para resolver os problemas acima&quot;
+fi
+EOF
+
+chmod +x diagnose.sh
+./diagnose.sh
+</div></section><section class="chapter"><h3 id="verifica-o-de-build" data-toc="verifica-o-de-build">Verifica&ccedil;&atilde;o de Build</h3><div class="code-block" data-lang="bash">
+# Script para verificar build específico
+cat &gt; check_build.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+if [ ! -d &quot;build&quot; ]; then
+    echo &quot;❌ Diretório build não existe&quot;
+    echo &quot;Execute: mkdir build &amp;&amp; cd build &amp;&amp; cmake ..&quot;
+    exit 1
+fi
+
+cd build
+
+if [ ! -f &quot;CMakeCache.txt&quot; ]; then
+    echo &quot;❌ CMake não foi configurado&quot;
+    echo &quot;Execute: cmake ..&quot;
+    exit 1
+fi
+
+echo &quot;✅ Build configurado&quot;
+echo &quot;📁 Jogos compilados:&quot;
+
+count=0
+for game_dir in games/*/; do
+    if [ -d &quot;$game_dir&quot; ]; then
+        game_name=$(basename &quot;$game_dir&quot;)
+        if [ -f &quot;$game_dir/$game_name&quot; ]; then
+            echo &quot;  ✅ $game_name&quot;
+            ((count++))
+        else
+            echo &quot;  ❌ $game_name (não compilado)&quot;
+        fi
+    fi
+done
+
+echo &quot;&quot;
+echo &quot;📊 Total: $count jogos compilados&quot;
+
+if [ $count -eq 0 ]; then
+    echo &quot;💡 Execute: make all_games&quot;
+fi
+EOF
+
+chmod +x check_build.sh
+./check_build.sh
+</div></section></section><section class="chapter"><h2 id="ltimos-recursos" data-toc="ltimos-recursos">🆘 &Uacute;ltimos Recursos</h2><section class="chapter"><h3 id="resetar-ambiente-completamente" data-toc="resetar-ambiente-completamente">Resetar Ambiente Completamente</h3><div class="code-block" data-lang="bash">
+# Script de reset total
+cat &gt; reset_environment.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+echo &quot;🚨 RESETANDO AMBIENTE COMPLETAMENTE&quot;
+echo &quot;====================================&quot;
+
+# Fazer backup se necessário
+if [ -d &quot;build&quot; ]; then
+    echo &quot;📦 Fazendo backup do build atual...&quot;
+    mv build build_backup_$(date +%Y%m%d_%H%M%S)
+fi
+
+# Limpar completamente
+echo &quot;🧹 Limpando arquivos temporários...&quot;
+rm -rf build
+rm -rf .cache
+find . -name &quot;*.o&quot; -delete
+find . -name &quot;*.cmake&quot; -delete 2&gt;/dev/null
+
+# Recriar build
+echo &quot;📁 Recriando estrutura...&quot;
+mkdir build
+cd build
+
+# Configurar do zero
+echo &quot;⚙️ Configurando CMake do zero...&quot;
+cmake .. -DCMAKE_BUILD_TYPE=Debug
+
+# Compilar teste
+echo &quot;🔨 Testando compilação...&quot;
+make tetris
+
+if [ $? -eq 0 ]; then
+    echo &quot;✅ Reset concluído com sucesso!&quot;
+    echo &quot;🎮 Teste: make run_tetris&quot;
+else
+    echo &quot;❌ Ainda há problemas após reset&quot;
+    echo &quot;💡 Execute o diagnóstico: ../diagnose.sh&quot;
+fi
+EOF
+
+chmod +x reset_environment.sh
+</div></section><section class="chapter"><h3 id="suporte-da-comunidade" data-toc="suporte-da-comunidade">Suporte da Comunidade</h3><p id="mim5c5_125">Se nenhuma solu&ccedil;&atilde;o funcionou:</p><ol class="list _decimal" id="mim5c5_126" type="1"><li class="list__item" id="mim5c5_127"><p id="mim5c5_131"><span class="control" id="mim5c5_132">Execute o diagn&oacute;stico completo</span>: <code class="code" id="mim5c5_133">./diagnose.sh</code></p></li><li class="list__item" id="mim5c5_128"><p id="mim5c5_134"><span class="control" id="mim5c5_135">Tente o reset total</span>: <code class="code" id="mim5c5_136">./reset_environment.sh</code></p></li><li class="list__item" id="mim5c5_129"><p id="mim5c5_137"><span class="control" id="mim5c5_139">Procure ajuda online</span>:</p><ul class="list _bullet" id="mim5c5_138"><li class="list__item" id="mim5c5_140"><p id="mim5c5_143">Stack Overflow: tag <code class="code" id="mim5c5_144">sfml</code> + <code class="code" id="mim5c5_145">cmake</code></p></li><li class="list__item" id="mim5c5_141"><p id="mim5c5_146">Reddit: r/cpp, r/gamedev</p></li><li class="list__item" id="mim5c5_142"><p id="mim5c5_147">Discord: servidores de C++ e game dev</p></li></ul></li><li class="list__item" id="mim5c5_130"><p id="mim5c5_148"><span class="control" id="mim5c5_150">Documente seu problema</span>:</p><ul class="list _bullet" id="mim5c5_149"><li class="list__item" id="mim5c5_151"><p id="mim5c5_155">Sistema operacional e vers&atilde;o</p></li><li class="list__item" id="mim5c5_152"><p id="mim5c5_156">Sa&iacute;da do script de diagn&oacute;stico</p></li><li class="list__item" id="mim5c5_153"><p id="mim5c5_157">Mensagens de erro completas</p></li><li class="list__item" id="mim5c5_154"><p id="mim5c5_158">Passos que j&aacute; tentou</p></li></ul></li></ol></section></section><section class="chapter"><h2 id="preven-o-de-problemas" data-toc="preven-o-de-problemas">🎯 Preven&ccedil;&atilde;o de Problemas</h2><section class="chapter"><h3 id="manuten-o-regular" data-toc="manuten-o-regular">Manuten&ccedil;&atilde;o Regular</h3><div class="code-block" data-lang="bash">
+# Atualizar dependências mensalmente
+sudo apt update &amp;&amp; sudo apt upgrade  # Linux
+brew update &amp;&amp; brew upgrade          # macOS
+
+# Limpar builds antigos
+find . -name &quot;build*&quot; -type d -mtime +30 -exec rm -rf {} \;
+</div></section><section class="chapter"><h3 id="backup-de-configura-o" data-toc="backup-de-configura-o">Backup de Configura&ccedil;&atilde;o</h3><div class="code-block" data-lang="bash">
+# Backup da configuração funcionando
+tar -czf working_config_$(date +%Y%m%d).tar.gz \
+    CMakeLists.txt setup.sh build/CMakeCache.txt
+</div><p id="mim5c5_164"><span class="control" id="mim5c5_165">Lembre-se</span>: A maioria dos problemas pode ser resolvida com <code class="code" id="mim5c5_166">./setup.sh</code>. Em caso de d&uacute;vida, sempre comece pelo diagn&oacute;stico autom&aacute;tico!</p></section></section><div class="last-modified">22 June 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="compilacao.html" class="navigation-links__prev">Compila&ccedil;&atilde;o</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>

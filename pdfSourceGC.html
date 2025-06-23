@@ -1,0 +1,1539 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-cmake.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-gitignore.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-ini.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-none.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-vim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-decimal {
+            list-style-type: decimal;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .no-bold {
+            font-weight: normal; 
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>pdfSourceGC</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of Contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-1184092571">16 Games in C++</a></div><div class="page">2</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-864305365">Configura&ccedil;&atilde;o do Ambiente</a></div><div class="page">5</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-362830994">Requisitos do Sistema</a></div><div class="page">8</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#249557237">Instala&ccedil;&atilde;o do SFML</a></div><div class="page">13</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-424771146">Instala&ccedil;&atilde;o do CMake</a></div><div class="page">21</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-1775583846">Configura&ccedil;&atilde;o da IDE</a></div><div class="page">30</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-971479485">Configura&ccedil;&atilde;o Final do Ambiente</a></div><div class="page">40</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-621198526">Compila&ccedil;&atilde;o</a></div><div class="page">49</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#1579521354">Troubleshooting</a></div><div class="page">59</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-1184092571">16 Games in C++</h1><p id="-1184092571#z39cn5i_3">Bem-vindo &agrave; documenta&ccedil;&atilde;o do projeto <span class="control" id="-1184092571#z39cn5i_12">16 Games in C++</span>! <span class="no-bold">🎮</span></p><p id="-1184092571#z39cn5i_4">Este projeto &eacute; uma cole&ccedil;&atilde;o de 16 jogos cl&aacute;ssicos implementados em C++ utilizando a biblioteca SFML (Simple and Fast Multimedia Library). Cada jogo &eacute; completo e funcional, perfeito para aprender conceitos de programa&ccedil;&atilde;o de jogos e C++.</p><section class="detached"><h2 id="-1184092571#sobre-o-projeto" data-toc="sobre-o-projeto#inicio.md-sobre-o-projeto"><span class="no-bold">🎯</span> Sobre o Projeto</h2><p id="-1184092571#z39cn5i_13">O projeto <span class="control" id="-1184092571#z39cn5i_15">16 Games in C++</span> foi criado com o objetivo de demonstrar diferentes t&eacute;cnicas de programa&ccedil;&atilde;o de jogos, desde jogos simples como Tetris at&eacute; jogos mais complexos como Chess e Asteroids. Todos os jogos utilizam:</p><ul class="list" id="-1184092571#z39cn5i_14" start="1"><li class="list-item" id="-1184092571#z39cn5i_16"><p id="-1184092571#z39cn5i_20"><span class="control" id="-1184092571#z39cn5i_21">C++17</span> como linguagem de programa&ccedil;&atilde;o</p></li><li class="list-item" id="-1184092571#z39cn5i_17"><p id="-1184092571#z39cn5i_22"><span class="control" id="-1184092571#z39cn5i_23">SFML 2.5+</span> para gr&aacute;ficos, &aacute;udio e entrada</p></li><li class="list-item" id="-1184092571#z39cn5i_18"><p id="-1184092571#z39cn5i_24"><span class="control" id="-1184092571#z39cn5i_25">CMake</span> para build system</p></li><li class="list-item" id="-1184092571#z39cn5i_19"><p id="-1184092571#z39cn5i_26">Estrutura modular e c&oacute;digo limpo</p></li></ul></section><section class="detached"><h2 id="-1184092571#jogos-inclu-dos" data-toc="jogos-inclu-dos#inicio.md-jogos-inclu-dos"><span class="no-bold">🎮</span> Jogos Inclu&iacute;dos</h2><ol class="list list-decimal" id="-1184092571#z39cn5i_27" type="1" start="1"><li class="list-item" id="-1184092571#z39cn5i_28"><p id="-1184092571#z39cn5i_44"><span class="control" id="-1184092571#z39cn5i_45">Tetris</span> - O cl&aacute;ssico jogo de blocos</p></li><li class="list-item" id="-1184092571#z39cn5i_29"><p id="-1184092571#z39cn5i_46"><span class="control" id="-1184092571#z39cn5i_47">Doodle Jump</span> - Pule o mais alto poss&iacute;vel</p></li><li class="list-item" id="-1184092571#z39cn5i_30"><p id="-1184092571#z39cn5i_48"><span class="control" id="-1184092571#z39cn5i_49">Arkanoid</span> - Quebre todos os blocos</p></li><li class="list-item" id="-1184092571#z39cn5i_31"><p id="-1184092571#z39cn5i_50"><span class="control" id="-1184092571#z39cn5i_51">Snake</span> - A serpente cl&aacute;ssica</p></li><li class="list-item" id="-1184092571#z39cn5i_32"><p id="-1184092571#z39cn5i_52"><span class="control" id="-1184092571#z39cn5i_53">Minesweeper</span> - Campo minado</p></li><li class="list-item" id="-1184092571#z39cn5i_33"><p id="-1184092571#z39cn5i_54"><span class="control" id="-1184092571#z39cn5i_55">Fifteen Puzzle</span> - Quebra-cabe&ccedil;a num&eacute;rico</p></li><li class="list-item" id="-1184092571#z39cn5i_34"><p id="-1184092571#z39cn5i_56"><span class="control" id="-1184092571#z39cn5i_57">Racing (Top Down)</span> - Corrida vista de cima</p></li><li class="list-item" id="-1184092571#z39cn5i_35"><p id="-1184092571#z39cn5i_58"><span class="control" id="-1184092571#z39cn5i_59">Outrun</span> - Corrida em perspectiva</p></li><li class="list-item" id="-1184092571#z39cn5i_36"><p id="-1184092571#z39cn5i_60"><span class="control" id="-1184092571#z39cn5i_61">Xonix</span> - Conquiste territ&oacute;rio</p></li><li class="list-item" id="-1184092571#z39cn5i_37"><p id="-1184092571#z39cn5i_62"><span class="control" id="-1184092571#z39cn5i_63">Bejeweled</span> - Combine joias</p></li><li class="list-item" id="-1184092571#z39cn5i_38"><p id="-1184092571#z39cn5i_64"><span class="control" id="-1184092571#z39cn5i_65">NetWalk</span> - Conecte os canos</p></li><li class="list-item" id="-1184092571#z39cn5i_39"><p id="-1184092571#z39cn5i_66"><span class="control" id="-1184092571#z39cn5i_67">Mahjong Solitaire</span> - Paci&ecirc;ncia mahjong</p></li><li class="list-item" id="-1184092571#z39cn5i_40"><p id="-1184092571#z39cn5i_68"><span class="control" id="-1184092571#z39cn5i_69">Tron</span> - Batalha de luz</p></li><li class="list-item" id="-1184092571#z39cn5i_41"><p id="-1184092571#z39cn5i_70"><span class="control" id="-1184092571#z39cn5i_71">Chess</span> - Xadrez completo</p></li><li class="list-item" id="-1184092571#z39cn5i_42"><p id="-1184092571#z39cn5i_72"><span class="control" id="-1184092571#z39cn5i_73">Volleyball</span> - V&ocirc;lei arcade</p></li><li class="list-item" id="-1184092571#z39cn5i_43"><p id="-1184092571#z39cn5i_74"><span class="control" id="-1184092571#z39cn5i_75">Asteroids</span> - Destrua os asteroides</p></li></ol></section><section class="detached"><h2 id="-1184092571#in-cio-r-pido" data-toc="in-cio-r-pido#inicio.md-in-cio-r-pido"><span class="no-bold">🚀</span> In&iacute;cio R&aacute;pido</h2><p id="-1184092571#z39cn5i_76">Para come&ccedil;ar rapidamente:</p><ol class="list list-decimal" id="-1184092571#z39cn5i_77" type="1" start="1"><li class="list-item" id="-1184092571#z39cn5i_78"><p id="-1184092571#z39cn5i_82">Configure o ambiente (<a href="#-864305365">Configura&ccedil;&atilde;o do Ambiente</a>)</p></li><li class="list-item" id="-1184092571#z39cn5i_79"><p id="-1184092571#z39cn5i_84">Clone o reposit&oacute;rio</p></li><li class="list-item" id="-1184092571#z39cn5i_80"><p id="-1184092571#z39cn5i_85">Execute o script de setup: <span class="inline-code" id="-1184092571#z39cn5i_86">./setup.sh</span></p></li><li class="list-item" id="-1184092571#z39cn5i_81"><p id="-1184092571#z39cn5i_87">Compile e jogue: <span class="inline-code" id="-1184092571#z39cn5i_88">make all_games</span></p></li></ol></section><section class="detached"><h2 id="-1184092571#estrutura-da-documenta-o" data-toc="estrutura-da-documenta-o#inicio.md-estrutura-da-documenta-o"><span class="no-bold">📚</span> Estrutura da Documenta&ccedil;&atilde;o</h2><p id="-1184092571#z39cn5i_89">Esta documenta&ccedil;&atilde;o est&aacute; organizada nas seguintes se&ccedil;&otilde;es:</p><ul class="list" id="-1184092571#z39cn5i_90" start="1"><li class="list-item" id="-1184092571#z39cn5i_91"><p id="-1184092571#z39cn5i_96"><span class="control" id="-1184092571#z39cn5i_97">Configura&ccedil;&atilde;o do Ambiente (<a href="#-864305365">Configura&ccedil;&atilde;o do Ambiente</a>)</span> - Como instalar e configurar tudo que voc&ecirc; precisa</p></li><li class="list-item" id="-1184092571#z39cn5i_92"><p id="-1184092571#z39cn5i_99"><span class="control" id="-1184092571#z39cn5i_100">Compila&ccedil;&atilde;o (<a href="#-621198526">Compila&ccedil;&atilde;o</a>)</span> - Guias de build e execu&ccedil;&atilde;o</p></li><li class="list-item" id="-1184092571#z39cn5i_93"><p id="-1184092571#z39cn5i_102"><span class="control" id="-1184092571#z39cn5i_103"></span> - Como o c&oacute;digo est&aacute; organizado</p></li><li class="list-item" id="-1184092571#z39cn5i_94"><p id="-1184092571#z39cn5i_105"><span class="control" id="-1184092571#z39cn5i_106"></span> - Documenta&ccedil;&atilde;o espec&iacute;fica de cada jogo</p></li><li class="list-item" id="-1184092571#z39cn5i_95"><p id="-1184092571#z39cn5i_108"><span class="control" id="-1184092571#z39cn5i_109">Troubleshooting (<a href="#1579521354">Troubleshooting</a>)</span> - Solu&ccedil;&otilde;es para problemas comuns</p></li></ul></section><section class="detached"><h2 id="-1184092571#requisitos-do-sistema" data-toc="requisitos-do-sistema#inicio.md-requisitos-do-sistema"><span class="no-bold">🛠</span>️ Requisitos do Sistema</h2><ul class="list" id="-1184092571#z39cn5i_111" start="1"><li class="list-item" id="-1184092571#z39cn5i_112"><p id="-1184092571#z39cn5i_116"><span class="control" id="-1184092571#z39cn5i_117">Sistema Operacional</span>: Linux, macOS ou Windows</p></li><li class="list-item" id="-1184092571#z39cn5i_113"><p id="-1184092571#z39cn5i_118"><span class="control" id="-1184092571#z39cn5i_119">Compilador</span>: GCC 7+ ou Clang 6+ com suporte a C++17</p></li><li class="list-item" id="-1184092571#z39cn5i_114"><p id="-1184092571#z39cn5i_120"><span class="control" id="-1184092571#z39cn5i_121">CMake</span>: 3.10 ou superior</p></li><li class="list-item" id="-1184092571#z39cn5i_115"><p id="-1184092571#z39cn5i_122"><span class="control" id="-1184092571#z39cn5i_123">SFML</span>: 2.5 ou superior</p></li></ul></section><section class="detached"><h2 id="-1184092571#contribuindo" data-toc="contribuindo#inicio.md-contribuindo"><span class="no-bold">🤝</span> Contribuindo</h2><p id="-1184092571#z39cn5i_124">Este projeto &eacute; open source! Voc&ecirc; pode:</p><ul class="list" id="-1184092571#z39cn5i_125" start="1"><li class="list-item" id="-1184092571#z39cn5i_126"><p id="-1184092571#z39cn5i_130">Reportar bugs</p></li><li class="list-item" id="-1184092571#z39cn5i_127"><p id="-1184092571#z39cn5i_131">Sugerir melhorias</p></li><li class="list-item" id="-1184092571#z39cn5i_128"><p id="-1184092571#z39cn5i_132">Contribuir com c&oacute;digo</p></li><li class="list-item" id="-1184092571#z39cn5i_129"><p id="-1184092571#z39cn5i_133">Melhorar a documenta&ccedil;&atilde;o</p></li></ul></section><section class="detached"><h2 id="-1184092571#licen-a" data-toc="licen-a#inicio.md-licen-a"><span class="no-bold">📄</span> Licen&ccedil;a</h2><p id="-1184092571#z39cn5i_134">Este projeto &eacute; distribu&iacute;do sob a licen&ccedil;a MIT. Veja o arquivo LICENSE para mais detalhes.</p><p id="-1184092571#z39cn5i_136"><span class="control" id="-1184092571#z39cn5i_137">Pronto para come&ccedil;ar?</span> V&aacute; para Configura&ccedil;&atilde;o do Ambiente (<a href="#-864305365">Configura&ccedil;&atilde;o do Ambiente</a>) e configure seu sistema para executar os jogos!</p></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-864305365">Configura&ccedil;&atilde;o do Ambiente</h1><p id="-864305365#lo5ssk_3">Este guia te ajudar&aacute; a configurar completamente o ambiente de desenvolvimento para executar os 16 jogos em C++. <span class="no-bold">🛠</span>️</p><section class="detached"><h2 id="-864305365#vis-o-geral" data-toc="vis-o-geral#configuracao-ambiente.md-vis-o-geral"><span class="no-bold">📋</span> Vis&atilde;o Geral</h2><p id="-864305365#lo5ssk_10">Para executar este projeto, voc&ecirc; precisar&aacute; instalar e configurar:</p><ol class="list list-decimal" id="-864305365#lo5ssk_11" type="1" start="1"><li class="list-item" id="-864305365#lo5ssk_12"><p id="-864305365#lo5ssk_17"><span class="control" id="-864305365#lo5ssk_18">Requisitos do Sistema (<a href="#-362830994">Requisitos do Sistema</a>)</span> - Verificar compatibilidade</p></li><li class="list-item" id="-864305365#lo5ssk_13"><p id="-864305365#lo5ssk_20"><span class="control" id="-864305365#lo5ssk_21">SFML (<a href="#249557237">Instala&ccedil;&atilde;o do SFML</a>)</span> - Biblioteca gr&aacute;fica principal</p></li><li class="list-item" id="-864305365#lo5ssk_14"><p id="-864305365#lo5ssk_23"><span class="control" id="-864305365#lo5ssk_24">CMake (<a href="#-424771146">Instala&ccedil;&atilde;o do CMake</a>)</span> - Sistema de build</p></li><li class="list-item" id="-864305365#lo5ssk_15"><p id="-864305365#lo5ssk_26"><span class="control" id="-864305365#lo5ssk_27">IDE (<a href="#-1775583846">Configura&ccedil;&atilde;o da IDE</a>)</span> - Ambiente de desenvolvimento (opcional)</p></li><li class="list-item" id="-864305365#lo5ssk_16"><p id="-864305365#lo5ssk_29"><span class="control" id="-864305365#lo5ssk_30">Configura&ccedil;&atilde;o Final (<a href="#-971479485">Configura&ccedil;&atilde;o Final do Ambiente</a>)</span> - Testes e valida&ccedil;&atilde;o</p></li></ol></section><section class="detached"><h2 id="-864305365#setup-autom-tico-recomendado" data-toc="setup-autom-tico-recomendado#configuracao-ambiente.md-setup-autom-tico-recomendado"><span class="no-bold">🚀</span> Setup Autom&aacute;tico (Recomendado)</h2><p id="-864305365#lo5ssk_32">O projeto inclui um script de configura&ccedil;&atilde;o autom&aacute;tica que verifica e configura tudo para voc&ecirc;:</p><div class="detached code-block" id="-864305365#lo5ssk_33"><pre><code class="language-bash"># Clone o repositório
+git clone &lt;repository-url&gt;
+cd 16Games-in-Cpp
+
+# Execute o script de setup
+chmod +x setup.sh
+./setup.sh</code></pre></div><p id="-864305365#lo5ssk_34">O script <span class="inline-code" id="-864305365#lo5ssk_36">setup.sh</span> ir&aacute;:</p><ul class="list" id="-864305365#lo5ssk_35" start="1"><li class="list-item" id="-864305365#lo5ssk_37"><p id="-864305365#lo5ssk_43"><span class="no-bold">✅</span> Verificar se o SFML est&aacute; instalado</p></li><li class="list-item" id="-864305365#lo5ssk_38"><p id="-864305365#lo5ssk_44"><span class="no-bold">✅</span> Verificar se o CMake est&aacute; dispon&iacute;vel</p></li><li class="list-item" id="-864305365#lo5ssk_39"><p id="-864305365#lo5ssk_45"><span class="no-bold">✅</span> Verificar se h&aacute; um compilador C++ v&aacute;lido</p></li><li class="list-item" id="-864305365#lo5ssk_40"><p id="-864305365#lo5ssk_46"><span class="no-bold">✅</span> Configurar o projeto com CMake</p></li><li class="list-item" id="-864305365#lo5ssk_41"><p id="-864305365#lo5ssk_47"><span class="no-bold">✅</span> Compilar um jogo de teste</p></li><li class="list-item" id="-864305365#lo5ssk_42"><p id="-864305365#lo5ssk_48"><span class="no-bold">✅</span> Mostrar instru&ccedil;&otilde;es de uso</p></li></ul></section><section class="detached"><h2 id="-864305365#setup-manual" data-toc="setup-manual#configuracao-ambiente.md-setup-manual"><span class="no-bold">🔧</span> Setup Manual</h2><p id="-864305365#lo5ssk_49">Se preferir instalar manualmente ou se o script autom&aacute;tico falhar, siga os guias espec&iacute;ficos:</p><section class="detached"><h3 id="-864305365#1-requisitos-do-sistema" data-toc="1-requisitos-do-sistema#configuracao-ambiente.md-1-requisitos-do-sistema">1. Requisitos do Sistema</h3><p id="-864305365#lo5ssk_55">Primeiro, verifique se seu sistema atende aos requisitos m&iacute;nimos (<a href="#-362830994">Requisitos do Sistema</a>).</p></section><section class="detached"><h3 id="-864305365#2-instalar-sfml" data-toc="2-instalar-sfml#configuracao-ambiente.md-2-instalar-sfml">2. Instalar SFML</h3><p id="-864305365#lo5ssk_57">A biblioteca SFML &eacute; essencial para gr&aacute;ficos, &aacute;udio e entrada. Veja o guia de instala&ccedil;&atilde;o do SFML (<a href="#249557237">Instala&ccedil;&atilde;o do SFML</a>).</p></section><section class="detached"><h3 id="-864305365#3-instalar-cmake" data-toc="3-instalar-cmake#configuracao-ambiente.md-3-instalar-cmake">3. Instalar CMake</h3><p id="-864305365#lo5ssk_59">O CMake &eacute; usado para gerenciar o build do projeto. Veja o guia de instala&ccedil;&atilde;o do CMake (<a href="#-424771146">Instala&ccedil;&atilde;o do CMake</a>).</p></section><section class="detached"><h3 id="-864305365#4-configurar-ide-opcional" data-toc="4-configurar-ide-opcional#configuracao-ambiente.md-4-configurar-ide-opcional">4. Configurar IDE (Opcional)</h3><p id="-864305365#lo5ssk_61">Para uma melhor experi&ecirc;ncia de desenvolvimento, configure sua IDE preferida (<a href="#-1775583846">Configura&ccedil;&atilde;o da IDE</a>).</p></section><section class="detached"><h3 id="-864305365#5-configura-o-final" data-toc="5-configura-o-final#configuracao-ambiente.md-5-configura-o-final">5. Configura&ccedil;&atilde;o Final</h3><p id="-864305365#lo5ssk_63">Complete a configura&ccedil;&atilde;o do ambiente (<a href="#-971479485">Configura&ccedil;&atilde;o Final do Ambiente</a>) e teste tudo.</p></section></section><section class="detached"><h2 id="-864305365#verifica-o-r-pida" data-toc="verifica-o-r-pida#configuracao-ambiente.md-verifica-o-r-pida"><span class="no-bold">⚡</span> Verifica&ccedil;&atilde;o R&aacute;pida</h2><p id="-864305365#lo5ssk_65">Ap&oacute;s a instala&ccedil;&atilde;o, execute estes comandos para verificar se tudo est&aacute; funcionando:</p><div class="detached code-block" id="-864305365#lo5ssk_66"><pre><code class="language-bash"># Verificar SFML
+pkg-config --exists sfml-all &amp;&amp; echo &quot;✅ SFML OK&quot; || echo &quot;❌ SFML não encontrado&quot;
+
+# Verificar CMake
+cmake --version &amp;&amp; echo &quot;✅ CMake OK&quot; || echo &quot;❌ CMake não encontrado&quot;
+
+# Verificar compilador
+g++ --version &amp;&amp; echo &quot;✅ G++ OK&quot; || echo &quot;❌ G++ não encontrado&quot;</code></pre></div></section><section class="detached"><h2 id="-864305365#pr-ximos-passos" data-toc="pr-ximos-passos#configuracao-ambiente.md-pr-ximos-passos"><span class="no-bold">🎯</span> Pr&oacute;ximos Passos</h2><p id="-864305365#lo5ssk_67">Ap&oacute;s configurar o ambiente:</p><ol class="list list-decimal" id="-864305365#lo5ssk_68" type="1" start="1"><li class="list-item" id="-864305365#lo5ssk_69"><p id="-864305365#lo5ssk_71">V&aacute; para Compila&ccedil;&atilde;o (<a href="#-621198526">Compila&ccedil;&atilde;o</a>) para aprender a compilar os jogos</p></li><li class="list-item" id="-864305365#lo5ssk_70"><p id="-864305365#lo5ssk_73">Ou v&aacute; direto para  para executar rapidamente</p></li></ol></section><section class="detached"><h2 id="-864305365#problemas" data-toc="problemas#configuracao-ambiente.md-problemas"><span class="no-bold">❗</span> Problemas?</h2><p id="-864305365#lo5ssk_75">Se encontrar algum problema durante a configura&ccedil;&atilde;o:</p><ol class="list list-decimal" id="-864305365#lo5ssk_76" type="1" start="1"><li class="list-item" id="-864305365#lo5ssk_79"><p id="-864305365#lo5ssk_82">Consulte o Troubleshooting (<a href="#1579521354">Troubleshooting</a>)</p></li><li class="list-item" id="-864305365#lo5ssk_80"><p id="-864305365#lo5ssk_84">Verifique se seguiu todos os passos corretamente</p></li><li class="list-item" id="-864305365#lo5ssk_81"><p id="-864305365#lo5ssk_85">Confirme se seu sistema atende aos requisitos m&iacute;nimos</p></li></ol><p id="-864305365#lo5ssk_78"><span class="control" id="-864305365#lo5ssk_86">Dica</span>: O script <span class="inline-code" id="-864305365#lo5ssk_87">setup.sh</span> &eacute; a forma mais r&aacute;pida e confi&aacute;vel de configurar o ambiente. Use-o sempre que poss&iacute;vel!</p></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-362830994">Requisitos do Sistema</h1><p id="-362830994#-vpm4yn_3">Antes de instalar o projeto 16 Games in C++, verifique se seu sistema atende aos requisitos m&iacute;nimos. <span class="no-bold">💻</span></p><section class="detached"><h2 id="-362830994#sistemas-operacionais-suportados" data-toc="sistemas-operacionais-suportados#system-requirements.md-sistemas-operacionais-suportados"><span class="no-bold">🖥</span>️ Sistemas Operacionais Suportados</h2><section class="detached"><h3 id="-362830994#linux-recomendado" data-toc="linux-recomendado#system-requirements.md-linux-recomendado">Linux (Recomendado)</h3><ul class="list" id="-362830994#-vpm4yn_15" start="1"><li class="list-item" id="-362830994#-vpm4yn_16"><p id="-362830994#-vpm4yn_22"><span class="control" id="-362830994#-vpm4yn_23">Ubuntu</span>: 18.04 LTS ou superior</p></li><li class="list-item" id="-362830994#-vpm4yn_17"><p id="-362830994#-vpm4yn_24"><span class="control" id="-362830994#-vpm4yn_25">Debian</span>: 10 (Buster) ou superior</p></li><li class="list-item" id="-362830994#-vpm4yn_18"><p id="-362830994#-vpm4yn_26"><span class="control" id="-362830994#-vpm4yn_27">Fedora</span>: 30 ou superior</p></li><li class="list-item" id="-362830994#-vpm4yn_19"><p id="-362830994#-vpm4yn_28"><span class="control" id="-362830994#-vpm4yn_29">Arch Linux</span>: Vers&atilde;o atual</p></li><li class="list-item" id="-362830994#-vpm4yn_20"><p id="-362830994#-vpm4yn_30"><span class="control" id="-362830994#-vpm4yn_31">openSUSE</span>: Leap 15.2 ou superior</p></li><li class="list-item" id="-362830994#-vpm4yn_21"><p id="-362830994#-vpm4yn_32"><span class="control" id="-362830994#-vpm4yn_33">CentOS/RHEL</span>: 8 ou superior</p></li></ul></section><section class="detached"><h3 id="-362830994#macos" data-toc="macos#system-requirements.md-macos">macOS</h3><ul class="list" id="-362830994#-vpm4yn_34" start="1"><li class="list-item" id="-362830994#-vpm4yn_35"><p id="-362830994#-vpm4yn_37"><span class="control" id="-362830994#-vpm4yn_38">macOS</span>: 10.14 (Mojave) ou superior</p></li><li class="list-item" id="-362830994#-vpm4yn_36"><p id="-362830994#-vpm4yn_39"><span class="control" id="-362830994#-vpm4yn_40">Xcode</span>: 10 ou superior (para compilador)</p></li></ul></section><section class="detached"><h3 id="-362830994#windows" data-toc="windows#system-requirements.md-windows">Windows</h3><ul class="list" id="-362830994#-vpm4yn_41" start="1"><li class="list-item" id="-362830994#-vpm4yn_42"><p id="-362830994#-vpm4yn_45"><span class="control" id="-362830994#-vpm4yn_46">Windows</span>: 10 ou superior</p></li><li class="list-item" id="-362830994#-vpm4yn_43"><p id="-362830994#-vpm4yn_47"><span class="control" id="-362830994#-vpm4yn_48">Visual Studio</span>: 2019 ou superior</p></li><li class="list-item" id="-362830994#-vpm4yn_44"><p id="-362830994#-vpm4yn_49"><span class="control" id="-362830994#-vpm4yn_50">MinGW-w64</span>: Como alternativa ao Visual Studio</p></li></ul></section></section><section class="detached"><h2 id="-362830994#compilador-c" data-toc="compilador-c#system-requirements.md-compilador-c"><span class="no-bold">🔧</span> Compilador C++</h2><section class="detached"><h3 id="-362830994#requisitos-m-nimos" data-toc="requisitos-m-nimos#system-requirements.md-requisitos-m-nimos">Requisitos M&iacute;nimos</h3><ul class="list" id="-362830994#-vpm4yn_53" start="1"><li class="list-item" id="-362830994#-vpm4yn_54"><p id="-362830994#-vpm4yn_56"><span class="control" id="-362830994#-vpm4yn_57">Suporte ao C++17</span>: Obrigat&oacute;rio</p></li><li class="list-item" id="-362830994#-vpm4yn_55"><p id="-362830994#-vpm4yn_58"><span class="control" id="-362830994#-vpm4yn_60">Vers&otilde;es m&iacute;nimas</span>:</p><ul class="list" id="-362830994#-vpm4yn_59" start="1"><li class="list-item" id="-362830994#-vpm4yn_61"><p id="-362830994#-vpm4yn_64"><span class="control" id="-362830994#-vpm4yn_65">GCC</span>: 7.0 ou superior</p></li><li class="list-item" id="-362830994#-vpm4yn_62"><p id="-362830994#-vpm4yn_66"><span class="control" id="-362830994#-vpm4yn_67">Clang</span>: 6.0 ou superior</p></li><li class="list-item" id="-362830994#-vpm4yn_63"><p id="-362830994#-vpm4yn_68"><span class="control" id="-362830994#-vpm4yn_69">MSVC</span>: Visual Studio 2019 ou superior</p></li></ul></li></ul></section><section class="detached"><h3 id="-362830994#verifica-o-do-compilador" data-toc="verifica-o-do-compilador#system-requirements.md-verifica-o-do-compilador">Verifica&ccedil;&atilde;o do Compilador</h3><section class="detached"><h4 id="-362830994#linux-macos" data-toc="linux-macos#system-requirements.md-linux-macos">Linux/macOS</h4><div class="detached code-block" id="-362830994#-vpm4yn_72"><pre><code class="language-bash"># Verificar GCC
+g++ --version
+# Deve mostrar versão 7.0+
+
+# Verificar Clang (se disponível)
+clang++ --version
+# Deve mostrar versão 6.0+</code></pre></div></section><section class="detached"><h4 id="-362830994#windows" data-toc="windows#system-requirements.md-windows">Windows</h4><div class="detached code-block" id="-362830994#-vpm4yn_73"><pre><code class="language-none"># Visual Studio
+cl
+# Deve mostrar MSVC 19.20+
+
+# MinGW
+g++ --version
+# Deve mostrar versão 7.0+</code></pre></div></section></section></section><section class="detached"><h2 id="-362830994#depend-ncias-principais" data-toc="depend-ncias-principais#system-requirements.md-depend-ncias-principais"><span class="no-bold">📦</span> Depend&ecirc;ncias Principais</h2><section class="detached"><h3 id="-362830994#cmake" data-toc="cmake#system-requirements.md-cmake">CMake</h3><ul class="list" id="-362830994#-vpm4yn_77" start="1"><li class="list-item" id="-362830994#-vpm4yn_78"><p id="-362830994#-vpm4yn_80"><span class="control" id="-362830994#-vpm4yn_81">Vers&atilde;o m&iacute;nima</span>: 3.10</p></li><li class="list-item" id="-362830994#-vpm4yn_79"><p id="-362830994#-vpm4yn_82"><span class="control" id="-362830994#-vpm4yn_83">Recomendada</span>: 3.16 ou superior</p></li></ul></section><section class="detached"><h3 id="-362830994#sfml" data-toc="sfml#system-requirements.md-sfml">SFML</h3><ul class="list" id="-362830994#-vpm4yn_84" start="1"><li class="list-item" id="-362830994#-vpm4yn_85"><p id="-362830994#-vpm4yn_88"><span class="control" id="-362830994#-vpm4yn_89">Vers&atilde;o m&iacute;nima</span>: 2.5.0</p></li><li class="list-item" id="-362830994#-vpm4yn_86"><p id="-362830994#-vpm4yn_90"><span class="control" id="-362830994#-vpm4yn_91">Recomendada</span>: 2.5.1 ou superior</p></li><li class="list-item" id="-362830994#-vpm4yn_87"><p id="-362830994#-vpm4yn_92"><span class="control" id="-362830994#-vpm4yn_94">M&oacute;dulos necess&aacute;rios</span>:</p><ul class="list" id="-362830994#-vpm4yn_93" start="1"><li class="list-item" id="-362830994#-vpm4yn_95"><p id="-362830994#-vpm4yn_100">sfml-system</p></li><li class="list-item" id="-362830994#-vpm4yn_96"><p id="-362830994#-vpm4yn_101">sfml-window</p></li><li class="list-item" id="-362830994#-vpm4yn_97"><p id="-362830994#-vpm4yn_102">sfml-graphics</p></li><li class="list-item" id="-362830994#-vpm4yn_98"><p id="-362830994#-vpm4yn_103">sfml-audio</p></li><li class="list-item" id="-362830994#-vpm4yn_99"><p id="-362830994#-vpm4yn_104">sfml-network (opcional)</p></li></ul></li></ul></section><section class="detached"><h3 id="-362830994#bibliotecas-do-sistema-linux" data-toc="bibliotecas-do-sistema-linux#system-requirements.md-bibliotecas-do-sistema-linux">Bibliotecas do Sistema (Linux)</h3><div class="detached code-block" id="-362830994#-vpm4yn_105"><pre><code class="language-bash"># Ubuntu/Debian
+sudo apt-get install libsfml-dev cmake build-essential
+
+# Fedora
+sudo dnf install SFML-devel cmake gcc-c++
+
+# Arch Linux
+sudo pacman -S sfml cmake gcc</code></pre></div></section></section><section class="detached"><h2 id="-362830994#espa-o-em-disco" data-toc="espa-o-em-disco#system-requirements.md-espa-o-em-disco"><span class="no-bold">💾</span> Espa&ccedil;o em Disco</h2><section class="detached"><h3 id="-362830994#requisitos-de-espa-o" data-toc="requisitos-de-espa-o#system-requirements.md-requisitos-de-espa-o">Requisitos de Espa&ccedil;o</h3><ul class="list" id="-362830994#-vpm4yn_108" start="1"><li class="list-item" id="-362830994#-vpm4yn_109"><p id="-362830994#-vpm4yn_113"><span class="control" id="-362830994#-vpm4yn_114">C&oacute;digo fonte</span>: ~50 MB</p></li><li class="list-item" id="-362830994#-vpm4yn_110"><p id="-362830994#-vpm4yn_115"><span class="control" id="-362830994#-vpm4yn_116">Depend&ecirc;ncias</span>: ~200 MB (SFML + CMake)</p></li><li class="list-item" id="-362830994#-vpm4yn_111"><p id="-362830994#-vpm4yn_117"><span class="control" id="-362830994#-vpm4yn_118">Build completo</span>: ~100 MB</p></li><li class="list-item" id="-362830994#-vpm4yn_112"><p id="-362830994#-vpm4yn_119"><span class="control" id="-362830994#-vpm4yn_120">Total recomendado</span>: ~500 MB livre</p></li></ul></section><section class="detached"><h3 id="-362830994#estrutura-de-diret-rios" data-toc="estrutura-de-diret-rios#system-requirements.md-estrutura-de-diret-rios">Estrutura de Diret&oacute;rios</h3><div class="detached code-block" id="-362830994#-vpm4yn_121"><pre><code class="language-none">16Games-in-Cpp/
+├── build/          # ~100 MB (arquivos compilados)
+├── Writerside/     # ~10 MB (documentação)
+├── games/          # ~40 MB (código fonte dos jogos)
+└── assets/         # ~5 MB (imagens, sons, fonts)</code></pre></div></section></section><section class="detached"><h2 id="-362830994#hardware-recomendado" data-toc="hardware-recomendado#system-requirements.md-hardware-recomendado"><span class="no-bold">🖱</span>️ Hardware Recomendado</h2><section class="detached"><h3 id="-362830994#m-nimo" data-toc="m-nimo#system-requirements.md-m-nimo">M&iacute;nimo</h3><ul class="list" id="-362830994#-vpm4yn_124" start="1"><li class="list-item" id="-362830994#-vpm4yn_125"><p id="-362830994#-vpm4yn_129"><span class="control" id="-362830994#-vpm4yn_130">CPU</span>: Dual-core 2.0 GHz</p></li><li class="list-item" id="-362830994#-vpm4yn_126"><p id="-362830994#-vpm4yn_131"><span class="control" id="-362830994#-vpm4yn_132">RAM</span>: 4 GB</p></li><li class="list-item" id="-362830994#-vpm4yn_127"><p id="-362830994#-vpm4yn_133"><span class="control" id="-362830994#-vpm4yn_134">GPU</span>: Integrada com OpenGL 2.1</p></li><li class="list-item" id="-362830994#-vpm4yn_128"><p id="-362830994#-vpm4yn_135"><span class="control" id="-362830994#-vpm4yn_136">Resolu&ccedil;&atilde;o</span>: 1024x768</p></li></ul></section><section class="detached"><h3 id="-362830994#recomendado" data-toc="recomendado#system-requirements.md-recomendado">Recomendado</h3><ul class="list" id="-362830994#-vpm4yn_137" start="1"><li class="list-item" id="-362830994#-vpm4yn_138"><p id="-362830994#-vpm4yn_142"><span class="control" id="-362830994#-vpm4yn_143">CPU</span>: Quad-core 2.5 GHz ou superior</p></li><li class="list-item" id="-362830994#-vpm4yn_139"><p id="-362830994#-vpm4yn_144"><span class="control" id="-362830994#-vpm4yn_145">RAM</span>: 8 GB ou superior</p></li><li class="list-item" id="-362830994#-vpm4yn_140"><p id="-362830994#-vpm4yn_146"><span class="control" id="-362830994#-vpm4yn_147">GPU</span>: Dedicada com OpenGL 3.3+</p></li><li class="list-item" id="-362830994#-vpm4yn_141"><p id="-362830994#-vpm4yn_148"><span class="control" id="-362830994#-vpm4yn_149">Resolu&ccedil;&atilde;o</span>: 1920x1080 ou superior</p></li></ul></section></section><section class="detached"><h2 id="-362830994#verifica-o-autom-tica" data-toc="verifica-o-autom-tica#system-requirements.md-verifica-o-autom-tica"><span class="no-bold">🔍</span> Verifica&ccedil;&atilde;o Autom&aacute;tica</h2><p id="-362830994#-vpm4yn_150">Use o script de verifica&ccedil;&atilde;o inclu&iacute;do no projeto:</p><div class="detached code-block" id="-362830994#-vpm4yn_151"><pre><code class="language-bash"># Executar verificação de requisitos
+./setup.sh
+
+# Ou verificar manualmente
+./check_requirements.sh  # Se disponível</code></pre></div><p id="-362830994#-vpm4yn_152">O script verificar&aacute;:</p><ul class="list" id="-362830994#-vpm4yn_153" start="1"><li class="list-item" id="-362830994#-vpm4yn_154"><p id="-362830994#-vpm4yn_159"><span class="no-bold">✅</span> Sistema operacional compat&iacute;vel</p></li><li class="list-item" id="-362830994#-vpm4yn_155"><p id="-362830994#-vpm4yn_160"><span class="no-bold">✅</span> Compilador C++ com suporte ao C++17</p></li><li class="list-item" id="-362830994#-vpm4yn_156"><p id="-362830994#-vpm4yn_161"><span class="no-bold">✅</span> CMake vers&atilde;o adequada</p></li><li class="list-item" id="-362830994#-vpm4yn_157"><p id="-362830994#-vpm4yn_162"><span class="no-bold">✅</span> SFML instalado e funcional</p></li><li class="list-item" id="-362830994#-vpm4yn_158"><p id="-362830994#-vpm4yn_163"><span class="no-bold">✅</span> Espa&ccedil;o em disco suficiente</p></li></ul></section><section class="detached"><h2 id="-362830994#problemas-comuns" data-toc="problemas-comuns#system-requirements.md-problemas-comuns"><span class="no-bold">⚠</span>️ Problemas Comuns</h2><section class="detached"><h3 id="-362830994#compilador-muito-antigo" data-toc="compilador-muito-antigo#system-requirements.md-compilador-muito-antigo">Compilador Muito Antigo</h3><div class="detached code-block" id="-362830994#-vpm4yn_167"><pre><code class="language-bash"># Ubuntu 18.04 - instalar GCC mais novo
+sudo apt update
+sudo apt install gcc-9 g++-9
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 90</code></pre></div></section><section class="detached"><h3 id="-362830994#sfml-n-o-encontrado" data-toc="sfml-n-o-encontrado#system-requirements.md-sfml-n-o-encontrado">SFML N&atilde;o Encontrado</h3><div class="detached code-block" id="-362830994#-vpm4yn_168"><pre><code class="language-bash"># Verificar instalação
+pkg-config --exists sfml-all
+pkg-config --modversion sfml-all
+
+# Se não encontrado, reinstalar
+sudo apt-get install --reinstall libsfml-dev</code></pre></div></section><section class="detached"><h3 id="-362830994#cmake-muito-antigo" data-toc="cmake-muito-antigo#system-requirements.md-cmake-muito-antigo">CMake Muito Antigo</h3><div class="detached code-block" id="-362830994#-vpm4yn_169"><pre><code class="language-bash"># Ubuntu - instalar versão mais nova
+wget https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0-Linux-x86_64.sh
+chmod +x cmake-3.20.0-Linux-x86_64.sh
+sudo ./cmake-3.20.0-Linux-x86_64.sh --prefix=/usr/local --skip-license</code></pre></div></section></section><section class="detached"><h2 id="-362830994#pr-ximos-passos" data-toc="pr-ximos-passos#system-requirements.md-pr-ximos-passos"><span class="no-bold">🎯</span> Pr&oacute;ximos Passos</h2><p id="-362830994#-vpm4yn_170">Se seu sistema atende aos requisitos:</p><ol class="list list-decimal" id="-362830994#-vpm4yn_171" type="1" start="1"><li class="list-item" id="-362830994#-vpm4yn_176"><p id="-362830994#-vpm4yn_178">Prossiga para Instala&ccedil;&atilde;o do SFML (<a href="#249557237">Instala&ccedil;&atilde;o do SFML</a>)</p></li><li class="list-item" id="-362830994#-vpm4yn_177"><p id="-362830994#-vpm4yn_180">Ou execute o setup autom&aacute;tico (<a href="#-864305365#setup-automatico">Configura&ccedil;&atilde;o do Ambiente</a>)</p></li></ol><p id="-362830994#-vpm4yn_172">Se encontrou problemas:</p><ol class="list list-decimal" id="-362830994#-vpm4yn_173" type="1" start="1"><li class="list-item" id="-362830994#-vpm4yn_182"><p id="-362830994#-vpm4yn_184">Consulte o Troubleshooting (<a href="#1579521354">Troubleshooting</a>)</p></li><li class="list-item" id="-362830994#-vpm4yn_183"><p id="-362830994#-vpm4yn_186">Atualize seu sistema e tente novamente</p></li></ol><p id="-362830994#-vpm4yn_175"><span class="control" id="-362830994#-vpm4yn_187">Dica</span>: Na d&uacute;vida, execute <span class="inline-code" id="-362830994#-vpm4yn_188">./setup.sh</span> - o script detectar&aacute; automaticamente se h&aacute; algum problema com os requisitos!</p></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="249557237">Instala&ccedil;&atilde;o do SFML</h1><p id="249557237#-oh84xy_3">O SFML (Simple and Fast Multimedia Library) &eacute; a biblioteca principal usada por todos os 16 jogos. Este guia mostra como instal&aacute;-la em diferentes sistemas operacionais. <span class="no-bold">🎮</span></p><section class="detached"><h2 id="249557237#o-que-sfml" data-toc="o-que-sfml#sfml-installation.md-o-que-sfml"><span class="no-bold">📚</span> O que &eacute; SFML?</h2><p id="249557237#-oh84xy_13">SFML &eacute; uma biblioteca C++ que fornece:</p><ul class="list" id="249557237#-oh84xy_14" start="1"><li class="list-item" id="249557237#-oh84xy_15"><p id="249557237#-oh84xy_20"><span class="control" id="249557237#-oh84xy_21">Gr&aacute;ficos 2D</span> - Desenho de sprites, formas, texto</p></li><li class="list-item" id="249557237#-oh84xy_16"><p id="249557237#-oh84xy_22"><span class="control" id="249557237#-oh84xy_23">&Aacute;udio</span> - Reprodu&ccedil;&atilde;o de sons e m&uacute;sica</p></li><li class="list-item" id="249557237#-oh84xy_17"><p id="249557237#-oh84xy_24"><span class="control" id="249557237#-oh84xy_25">Janelas</span> - Cria&ccedil;&atilde;o e gerenciamento de janelas</p></li><li class="list-item" id="249557237#-oh84xy_18"><p id="249557237#-oh84xy_26"><span class="control" id="249557237#-oh84xy_27">Eventos</span> - Captura de teclado, mouse e joystick</p></li><li class="list-item" id="249557237#-oh84xy_19"><p id="249557237#-oh84xy_28"><span class="control" id="249557237#-oh84xy_29">Rede</span> - Comunica&ccedil;&atilde;o TCP/UDP (n&atilde;o usado neste projeto)</p></li></ul></section><section class="detached"><h2 id="249557237#linux" data-toc="linux#sfml-installation.md-linux"><span class="no-bold">🐧</span> Linux</h2><section class="detached"><h3 id="249557237#ubuntu-debian" data-toc="ubuntu-debian#sfml-installation.md-ubuntu-debian">Ubuntu/Debian</h3><div class="detached code-block" id="249557237#-oh84xy_34"><pre><code class="language-bash"># Atualizar repositórios
+sudo apt update
+
+# Instalar SFML e dependências de desenvolvimento
+sudo apt install libsfml-dev
+
+# Verificar instalação
+pkg-config --modversion sfml-all</code></pre></div></section><section class="detached"><h3 id="249557237#fedora-centos-rhel" data-toc="fedora-centos-rhel#sfml-installation.md-fedora-centos-rhel">Fedora/CentOS/RHEL</h3><div class="detached code-block" id="249557237#-oh84xy_35"><pre><code class="language-bash"># Fedora
+sudo dnf install SFML-devel
+
+# CentOS/RHEL (com EPEL)
+sudo yum install epel-release
+sudo yum install SFML-devel
+
+# Verificar instalação
+pkg-config --modversion sfml-all</code></pre></div></section><section class="detached"><h3 id="249557237#arch-linux" data-toc="arch-linux#sfml-installation.md-arch-linux">Arch Linux</h3><div class="detached code-block" id="249557237#-oh84xy_36"><pre><code class="language-bash"># Instalar SFML
+sudo pacman -S sfml
+
+# Verificar instalação
+pkg-config --modversion sfml-all</code></pre></div></section><section class="detached"><h3 id="249557237#opensuse" data-toc="opensuse#sfml-installation.md-opensuse">openSUSE</h3><div class="detached code-block" id="249557237#-oh84xy_37"><pre><code class="language-bash"># openSUSE Leap/Tumbleweed
+sudo zypper install libsfml2-devel
+
+# Verificar instalação
+pkg-config --modversion sfml-all</code></pre></div></section></section><section class="detached"><h2 id="249557237#macos" data-toc="macos#sfml-installation.md-macos"><span class="no-bold">🍎</span> macOS</h2><section class="detached"><h3 id="249557237#usando-homebrew-recomendado" data-toc="usando-homebrew-recomendado#sfml-installation.md-usando-homebrew-recomendado">Usando Homebrew (Recomendado)</h3><div class="detached code-block" id="249557237#-oh84xy_41"><pre><code class="language-bash"># Instalar Homebrew se não tiver
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+
+# Instalar SFML
+brew install sfml
+
+# Verificar instalação
+pkg-config --modversion sfml-all</code></pre></div></section><section class="detached"><h3 id="249557237#usando-macports" data-toc="usando-macports#sfml-installation.md-usando-macports">Usando MacPorts</h3><div class="detached code-block" id="249557237#-oh84xy_42"><pre><code class="language-bash"># Instalar SFML
+sudo port install sfml
+
+# Verificar instalação
+pkg-config --modversion sfml-all</code></pre></div></section><section class="detached"><h3 id="249557237#instala-o-manual" data-toc="instala-o-manual#sfml-installation.md-instala-o-manual">Instala&ccedil;&atilde;o Manual</h3><ol class="list list-decimal" id="249557237#-oh84xy_43" type="1" start="1"><li class="list-item" id="249557237#-oh84xy_45"><p id="249557237#-oh84xy_48">Baixe SFML do site oficial (<a href="https://www.sfml-dev.org/download.php">https://www.sfml-dev.org/download.php</a>)</p></li><li class="list-item" id="249557237#-oh84xy_46"><p id="249557237#-oh84xy_50">Extraia para <span class="inline-code" id="249557237#-oh84xy_51">/usr/local/</span></p></li><li class="list-item" id="249557237#-oh84xy_47"><p id="249557237#-oh84xy_52">Configure as vari&aacute;veis de ambiente:</p></li></ol><div class="detached code-block" id="249557237#-oh84xy_44"><pre><code class="language-bash">export SFML_ROOT=/usr/local/SFML-2.5.1
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$SFML_ROOT/lib/pkgconfig</code></pre></div></section></section><section class="detached"><h2 id="249557237#windows" data-toc="windows#sfml-installation.md-windows">🪟 Windows</h2><section class="detached"><h3 id="249557237#visual-studio-recomendado" data-toc="visual-studio-recomendado#sfml-installation.md-visual-studio-recomendado">Visual Studio (Recomendado)</h3><section class="detached"><h4 id="249557237#1-baixar-sfml" data-toc="1-baixar-sfml#sfml-installation.md-1-baixar-sfml">1. Baixar SFML</h4><ul class="list" id="249557237#-oh84xy_59" start="1"><li class="list-item" id="249557237#-oh84xy_60"><p id="249557237#-oh84xy_62">Acesse SFML Downloads (<a href="https://www.sfml-dev.org/download.php">https://www.sfml-dev.org/download.php</a>)</p></li><li class="list-item" id="249557237#-oh84xy_61"><p id="249557237#-oh84xy_64">Baixe a vers&atilde;o para Visual Studio (ex: <span class="inline-code" id="249557237#-oh84xy_65">SFML-2.5.1-windows-vc15-64-bit.zip</span>)</p></li></ul></section><section class="detached"><h4 id="249557237#2-extrair-e-configurar" data-toc="2-extrair-e-configurar#sfml-installation.md-2-extrair-e-configurar">2. Extrair e Configurar</h4><div class="detached code-block" id="249557237#-oh84xy_66"><pre><code class="language-none"># Extrair para C:\SFML
+# Estrutura deve ficar:
+C:\SFML\
+├── bin\
+├── include\
+├── lib\
+└── examples\</code></pre></div></section><section class="detached"><h4 id="249557237#3-configurar-projeto-visual-studio" data-toc="3-configurar-projeto-visual-studio#sfml-installation.md-3-configurar-projeto-visual-studio">3. Configurar Projeto Visual Studio</h4><p id="249557237#-oh84xy_67">No seu projeto CMake ou Visual Studio:</p><div class="detached code-block" id="249557237#-oh84xy_68"><pre><code class="language-cmake">set(SFML_ROOT &quot;C:/SFML&quot;)
+find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)</code></pre></div></section></section><section class="detached"><h3 id="249557237#mingw-w64" data-toc="mingw-w64#sfml-installation.md-mingw-w64">MinGW-w64</h3><div class="detached code-block" id="249557237#-oh84xy_69"><pre><code class="language-bash"># Usando MSYS2
+pacman -S mingw-w64-x86_64-sfml
+
+# Verificar instalação
+pkg-config --modversion sfml-all</code></pre></div></section><section class="detached"><h3 id="249557237#vcpkg-alternativa" data-toc="vcpkg-alternativa#sfml-installation.md-vcpkg-alternativa">vcpkg (Alternativa)</h3><div class="detached code-block" id="249557237#-oh84xy_70"><pre><code class="language-none"># Instalar vcpkg
+git clone https://github.com/Microsoft/vcpkg.git
+cd vcpkg
+.\bootstrap-vcpkg.bat
+
+# Instalar SFML
+.\vcpkg install sfml:x64-windows</code></pre></div></section></section><section class="detached"><h2 id="249557237#compila-o-desde-o-c-digo-fonte" data-toc="compila-o-desde-o-c-digo-fonte#sfml-installation.md-compila-o-desde-o-c-digo-fonte"><span class="no-bold">🔧</span> Compila&ccedil;&atilde;o desde o C&oacute;digo Fonte</h2><p id="249557237#-oh84xy_71">Se os pacotes pr&eacute;-compilados n&atilde;o funcionarem, compile o SFML:</p><section class="detached"><h3 id="249557237#linux-macos" data-toc="linux-macos#sfml-installation.md-linux-macos">Linux/macOS</h3><div class="detached code-block" id="249557237#-oh84xy_74"><pre><code class="language-bash"># Baixar código fonte
+git clone https://github.com/SFML/SFML.git
+cd SFML
+
+# Criar diretório de build
+mkdir build
+cd build
+
+# Configurar com CMake
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local
+
+# Compilar
+make -j$(nproc)
+
+# Instalar (pode precisar de sudo)
+sudo make install
+
+# Atualizar cache de bibliotecas (Linux)
+sudo ldconfig</code></pre></div></section><section class="detached"><h3 id="249557237#windows-visual-studio" data-toc="windows-visual-studio#sfml-installation.md-windows-visual-studio">Windows (Visual Studio)</h3><div class="detached code-block" id="249557237#-oh84xy_75"><pre><code class="language-none"># No Developer Command Prompt
+git clone https://github.com/SFML/SFML.git
+cd SFML
+mkdir build
+cd build
+
+cmake .. -G &quot;Visual Studio 16 2019&quot; -A x64
+cmake --build . --config Release
+cmake --install . --prefix C:\SFML</code></pre></div></section></section><section class="detached"><h2 id="249557237#verifica-o-da-instala-o" data-toc="verifica-o-da-instala-o#sfml-installation.md-verifica-o-da-instala-o"><span class="no-bold">✅</span> Verifica&ccedil;&atilde;o da Instala&ccedil;&atilde;o</h2><section class="detached"><h3 id="249557237#teste-b-sico" data-toc="teste-b-sico#sfml-installation.md-teste-b-sico">Teste B&aacute;sico</h3><p id="249557237#-oh84xy_79">Crie um arquivo <span class="inline-code" id="249557237#-oh84xy_81">test_sfml.cpp</span>:</p><div class="detached code-block" id="249557237#-oh84xy_80"><pre><code class="language-cpp">#include &lt;SFML/Graphics.hpp&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    // Tentar criar uma janela
+    sf::RenderWindow window(sf::VideoMode(200, 200), &quot;SFML Test&quot;);
+    
+    if (!window.isOpen()) {
+        std::cout &lt;&lt; &quot;❌ Erro ao criar janela SFML\n&quot;;
+        return 1;
+    }
+    
+    std::cout &lt;&lt; &quot;✅ SFML funcionando corretamente!\n&quot;;
+    
+    // Fechar imediatamente
+    window.close();
+    return 0;
+}</code></pre></div></section><section class="detached"><h3 id="249557237#compilar-teste" data-toc="compilar-teste#sfml-installation.md-compilar-teste">Compilar Teste</h3><div class="detached code-block" id="249557237#-oh84xy_82"><pre><code class="language-bash"># Linux/macOS
+g++ -o test_sfml test_sfml.cpp $(pkg-config --cflags --libs sfml-all)
+
+# Windows (MinGW)
+g++ -o test_sfml.exe test_sfml.cpp -lsfml-graphics -lsfml-window -lsfml-system
+
+# Executar
+./test_sfml</code></pre></div></section><section class="detached"><h3 id="249557237#usando-cmake-recomendado" data-toc="usando-cmake-recomendado#sfml-installation.md-usando-cmake-recomendado">Usando CMake (Recomendado)</h3><p id="249557237#-oh84xy_83">Crie um <span class="inline-code" id="249557237#-oh84xy_86">CMakeLists.txt</span>:</p><div class="detached code-block" id="249557237#-oh84xy_84"><pre><code class="language-cmake">cmake_minimum_required(VERSION 3.10)
+project(TestSFML)
+
+set(CMAKE_CXX_STANDARD 17)
+
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(SFML REQUIRED sfml-all&gt;=2.5)
+
+add_executable(test_sfml test_sfml.cpp)
+target_link_libraries(test_sfml ${SFML_LIBRARIES})
+target_compile_options(test_sfml PRIVATE ${SFML_CFLAGS})</code></pre></div><div class="detached code-block" id="249557237#-oh84xy_85"><pre><code class="language-bash">mkdir build
+cd build
+cmake ..
+make
+./test_sfml</code></pre></div></section></section><section class="detached"><h2 id="249557237#verifica-o-com-pkg-config" data-toc="verifica-o-com-pkg-config#sfml-installation.md-verifica-o-com-pkg-config"><span class="no-bold">🔍</span> Verifica&ccedil;&atilde;o com pkg-config</h2><div class="detached code-block" id="249557237#-oh84xy_87"><pre><code class="language-bash"># Verificar se SFML está disponível
+pkg-config --exists sfml-all
+echo $?  # Deve retornar 0
+
+# Ver versão instalada
+pkg-config --modversion sfml-all
+
+# Ver flags de compilação
+pkg-config --cflags sfml-all
+
+# Ver flags de link
+pkg-config --libs sfml-all
+
+# Informações completas
+pkg-config --cflags --libs sfml-all</code></pre></div></section><section class="detached"><h2 id="249557237#solu-o-de-problemas" data-toc="solu-o-de-problemas#sfml-installation.md-solu-o-de-problemas"><span class="no-bold">❗</span> Solu&ccedil;&atilde;o de Problemas</h2><section class="detached"><h3 id="249557237#erro-sfml-all-not-found" data-toc="erro-sfml-all-not-found#sfml-installation.md-erro-sfml-all-not-found">Erro: &quot;sfml-all not found&quot;</h3><div class="detached code-block" id="249557237#-oh84xy_91"><pre><code class="language-bash"># Verificar se pkg-config está instalado
+pkg-config --version
+
+# Listar todos os pacotes disponíveis
+pkg-config --list-all | grep -i sfml
+
+# Verificar caminhos do pkg-config
+echo $PKG_CONFIG_PATH
+
+# Linux: SFML pode estar em /usr/lib/pkgconfig/
+ls /usr/lib/pkgconfig/ | grep sfml</code></pre></div></section><section class="detached"><h3 id="249557237#erro-de-linking" data-toc="erro-de-linking#sfml-installation.md-erro-de-linking">Erro de Linking</h3><div class="detached code-block" id="249557237#-oh84xy_92"><pre><code class="language-bash"># Verificar se bibliotecas estão instaladas
+ldconfig -p | grep sfml  # Linux
+find /usr -name &quot;*sfml*&quot; 2&gt;/dev/null  # Linux/macOS
+
+# Windows: verificar PATH
+echo %PATH%</code></pre></div></section><section class="detached"><h3 id="249557237#vers-o-incompat-vel" data-toc="vers-o-incompat-vel#sfml-installation.md-vers-o-incompat-vel">Vers&atilde;o Incompat&iacute;vel</h3><div class="detached code-block" id="249557237#-oh84xy_93"><pre><code class="language-bash"># Desinstalar versão antiga
+sudo apt remove libsfml-dev  # Ubuntu
+brew uninstall sfml          # macOS
+
+# Limpar cache
+sudo apt autoremove
+brew cleanup
+
+# Reinstalar versão correta
+sudo apt install libsfml-dev
+brew install sfml</code></pre></div></section></section><section class="detached"><h2 id="249557237#pr-ximos-passos" data-toc="pr-ximos-passos#sfml-installation.md-pr-ximos-passos"><span class="no-bold">🎯</span> Pr&oacute;ximos Passos</h2><p id="249557237#-oh84xy_94">Ap&oacute;s instalar o SFML com sucesso:</p><ol class="list list-decimal" id="249557237#-oh84xy_95" type="1" start="1"><li class="list-item" id="249557237#-oh84xy_100"><p id="249557237#-oh84xy_102">Prossiga para Instala&ccedil;&atilde;o do CMake (<a href="#-424771146">Instala&ccedil;&atilde;o do CMake</a>)</p></li><li class="list-item" id="249557237#-oh84xy_101"><p id="249557237#-oh84xy_104">Ou volte para Configura&ccedil;&atilde;o do Ambiente (<a href="#-864305365">Configura&ccedil;&atilde;o do Ambiente</a>)</p></li></ol><p id="249557237#-oh84xy_96">Se ainda tiver problemas:</p><ol class="list list-decimal" id="249557237#-oh84xy_97" type="1" start="1"><li class="list-item" id="249557237#-oh84xy_106"><p id="249557237#-oh84xy_108">Consulte o Troubleshooting (<a href="#1579521354">Troubleshooting</a>)</p></li><li class="list-item" id="249557237#-oh84xy_107"><p id="249557237#-oh84xy_110">Execute o script autom&aacute;tico: <span class="inline-code" id="249557237#-oh84xy_111">./setup.sh</span></p></li></ol><p id="249557237#-oh84xy_99"><span class="control" id="249557237#-oh84xy_112">Dica</span>: O comando <span class="inline-code" id="249557237#-oh84xy_113">pkg-config --cflags --libs sfml-all</span> mostra exatamente como compilar com SFML. Guarde essa informa&ccedil;&atilde;o!</p></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-424771146">Instala&ccedil;&atilde;o do CMake</h1><p id="-424771146#ec4h1h_3">O CMake &eacute; o sistema de build usado pelo projeto 16 Games in C++. Este guia mostra como instal&aacute;-lo em diferentes sistemas operacionais. <span class="no-bold">🔨</span></p><section class="detached"><h2 id="-424771146#o-que-cmake" data-toc="o-que-cmake#cmake-installation.md-o-que-cmake"><span class="no-bold">📚</span> O que &eacute; CMake?</h2><p id="-424771146#ec4h1h_17">CMake &eacute; uma ferramenta multiplataforma que:</p><ul class="list" id="-424771146#ec4h1h_18" start="1"><li class="list-item" id="-424771146#ec4h1h_19"><p id="-424771146#ec4h1h_23"><span class="control" id="-424771146#ec4h1h_24">Gera arquivos de build</span> para diferentes sistemas (Make, Visual Studio, Xcode)</p></li><li class="list-item" id="-424771146#ec4h1h_20"><p id="-424771146#ec4h1h_25"><span class="control" id="-424771146#ec4h1h_26">Gerencia depend&ecirc;ncias</span> de forma autom&aacute;tica</p></li><li class="list-item" id="-424771146#ec4h1h_21"><p id="-424771146#ec4h1h_27"><span class="control" id="-424771146#ec4h1h_28">Configura compila&ccedil;&atilde;o</span> com diferentes op&ccedil;&otilde;es</p></li><li class="list-item" id="-424771146#ec4h1h_22"><p id="-424771146#ec4h1h_29"><span class="control" id="-424771146#ec4h1h_30">Simplifica builds</span> em m&uacute;ltiplas plataformas</p></li></ul></section><section class="detached"><h2 id="-424771146#vers-es-suportadas" data-toc="vers-es-suportadas#cmake-installation.md-vers-es-suportadas"><span class="no-bold">📋</span> Vers&otilde;es Suportadas</h2><ul class="list" id="-424771146#ec4h1h_31" start="1"><li class="list-item" id="-424771146#ec4h1h_32"><p id="-424771146#ec4h1h_35"><span class="control" id="-424771146#ec4h1h_36">M&iacute;nima</span>: 3.10</p></li><li class="list-item" id="-424771146#ec4h1h_33"><p id="-424771146#ec4h1h_37"><span class="control" id="-424771146#ec4h1h_38">Recomendada</span>: 3.16 ou superior</p></li><li class="list-item" id="-424771146#ec4h1h_34"><p id="-424771146#ec4h1h_39"><span class="control" id="-424771146#ec4h1h_40">Ideal</span>: 3.20 ou superior (melhor suporte ao C++17)</p></li></ul></section><section class="detached"><h2 id="-424771146#linux" data-toc="linux#cmake-installation.md-linux"><span class="no-bold">🐧</span> Linux</h2><section class="detached"><h3 id="-424771146#ubuntu-debian" data-toc="ubuntu-debian#cmake-installation.md-ubuntu-debian">Ubuntu/Debian</h3><section class="detached"><h4 id="-424771146#vers-o-dos-reposit-rios-mais-simples" data-toc="vers-o-dos-reposit-rios-mais-simples#cmake-installation.md-vers-o-dos-reposit-rios-mais-simples">Vers&atilde;o dos Reposit&oacute;rios (Mais Simples)</h4><div class="detached code-block" id="-424771146#ec4h1h_47"><pre><code class="language-bash"># Atualizar repositórios
+sudo apt update
+
+# Instalar CMake
+sudo apt install cmake
+
+# Verificar versão
+cmake --version</code></pre></div></section><section class="detached"><h4 id="-424771146#vers-o-mais-recente-recomendado" data-toc="vers-o-mais-recente-recomendado#cmake-installation.md-vers-o-mais-recente-recomendado">Vers&atilde;o Mais Recente (Recomendado)</h4><div class="detached code-block" id="-424771146#ec4h1h_48"><pre><code class="language-bash"># Adicionar repositório Kitware (oficial)
+wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2&gt;/dev/null | gpg --dearmor - | sudo tee /etc/apt/trusted.gpg.d/kitware.gpg &gt;/dev/null
+
+# Ubuntu 20.04
+sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
+
+# Ubuntu 22.04
+sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ jammy main'
+
+# Instalar
+sudo apt update
+sudo apt install cmake
+
+# Verificar versão
+cmake --version</code></pre></div></section></section><section class="detached"><h3 id="-424771146#fedora-centos-rhel" data-toc="fedora-centos-rhel#cmake-installation.md-fedora-centos-rhel">Fedora/CentOS/RHEL</h3><div class="detached code-block" id="-424771146#ec4h1h_49"><pre><code class="language-bash"># Fedora
+sudo dnf install cmake
+
+# CentOS/RHEL 8+
+sudo dnf install cmake
+
+# Verificar versão
+cmake --version</code></pre></div></section><section class="detached"><h3 id="-424771146#arch-linux" data-toc="arch-linux#cmake-installation.md-arch-linux">Arch Linux</h3><div class="detached code-block" id="-424771146#ec4h1h_50"><pre><code class="language-bash"># Instalar CMake
+sudo pacman -S cmake
+
+# Verificar versão
+cmake --version</code></pre></div></section><section class="detached"><h3 id="-424771146#opensuse" data-toc="opensuse#cmake-installation.md-opensuse">openSUSE</h3><div class="detached code-block" id="-424771146#ec4h1h_51"><pre><code class="language-bash"># openSUSE Leap/Tumbleweed
+sudo zypper install cmake
+
+# Verificar versão
+cmake --version</code></pre></div></section></section><section class="detached"><h2 id="-424771146#macos" data-toc="macos#cmake-installation.md-macos"><span class="no-bold">🍎</span> macOS</h2><section class="detached"><h3 id="-424771146#usando-homebrew-recomendado" data-toc="usando-homebrew-recomendado#cmake-installation.md-usando-homebrew-recomendado">Usando Homebrew (Recomendado)</h3><div class="detached code-block" id="-424771146#ec4h1h_55"><pre><code class="language-bash"># Instalar Homebrew se não tiver
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+
+# Instalar CMake
+brew install cmake
+
+# Verificar versão
+cmake --version</code></pre></div></section><section class="detached"><h3 id="-424771146#usando-macports" data-toc="usando-macports#cmake-installation.md-usando-macports">Usando MacPorts</h3><div class="detached code-block" id="-424771146#ec4h1h_56"><pre><code class="language-bash"># Instalar CMake
+sudo port install cmake
+
+# Verificar versão
+cmake --version</code></pre></div></section><section class="detached"><h3 id="-424771146#instala-o-manual" data-toc="instala-o-manual#cmake-installation.md-instala-o-manual">Instala&ccedil;&atilde;o Manual</h3><div class="detached code-block" id="-424771146#ec4h1h_57"><pre><code class="language-bash"># Baixar binário
+curl -L -O https://github.com/Kitware/CMake/releases/download/v3.25.1/cmake-3.25.1-macos-universal.tar.gz
+
+# Extrair
+tar -xzf cmake-3.25.1-macos-universal.tar.gz
+
+# Mover para aplicações
+sudo mv cmake-3.25.1-macos-universal/CMake.app /Applications/
+
+# Criar link simbólico
+sudo ln -s /Applications/CMake.app/Contents/bin/cmake /usr/local/bin/cmake
+
+# Verificar versão
+cmake --version</code></pre></div></section></section><section class="detached"><h2 id="-424771146#windows" data-toc="windows#cmake-installation.md-windows">🪟 Windows</h2><section class="detached"><h3 id="-424771146#usando-winget-windows-10-11" data-toc="usando-winget-windows-10-11#cmake-installation.md-usando-winget-windows-10-11">Usando winget (Windows 10/11)</h3><div class="detached code-block" id="-424771146#ec4h1h_62"><pre><code class="language-none"># Instalar CMake
+winget install Kitware.CMake
+
+# Verificar versão (reiniciar terminal)
+cmake --version</code></pre></div></section><section class="detached"><h3 id="-424771146#usando-chocolatey" data-toc="usando-chocolatey#cmake-installation.md-usando-chocolatey">Usando Chocolatey</h3><div class="detached code-block" id="-424771146#ec4h1h_63"><pre><code class="language-none"># Instalar Chocolatey se não tiver
+# Ver: https://chocolatey.org/install
+
+# Instalar CMake
+choco install cmake
+
+# Verificar versão
+cmake --version</code></pre></div></section><section class="detached"><h3 id="-424771146#instala-o-manual" data-toc="instala-o-manual#cmake-installation.md-instala-o-manual">Instala&ccedil;&atilde;o Manual</h3><ol class="list list-decimal" id="-424771146#ec4h1h_64" type="1" start="1"><li class="list-item" id="-424771146#ec4h1h_66"><p id="-424771146#ec4h1h_71">Acesse CMake Downloads (<a href="https://cmake.org/download/">https://cmake.org/download/</a>)</p></li><li class="list-item" id="-424771146#ec4h1h_67"><p id="-424771146#ec4h1h_73">Baixe o instalador Windows (<span class="inline-code" id="-424771146#ec4h1h_74">.msi</span>)</p></li><li class="list-item" id="-424771146#ec4h1h_68"><p id="-424771146#ec4h1h_75">Execute o instalador</p></li><li class="list-item" id="-424771146#ec4h1h_69"><p id="-424771146#ec4h1h_76"><span class="control" id="-424771146#ec4h1h_77">Importante</span>: Marque &quot;Add CMake to system PATH&quot;</p></li><li class="list-item" id="-424771146#ec4h1h_70"><p id="-424771146#ec4h1h_78">Verificar instala&ccedil;&atilde;o:</p></li></ol><div class="detached code-block" id="-424771146#ec4h1h_65"><pre><code class="language-none">cmake --version</code></pre></div></section><section class="detached"><h3 id="-424771146#visual-studio" data-toc="visual-studio#cmake-installation.md-visual-studio">Visual Studio</h3><p id="-424771146#ec4h1h_79">O Visual Studio 2019/2022 j&aacute; inclui CMake:</p><ul class="list" id="-424771146#ec4h1h_80" start="1"><li class="list-item" id="-424771146#ec4h1h_81"><p id="-424771146#ec4h1h_83">Est&aacute; em <span class="inline-code" id="-424771146#ec4h1h_84">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe</span></p></li><li class="list-item" id="-424771146#ec4h1h_82"><p id="-424771146#ec4h1h_85">Pode ser necess&aacute;rio adicionar ao PATH manualmente</p></li></ul></section></section><section class="detached"><h2 id="-424771146#compila-o-desde-o-c-digo-fonte" data-toc="compila-o-desde-o-c-digo-fonte#cmake-installation.md-compila-o-desde-o-c-digo-fonte"><span class="no-bold">🔧</span> Compila&ccedil;&atilde;o desde o C&oacute;digo Fonte</h2><p id="-424771146#ec4h1h_86">Se precisar de uma vers&atilde;o espec&iacute;fica ou os pacotes n&atilde;o funcionarem:</p><section class="detached"><h3 id="-424771146#linux-macos" data-toc="linux-macos#cmake-installation.md-linux-macos">Linux/macOS</h3><div class="detached code-block" id="-424771146#ec4h1h_89"><pre><code class="language-bash"># Baixar código fonte
+wget https://github.com/Kitware/CMake/releases/download/v3.25.1/cmake-3.25.1.tar.gz
+tar -xzf cmake-3.25.1.tar.gz
+cd cmake-3.25.1
+
+# Configurar (bootstrap)
+./bootstrap --prefix=/usr/local
+
+# Compilar
+make -j$(nproc)
+
+# Instalar
+sudo make install
+
+# Verificar versão
+cmake --version</code></pre></div></section><section class="detached"><h3 id="-424771146#compila-o-r-pida-sem-bootstrap" data-toc="compila-o-r-pida-sem-bootstrap#cmake-installation.md-compila-o-r-pida-sem-bootstrap">Compila&ccedil;&atilde;o R&aacute;pida (Sem Bootstrap)</h3><div class="detached code-block" id="-424771146#ec4h1h_90"><pre><code class="language-bash"># Se já tiver CMake instalado (versão mais antiga)
+mkdir build
+cd build
+cmake ..
+make -j$(nproc)
+sudo make install</code></pre></div></section></section><section class="detached"><h2 id="-424771146#verifica-o-da-instala-o" data-toc="verifica-o-da-instala-o#cmake-installation.md-verifica-o-da-instala-o"><span class="no-bold">✅</span> Verifica&ccedil;&atilde;o da Instala&ccedil;&atilde;o</h2><section class="detached"><h3 id="-424771146#teste-b-sico" data-toc="teste-b-sico#cmake-installation.md-teste-b-sico">Teste B&aacute;sico</h3><div class="detached code-block" id="-424771146#ec4h1h_93"><pre><code class="language-bash"># Verificar versão
+cmake --version
+
+# Deve mostrar algo como:
+# cmake version 3.25.1</code></pre></div></section><section class="detached"><h3 id="-424771146#teste-de-funcionalidade" data-toc="teste-de-funcionalidade#cmake-installation.md-teste-de-funcionalidade">Teste de Funcionalidade</h3><p id="-424771146#ec4h1h_94">Crie um projeto de teste:</p><section class="detached"><h4 id="-424771146#cmakelists-txt" data-toc="cmakelists-txt#cmake-installation.md-cmakelists-txt">CMakeLists.txt</h4><div class="detached code-block" id="-424771146#ec4h1h_98"><pre><code class="language-cmake">cmake_minimum_required(VERSION 3.10)
+project(TestCMake)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(test_cmake main.cpp)</code></pre></div></section><section class="detached"><h4 id="-424771146#main-cpp" data-toc="main-cpp#cmake-installation.md-main-cpp">main.cpp</h4><div class="detached code-block" id="-424771146#ec4h1h_99"><pre><code class="language-cpp">#include &lt;iostream&gt;
+int main() {
+    std::cout &lt;&lt; &quot;✅ CMake funcionando!\n&quot;;
+    return 0;
+}</code></pre></div></section><section class="detached"><h4 id="-424771146#compilar-e-testar" data-toc="compilar-e-testar#cmake-installation.md-compilar-e-testar">Compilar e Testar</h4><div class="detached code-block" id="-424771146#ec4h1h_100"><pre><code class="language-bash">mkdir build
+cd build
+cmake ..
+make  # ou cmake --build .
+./test_cmake</code></pre></div></section></section></section><section class="detached"><h2 id="-424771146#configura-es-teis" data-toc="configura-es-teis#cmake-installation.md-configura-es-teis"><span class="no-bold">🎯</span> Configura&ccedil;&otilde;es &Uacute;teis</h2><section class="detached"><h3 id="-424771146#configurar-cmake-globalmente" data-toc="configurar-cmake-globalmente#cmake-installation.md-configurar-cmake-globalmente">Configurar CMake Globalmente</h3><div class="detached code-block" id="-424771146#ec4h1h_103"><pre><code class="language-bash"># Criar arquivo de configuração
+mkdir -p ~/.cmake
+cat &gt; ~/.cmake/CMakeCache.txt &lt;&lt; EOF
+CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_CXX_STANDARD:STRING=17
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON
+EOF</code></pre></div></section><section class="detached"><h3 id="-424771146#aliases-teis" data-toc="aliases-teis#cmake-installation.md-aliases-teis">Aliases &Uacute;teis</h3><p id="-424771146#ec4h1h_104">Adicione ao seu <span class="inline-code" id="-424771146#ec4h1h_106">.bashrc</span> ou <span class="inline-code" id="-424771146#ec4h1h_107">.zshrc</span>:</p><div class="detached code-block" id="-424771146#ec4h1h_105"><pre><code class="language-bash"># Aliases para CMake
+alias cb='cmake --build .'
+alias cc='cmake ..'
+alias cr='cmake .. &amp;&amp; make'
+alias ctest='ctest --output-on-failure'</code></pre></div></section></section><section class="detached"><h2 id="-424771146#ferramentas-complementares" data-toc="ferramentas-complementares#cmake-installation.md-ferramentas-complementares"><span class="no-bold">🔧</span> Ferramentas Complementares</h2><section class="detached"><h3 id="-424771146#cmake-gui-opcional" data-toc="cmake-gui-opcional#cmake-installation.md-cmake-gui-opcional">CMake GUI (Opcional)</h3><div class="detached code-block" id="-424771146#ec4h1h_110"><pre><code class="language-bash"># Linux
+sudo apt install cmake-qt-gui  # Ubuntu/Debian
+sudo dnf install cmake-gui     # Fedora
+
+# macOS
+brew install --cask cmake
+
+# Windows - incluído no instalador</code></pre></div></section><section class="detached"><h3 id="-424771146#ccmake-curses-interface" data-toc="ccmake-curses-interface#cmake-installation.md-ccmake-curses-interface">ccmake (Curses Interface)</h3><div class="detached code-block" id="-424771146#ec4h1h_111"><pre><code class="language-bash"># Linux - geralmente incluído
+ccmake ..
+
+# Navegar com setas, Enter para editar, 'c' para configurar, 'g' para gerar</code></pre></div></section></section><section class="detached"><h2 id="-424771146#verifica-o-de-recursos" data-toc="verifica-o-de-recursos#cmake-installation.md-verifica-o-de-recursos"><span class="no-bold">📊</span> Verifica&ccedil;&atilde;o de Recursos</h2><div class="detached code-block" id="-424771146#ec4h1h_112"><pre><code class="language-bash"># Ver todas as opções do CMake
+cmake --help
+
+# Ver geradores disponíveis
+cmake --help | grep &quot;Generators&quot;
+
+# Informações do sistema
+cmake --system-information
+
+# Verificar variáveis disponíveis
+cmake --help-variable-list | head -20</code></pre></div></section><section class="detached"><h2 id="-424771146#solu-o-de-problemas" data-toc="solu-o-de-problemas#cmake-installation.md-solu-o-de-problemas"><span class="no-bold">❗</span> Solu&ccedil;&atilde;o de Problemas</h2><section class="detached"><h3 id="-424771146#cmake-n-o-encontrado" data-toc="cmake-n-o-encontrado#cmake-installation.md-cmake-n-o-encontrado">CMake N&atilde;o Encontrado</h3><div class="detached code-block" id="-424771146#ec4h1h_117"><pre><code class="language-bash"># Verificar PATH
+echo $PATH
+
+# Linux/macOS - onde está o CMake?
+which cmake
+whereis cmake
+
+# Windows
+where cmake</code></pre></div></section><section class="detached"><h3 id="-424771146#vers-o-muito-antiga" data-toc="vers-o-muito-antiga#cmake-installation.md-vers-o-muito-antiga">Vers&atilde;o Muito Antiga</h3><div class="detached code-block" id="-424771146#ec4h1h_118"><pre><code class="language-bash"># Desinstalar versão antiga
+sudo apt remove cmake      # Ubuntu
+brew uninstall cmake       # macOS
+
+# Instalar versão mais recente (ver seções acima)</code></pre></div></section><section class="detached"><h3 id="-424771146#erro-de-permiss-o" data-toc="erro-de-permiss-o#cmake-installation.md-erro-de-permiss-o">Erro de Permiss&atilde;o</h3><div class="detached code-block" id="-424771146#ec4h1h_119"><pre><code class="language-bash"># Linux - problemas de permissão
+sudo chown -R $USER:$USER ~/.cmake
+sudo chmod -R 755 ~/.cmake</code></pre></div></section><section class="detached"><h3 id="-424771146#conflito-de-vers-es" data-toc="conflito-de-vers-es#cmake-installation.md-conflito-de-vers-es">Conflito de Vers&otilde;es</h3><div class="detached code-block" id="-424771146#ec4h1h_120"><pre><code class="language-bash"># Ver todas as versões instaladas
+ls /usr/bin/cmake*
+ls /usr/local/bin/cmake*
+
+# Usar versão específica
+/usr/local/bin/cmake --version</code></pre></div></section></section><section class="detached"><h2 id="-424771146#cmake-no-projeto-16-games" data-toc="cmake-no-projeto-16-games#cmake-installation.md-cmake-no-projeto-16-games"><span class="no-bold">🎯</span> CMake no Projeto 16 Games</h2><p id="-424771146#ec4h1h_121">No nosso projeto, o CMake:</p><ul class="list" id="-424771146#ec4h1h_122" start="1"><li class="list-item" id="-424771146#ec4h1h_124"><p id="-424771146#ec4h1h_129"><span class="control" id="-424771146#ec4h1h_130">Detecta SFML</span> automaticamente</p></li><li class="list-item" id="-424771146#ec4h1h_125"><p id="-424771146#ec4h1h_131"><span class="control" id="-424771146#ec4h1h_132">Configura compila&ccedil;&atilde;o</span> para C++17</p></li><li class="list-item" id="-424771146#ec4h1h_126"><p id="-424771146#ec4h1h_133"><span class="control" id="-424771146#ec4h1h_134">Gerencia assets</span> (copia imagens, sons, etc.)</p></li><li class="list-item" id="-424771146#ec4h1h_127"><p id="-424771146#ec4h1h_135"><span class="control" id="-424771146#ec4h1h_136">Cria targets</span> para cada jogo</p></li><li class="list-item" id="-424771146#ec4h1h_128"><p id="-424771146#ec4h1h_137"><span class="control" id="-424771146#ec4h1h_138">Oferece comandos</span> de build e execu&ccedil;&atilde;o</p></li></ul><section class="detached"><h3 id="-424771146#comandos-principais" data-toc="comandos-principais#cmake-installation.md-comandos-principais">Comandos Principais</h3><div class="detached code-block" id="-424771146#ec4h1h_139"><pre><code class="language-bash"># Configurar projeto
+cmake ..
+
+# Compilar todos os jogos
+make all_games
+
+# Compilar jogo específico
+make tetris
+
+# Executar jogo
+make run_tetris</code></pre></div></section></section><section class="detached"><h2 id="-424771146#pr-ximos-passos" data-toc="pr-ximos-passos#cmake-installation.md-pr-ximos-passos"><span class="no-bold">🎯</span> Pr&oacute;ximos Passos</h2><p id="-424771146#ec4h1h_140">Ap&oacute;s instalar o CMake com sucesso:</p><ol class="list list-decimal" id="-424771146#ec4h1h_141" type="1" start="1"><li class="list-item" id="-424771146#ec4h1h_146"><p id="-424771146#ec4h1h_149">Prossiga para Configura&ccedil;&atilde;o da IDE (<a href="#-1775583846">Configura&ccedil;&atilde;o da IDE</a>)</p></li><li class="list-item" id="-424771146#ec4h1h_147"><p id="-424771146#ec4h1h_151">Ou pule para Configura&ccedil;&atilde;o Final (<a href="#-971479485">Configura&ccedil;&atilde;o Final do Ambiente</a>)</p></li><li class="list-item" id="-424771146#ec4h1h_148"><p id="-424771146#ec4h1h_153">Ou volte para Configura&ccedil;&atilde;o do Ambiente (<a href="#-864305365">Configura&ccedil;&atilde;o do Ambiente</a>)</p></li></ol><p id="-424771146#ec4h1h_142">Se tiver problemas:</p><ol class="list list-decimal" id="-424771146#ec4h1h_143" type="1" start="1"><li class="list-item" id="-424771146#ec4h1h_155"><p id="-424771146#ec4h1h_157">Consulte o Troubleshooting (<a href="#1579521354">Troubleshooting</a>)</p></li><li class="list-item" id="-424771146#ec4h1h_156"><p id="-424771146#ec4h1h_159">Execute o script autom&aacute;tico: <span class="inline-code" id="-424771146#ec4h1h_160">./setup.sh</span></p></li></ol><p id="-424771146#ec4h1h_145"><span class="control" id="-424771146#ec4h1h_161">Dica</span>: Use sempre <span class="inline-code" id="-424771146#ec4h1h_162">cmake --build .</span> em vez de <span class="inline-code" id="-424771146#ec4h1h_163">make</span> para m&aacute;xima compatibilidade entre plataformas!</p></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-1775583846">Configura&ccedil;&atilde;o da IDE</h1><p id="-1775583846#-jq4iiz_3">Embora voc&ecirc; possa compilar e executar os jogos apenas com terminal, usar uma IDE melhora significativamente a experi&ecirc;ncia de desenvolvimento. Este guia mostra como configurar diferentes IDEs para o projeto. <span class="no-bold">💻</span></p><section class="detached"><h2 id="-1775583846#ides-recomendadas" data-toc="ides-recomendadas#ide-setup.md-ides-recomendadas"><span class="no-bold">🎯</span> IDEs Recomendadas</h2><section class="detached"><h3 id="-1775583846#para-iniciantes" data-toc="para-iniciantes#ide-setup.md-para-iniciantes">Para Iniciantes</h3><ul class="list" id="-1775583846#-jq4iiz_19" start="1"><li class="list-item" id="-1775583846#-jq4iiz_20"><p id="-1775583846#-jq4iiz_22"><span class="control" id="-1775583846#-jq4iiz_23">Visual Studio Code (<a href="#-1775583846#visual-studio-code">&quot;🆚 Visual Studio Code&quot; in &quot;Configura&ccedil;&atilde;o da IDE&quot;</a>)</span> - Leve, extens&iacute;vel, gratuito</p></li><li class="list-item" id="-1775583846#-jq4iiz_21"><p id="-1775583846#-jq4iiz_25"><span class="control" id="-1775583846#-jq4iiz_26">Code::Blocks (<a href="#-1775583846#codeblocks">Configura&ccedil;&atilde;o da IDE</a>)</span> - Simples, focado em C++</p></li></ul></section><section class="detached"><h3 id="-1775583846#para-desenvolvedores-experientes" data-toc="para-desenvolvedores-experientes#ide-setup.md-para-desenvolvedores-experientes">Para Desenvolvedores Experientes</h3><ul class="list" id="-1775583846#-jq4iiz_28" start="1"><li class="list-item" id="-1775583846#-jq4iiz_29"><p id="-1775583846#-jq4iiz_32"><span class="control" id="-1775583846#-jq4iiz_33">CLion (<a href="#-1775583846#clion">&quot;CLion&quot; in &quot;Configura&ccedil;&atilde;o da IDE&quot;</a>)</span> - Profissional, JetBrains</p></li><li class="list-item" id="-1775583846#-jq4iiz_30"><p id="-1775583846#-jq4iiz_35"><span class="control" id="-1775583846#-jq4iiz_36">Visual Studio (<a href="#-1775583846#visual-studio">&quot;Visual Studio&quot; in &quot;Configura&ccedil;&atilde;o da IDE&quot;</a>)</span> - Windows, Microsoft</p></li><li class="list-item" id="-1775583846#-jq4iiz_31"><p id="-1775583846#-jq4iiz_38"><span class="control" id="-1775583846#-jq4iiz_39">Qt Creator (<a href="#-1775583846#qt-creator">&quot;🛠️ Qt Creator&quot; in &quot;Configura&ccedil;&atilde;o da IDE&quot;</a>)</span> - Multiplataforma, excelente CMake</p></li></ul></section><section class="detached"><h3 id="-1775583846#editores-avan-ados" data-toc="editores-avan-ados#ide-setup.md-editores-avan-ados">Editores Avan&ccedil;ados</h3><ul class="list" id="-1775583846#-jq4iiz_41" start="1"><li class="list-item" id="-1775583846#-jq4iiz_42"><p id="-1775583846#-jq4iiz_44"><span class="control" id="-1775583846#-jq4iiz_45">Vim/Neovim (<a href="#-1775583846#vim-neovim">&quot;🎭 Vim/Neovim&quot; in &quot;Configura&ccedil;&atilde;o da IDE&quot;</a>)</span> - Para usu&aacute;rios experientes</p></li><li class="list-item" id="-1775583846#-jq4iiz_43"><p id="-1775583846#-jq4iiz_47"><span class="control" id="-1775583846#-jq4iiz_48">Emacs (<a href="#-1775583846#emacs">&quot;🎨 Emacs&quot; in &quot;Configura&ccedil;&atilde;o da IDE&quot;</a>)</span> - Altamente customiz&aacute;vel</p></li></ul></section></section><section class="detached"><h2 id="-1775583846#visual-studio-code" data-toc="visual-studio-code#ide-setup.md-visual-studio-code"><span class="no-bold">🆚</span> Visual Studio Code</h2><section class="detached"><h3 id="-1775583846#instala-o" data-toc="instala-o#ide-setup.md-instala-o">Instala&ccedil;&atilde;o</h3><div class="detached code-block" id="-1775583846#-jq4iiz_53"><pre><code class="language-bash"># Linux (Ubuntu/Debian)
+sudo apt update
+sudo apt install code
+
+# macOS
+brew install --cask visual-studio-code
+
+# Windows - baixar do site oficial
+# https://code.visualstudio.com/</code></pre></div></section><section class="detached"><h3 id="-1775583846#extens-es-essenciais" data-toc="extens-es-essenciais#ide-setup.md-extens-es-essenciais">Extens&otilde;es Essenciais</h3><p id="-1775583846#-jq4iiz_54">Instale essas extens&otilde;es (Ctrl+Shift+X):</p><ol class="list list-decimal" id="-1775583846#-jq4iiz_55" type="1" start="1"><li class="list-item" id="-1775583846#-jq4iiz_56"><p id="-1775583846#-jq4iiz_61"><span class="control" id="-1775583846#-jq4iiz_62">C/C++</span> (Microsoft) - Suporte b&aacute;sico ao C++</p></li><li class="list-item" id="-1775583846#-jq4iiz_57"><p id="-1775583846#-jq4iiz_63"><span class="control" id="-1775583846#-jq4iiz_64">CMake Tools</span> (Microsoft) - Integra&ccedil;&atilde;o com CMake</p></li><li class="list-item" id="-1775583846#-jq4iiz_58"><p id="-1775583846#-jq4iiz_65"><span class="control" id="-1775583846#-jq4iiz_66">CMake</span> (twxs) - Syntax highlighting para CMake</p></li><li class="list-item" id="-1775583846#-jq4iiz_59"><p id="-1775583846#-jq4iiz_67"><span class="control" id="-1775583846#-jq4iiz_68">C++ Intellisense</span> (austin) - Melhor autocomplete</p></li><li class="list-item" id="-1775583846#-jq4iiz_60"><p id="-1775583846#-jq4iiz_69"><span class="control" id="-1775583846#-jq4iiz_70">GitLens</span> (GitKraken) - Integra&ccedil;&atilde;o Git avan&ccedil;ada</p></li></ol></section><section class="detached"><h3 id="-1775583846#configura-o-do-projeto" data-toc="configura-o-do-projeto#ide-setup.md-configura-o-do-projeto">Configura&ccedil;&atilde;o do Projeto</h3><section class="detached"><h4 id="-1775583846#1-abrir-projeto" data-toc="1-abrir-projeto#ide-setup.md-1-abrir-projeto">1. Abrir Projeto</h4><div class="detached code-block" id="-1775583846#-jq4iiz_75"><pre><code class="language-bash">cd 16Games-in-Cpp
+code .</code></pre></div></section><section class="detached"><h4 id="-1775583846#2-configurar-cmake-tools" data-toc="2-configurar-cmake-tools#ide-setup.md-2-configurar-cmake-tools">2. Configurar CMake Tools</h4><p id="-1775583846#-jq4iiz_76">Pressione <span class="inline-code" id="-1775583846#-jq4iiz_78">Ctrl+Shift+P</span> e digite &quot;CMake: Configure&quot;:</p><div class="detached code-block" id="-1775583846#-jq4iiz_77"><pre><code class="language-json">// .vscode/settings.json
+{
+    &quot;cmake.configureSettings&quot;: {
+        &quot;CMAKE_BUILD_TYPE&quot;: &quot;Debug&quot;,
+        &quot;CMAKE_CXX_STANDARD&quot;: &quot;17&quot;
+    },
+    &quot;cmake.buildDirectory&quot;: &quot;${workspaceFolder}/build&quot;,
+    &quot;cmake.generator&quot;: &quot;Unix Makefiles&quot;,
+    &quot;C_Cpp.default.configurationProvider&quot;: &quot;ms-vscode.cmake-tools&quot;
+}</code></pre></div></section><section class="detached"><h4 id="-1775583846#3-configurar-tarefas-de-build" data-toc="3-configurar-tarefas-de-build#ide-setup.md-3-configurar-tarefas-de-build">3. Configurar Tarefas de Build</h4><div class="detached code-block" id="-1775583846#-jq4iiz_79"><pre><code class="language-json">// .vscode/tasks.json
+{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;label&quot;: &quot;CMake Configure&quot;,
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;command&quot;: &quot;cmake&quot;,
+            &quot;args&quot;: [&quot;..&quot;, &quot;-DCMAKE_BUILD_TYPE=Debug&quot;],
+            &quot;options&quot;: {
+                &quot;cwd&quot;: &quot;${workspaceFolder}/build&quot;
+            },
+            &quot;group&quot;: &quot;build&quot;
+        },
+        {
+            &quot;label&quot;: &quot;Build All Games&quot;,
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;command&quot;: &quot;make&quot;,
+            &quot;args&quot;: [&quot;all_games&quot;],
+            &quot;options&quot;: {
+                &quot;cwd&quot;: &quot;${workspaceFolder}/build&quot;
+            },
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }
+    ]
+}</code></pre></div></section><section class="detached"><h4 id="-1775583846#4-configurar-launch-debug" data-toc="4-configurar-launch-debug#ide-setup.md-4-configurar-launch-debug">4. Configurar Launch (Debug)</h4><div class="detached code-block" id="-1775583846#-jq4iiz_80"><pre><code class="language-json">// .vscode/launch.json
+{
+    &quot;version&quot;: &quot;0.2.0&quot;,
+    &quot;configurations&quot;: [
+        {
+            &quot;name&quot;: &quot;Debug Tetris&quot;,
+            &quot;type&quot;: &quot;cppdbg&quot;,
+            &quot;request&quot;: &quot;launch&quot;,
+            &quot;program&quot;: &quot;${workspaceFolder}/build/games/tetris/tetris&quot;,
+            &quot;args&quot;: [],
+            &quot;stopAtEntry&quot;: false,
+            &quot;cwd&quot;: &quot;${workspaceFolder}/build/games/tetris&quot;,
+            &quot;environment&quot;: [],
+            &quot;externalConsole&quot;: false,
+            &quot;MIMode&quot;: &quot;gdb&quot;,
+            &quot;setupCommands&quot;: [
+                {
+                    &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,
+                    &quot;text&quot;: &quot;-enable-pretty-printing&quot;,
+                    &quot;ignoreFailures&quot;: true
+                }
+            ]
+        }
+    ]
+}</code></pre></div></section></section></section><section class="detached"><h2 id="-1775583846#clion" data-toc="clion#ide-setup.md-clion"><span class="no-bold">🔷</span> CLion</h2><section class="detached"><h3 id="-1775583846#configura-o" data-toc="configura-o#ide-setup.md-configura-o">Configura&ccedil;&atilde;o</h3><ol class="list list-decimal" id="-1775583846#-jq4iiz_84" type="1" start="1"><li class="list-item" id="-1775583846#-jq4iiz_85"><p id="-1775583846#-jq4iiz_88"><span class="control" id="-1775583846#-jq4iiz_89">Abrir Projeto</span>: File &rarr; Open &rarr; Selecionar pasta do projeto</p></li><li class="list-item" id="-1775583846#-jq4iiz_86"><p id="-1775583846#-jq4iiz_90"><span class="control" id="-1775583846#-jq4iiz_91">CMake ser&aacute; detectado automaticamente</span></p></li><li class="list-item" id="-1775583846#-jq4iiz_87"><p id="-1775583846#-jq4iiz_92"><span class="control" id="-1775583846#-jq4iiz_94">Configurar Build Types</span>:</p><ul class="list" id="-1775583846#-jq4iiz_93" start="1"><li class="list-item" id="-1775583846#-jq4iiz_95"><p id="-1775583846#-jq4iiz_97">File &rarr; Settings &rarr; Build, Execution, Deployment &rarr; CMake</p></li><li class="list-item" id="-1775583846#-jq4iiz_96"><p id="-1775583846#-jq4iiz_98">Adicionar Debug e Release profiles</p></li></ul></li></ol></section><section class="detached"><h3 id="-1775583846#configura-es-recomendadas" data-toc="configura-es-recomendadas#ide-setup.md-configura-es-recomendadas">Configura&ccedil;&otilde;es Recomendadas</h3><section class="detached"><h4 id="-1775583846#cmake-settings" data-toc="cmake-settings#ide-setup.md-cmake-settings">CMake Settings</h4><div class="detached code-block" id="-1775583846#-jq4iiz_101"><pre><code class="language-none">Debug Profile:
+- Build type: Debug
+- CMake options: -DCMAKE_BUILD_TYPE=Debug
+- Build directory: build/Debug
+
+Release Profile:
+- Build type: Release  
+- CMake options: -DCMAKE_BUILD_TYPE=Release
+- Build directory: build/Release</code></pre></div></section><section class="detached"><h4 id="-1775583846#run-configurations" data-toc="run-configurations#ide-setup.md-run-configurations">Run Configurations</h4><p id="-1775583846#-jq4iiz_102">CLion criar&aacute; automaticamente configura&ccedil;&otilde;es para cada jogo. Voc&ecirc; pode:</p><ul class="list" id="-1775583846#-jq4iiz_103" start="1"><li class="list-item" id="-1775583846#-jq4iiz_104"><p id="-1775583846#-jq4iiz_107"><span class="control" id="-1775583846#-jq4iiz_108">Executar</span>: Ctrl+Shift+F10</p></li><li class="list-item" id="-1775583846#-jq4iiz_105"><p id="-1775583846#-jq4iiz_109"><span class="control" id="-1775583846#-jq4iiz_110">Debug</span>: Shift+F9</p></li><li class="list-item" id="-1775583846#-jq4iiz_106"><p id="-1775583846#-jq4iiz_111"><span class="control" id="-1775583846#-jq4iiz_112">Configurar</span>: Run &rarr; Edit Configurations</p></li></ul></section></section><section class="detached"><h3 id="-1775583846#plugins-teis" data-toc="plugins-teis#ide-setup.md-plugins-teis">Plugins &Uacute;teis</h3><ul class="list" id="-1775583846#-jq4iiz_113" start="1"><li class="list-item" id="-1775583846#-jq4iiz_114"><p id="-1775583846#-jq4iiz_117"><span class="control" id="-1775583846#-jq4iiz_118">Valgrind Memcheck</span> - Detec&ccedil;&atilde;o de vazamentos</p></li><li class="list-item" id="-1775583846#-jq4iiz_115"><p id="-1775583846#-jq4iiz_119"><span class="control" id="-1775583846#-jq4iiz_120">CPU Usage Indicator</span> - Monitor de performance</p></li><li class="list-item" id="-1775583846#-jq4iiz_116"><p id="-1775583846#-jq4iiz_121"><span class="control" id="-1775583846#-jq4iiz_122">Rainbow Brackets</span> - Melhor visualiza&ccedil;&atilde;o</p></li></ul></section></section><section class="detached"><h2 id="-1775583846#visual-studio-windows" data-toc="visual-studio-windows#ide-setup.md-visual-studio-windows">🪟 Visual Studio (Windows)</h2><section class="detached"><h3 id="-1775583846#configura-o" data-toc="configura-o#ide-setup.md-configura-o">Configura&ccedil;&atilde;o</h3><ol class="list list-decimal" id="-1775583846#-jq4iiz_126" type="1" start="1"><li class="list-item" id="-1775583846#-jq4iiz_127"><p id="-1775583846#-jq4iiz_130"><span class="control" id="-1775583846#-jq4iiz_131">Instalar</span>: Visual Studio Community (gratuito)</p></li><li class="list-item" id="-1775583846#-jq4iiz_128"><p id="-1775583846#-jq4iiz_132"><span class="control" id="-1775583846#-jq4iiz_133">Workloads</span>: Marcar &quot;Desktop development with C++&quot;</p></li><li class="list-item" id="-1775583846#-jq4iiz_129"><p id="-1775583846#-jq4iiz_134"><span class="control" id="-1775583846#-jq4iiz_135">Componentes</span>: Incluir CMake tools</p></li></ol></section><section class="detached"><h3 id="-1775583846#abrir-projeto" data-toc="abrir-projeto#ide-setup.md-abrir-projeto">Abrir Projeto</h3><ol class="list list-decimal" id="-1775583846#-jq4iiz_136" type="1" start="1"><li class="list-item" id="-1775583846#-jq4iiz_137"><p id="-1775583846#-jq4iiz_140">File &rarr; Open &rarr; CMake...</p></li><li class="list-item" id="-1775583846#-jq4iiz_138"><p id="-1775583846#-jq4iiz_141">Selecionar <span class="inline-code" id="-1775583846#-jq4iiz_142">CMakeLists.txt</span> na raiz do projeto</p></li><li class="list-item" id="-1775583846#-jq4iiz_139"><p id="-1775583846#-jq4iiz_143">Visual Studio configurar&aacute; automaticamente</p></li></ol></section><section class="detached"><h3 id="-1775583846#configura-es-cmake" data-toc="configura-es-cmake#ide-setup.md-configura-es-cmake">Configura&ccedil;&otilde;es CMake</h3><div class="detached code-block" id="-1775583846#-jq4iiz_144"><pre><code class="language-json">// CMakeSettings.json (criado automaticamente)
+{
+  &quot;configurations&quot;: [
+    {
+      &quot;name&quot;: &quot;x64-Debug&quot;,
+      &quot;generator&quot;: &quot;Ninja&quot;,
+      &quot;configurationType&quot;: &quot;Debug&quot;,
+      &quot;buildRoot&quot;: &quot;${projectDir}\\build\\${name}&quot;,
+      &quot;installRoot&quot;: &quot;${projectDir}\\install\\${name}&quot;,
+      &quot;cmakeCommandArgs&quot;: &quot;&quot;,
+      &quot;buildCommandArgs&quot;: &quot;&quot;,
+      &quot;ctestCommandArgs&quot;: &quot;&quot;
+    }
+  ]
+}</code></pre></div></section></section><section class="detached"><h2 id="-1775583846#qt-creator" data-toc="qt-creator#ide-setup.md-qt-creator"><span class="no-bold">🛠</span>️ Qt Creator</h2><section class="detached"><h3 id="-1775583846#instala-o" data-toc="instala-o#ide-setup.md-instala-o">Instala&ccedil;&atilde;o</h3><div class="detached code-block" id="-1775583846#-jq4iiz_148"><pre><code class="language-bash"># Linux
+sudo apt install qtcreator
+
+# macOS
+brew install --cask qt-creator
+
+# Windows - baixar do site Qt</code></pre></div></section><section class="detached"><h3 id="-1775583846#configura-o" data-toc="configura-o#ide-setup.md-configura-o">Configura&ccedil;&atilde;o</h3><ol class="list list-decimal" id="-1775583846#-jq4iiz_149" type="1" start="1"><li class="list-item" id="-1775583846#-jq4iiz_150"><p id="-1775583846#-jq4iiz_153"><span class="control" id="-1775583846#-jq4iiz_154">Abrir</span>: File &rarr; Open File or Project &rarr; CMakeLists.txt</p></li><li class="list-item" id="-1775583846#-jq4iiz_151"><p id="-1775583846#-jq4iiz_155"><span class="control" id="-1775583846#-jq4iiz_156">Kit Selection</span>: Escolher kit apropriado (GCC/Clang)</p></li><li class="list-item" id="-1775583846#-jq4iiz_152"><p id="-1775583846#-jq4iiz_157"><span class="control" id="-1775583846#-jq4iiz_158">Build Directory</span>: Configurar diret&oacute;rio de build</p></li></ol></section><section class="detached"><h3 id="-1775583846#vantagens" data-toc="vantagens#ide-setup.md-vantagens">Vantagens</h3><ul class="list" id="-1775583846#-jq4iiz_159" start="1"><li class="list-item" id="-1775583846#-jq4iiz_160"><p id="-1775583846#-jq4iiz_164"><span class="control" id="-1775583846#-jq4iiz_165">Excelente suporte CMake</span></p></li><li class="list-item" id="-1775583846#-jq4iiz_161"><p id="-1775583846#-jq4iiz_166"><span class="control" id="-1775583846#-jq4iiz_167">Debugger integrado</span></p></li><li class="list-item" id="-1775583846#-jq4iiz_162"><p id="-1775583846#-jq4iiz_168"><span class="control" id="-1775583846#-jq4iiz_169">Profiler built-in</span></p></li><li class="list-item" id="-1775583846#-jq4iiz_163"><p id="-1775583846#-jq4iiz_170"><span class="control" id="-1775583846#-jq4iiz_171">Git integration</span></p></li></ul></section></section><section class="detached"><h2 id="-1775583846#code-blocks" data-toc="code-blocks#ide-setup.md-code-blocks"><span class="no-bold">📝</span> Code::Blocks</h2><section class="detached"><h3 id="-1775583846#instala-o" data-toc="instala-o#ide-setup.md-instala-o">Instala&ccedil;&atilde;o</h3><div class="detached code-block" id="-1775583846#-jq4iiz_174"><pre><code class="language-bash"># Linux
+sudo apt install codeblocks
+
+# Windows/macOS - baixar do site oficial</code></pre></div></section><section class="detached"><h3 id="-1775583846#importar-projeto-cmake" data-toc="importar-projeto-cmake#ide-setup.md-importar-projeto-cmake">Importar Projeto CMake</h3><ol class="list list-decimal" id="-1775583846#-jq4iiz_175" type="1" start="1"><li class="list-item" id="-1775583846#-jq4iiz_176"><p id="-1775583846#-jq4iiz_179">File &rarr; Import &rarr; Import CMake Project</p></li><li class="list-item" id="-1775583846#-jq4iiz_177"><p id="-1775583846#-jq4iiz_180">Selecionar CMakeLists.txt</p></li><li class="list-item" id="-1775583846#-jq4iiz_178"><p id="-1775583846#-jq4iiz_181">Configurar compilador e op&ccedil;&otilde;es</p></li></ol></section></section><section class="detached"><h2 id="-1775583846#vim-neovim" data-toc="vim-neovim#ide-setup.md-vim-neovim"><span class="no-bold">🎭</span> Vim/Neovim</h2><section class="detached"><h3 id="-1775583846#plugins-recomendados-com-vim-plug" data-toc="plugins-recomendados-com-vim-plug#ide-setup.md-plugins-recomendados-com-vim-plug">Plugins Recomendados (com vim-plug)</h3><div class="detached code-block" id="-1775583846#-jq4iiz_184"><pre><code class="language-vim">&quot; .vimrc ou init.vim
+call plug#begin()
+
+&quot; LSP e Completions
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'clangd/coc-clangd'
+
+&quot; CMake
+Plug 'cdelledonne/vim-cmake'
+Plug 'vhdirk/vim-cmake'
+
+&quot; Syntax
+Plug 'vim-syntastic/syntastic'
+Plug 'octol/vim-cpp-enhanced-highlight'
+
+&quot; Git
+Plug 'tpope/vim-fugitive'
+
+call plug#end()</code></pre></div></section><section class="detached"><h3 id="-1775583846#configura-o-cmake" data-toc="configura-o-cmake#ide-setup.md-configura-o-cmake">Configura&ccedil;&atilde;o CMake</h3><div class="detached code-block" id="-1775583846#-jq4iiz_185"><pre><code class="language-vim">&quot; Keybindings para CMake
+nnoremap &lt;leader&gt;cc :CMake&lt;CR&gt;
+nnoremap &lt;leader&gt;cb :CMakeBuild&lt;CR&gt;
+nnoremap &lt;leader&gt;cr :CMakeRun&lt;CR&gt;</code></pre></div></section></section><section class="detached"><h2 id="-1775583846#emacs" data-toc="emacs#ide-setup.md-emacs"><span class="no-bold">🎨</span> Emacs</h2><section class="detached"><h3 id="-1775583846#configura-o-com-use-package" data-toc="configura-o-com-use-package#ide-setup.md-configura-o-com-use-package">Configura&ccedil;&atilde;o com use-package</h3><div class="detached code-block" id="-1775583846#-jq4iiz_187"><pre><code class="language-none">;; init.el
+(use-package cmake-mode
+  :ensure t)
+
+(use-package cmake-ide
+  :ensure t
+  :config
+  (cmake-ide-setup))
+
+(use-package company
+  :ensure t
+  :config
+  (global-company-mode))
+
+(use-package lsp-mode
+  :ensure t
+  :init
+  (setq lsp-keymap-prefix &quot;C-c l&quot;)
+  :hook ((c++-mode . lsp))
+  :commands lsp)</code></pre></div></section></section><section class="detached"><h2 id="-1775583846#configura-o-geral-para-todas-ides" data-toc="configura-o-geral-para-todas-ides#ide-setup.md-configura-o-geral-para-todas-ides"><span class="no-bold">⚙</span>️ Configura&ccedil;&atilde;o Geral para Todas IDEs</h2><section class="detached"><h3 id="-1775583846#formata-o-de-c-digo" data-toc="formata-o-de-c-digo#ide-setup.md-formata-o-de-c-digo">Formata&ccedil;&atilde;o de C&oacute;digo</h3><p id="-1775583846#-jq4iiz_191">Crie <span class="inline-code" id="-1775583846#-jq4iiz_193">.clang-format</span> na raiz do projeto:</p><div class="detached code-block" id="-1775583846#-jq4iiz_192"><pre><code class="language-yaml">BasedOnStyle: Google
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+AllowShortFunctionsOnASingleLine: Empty</code></pre></div></section><section class="detached"><h3 id="-1775583846#editorconfig" data-toc="editorconfig#ide-setup.md-editorconfig">EditorConfig</h3><p id="-1775583846#-jq4iiz_194">Crie <span class="inline-code" id="-1775583846#-jq4iiz_196">.editorconfig</span>:</p><div class="detached code-block" id="-1775583846#-jq4iiz_195"><pre><code class="language-ini">root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{cpp,hpp,h}]
+indent_style = space
+indent_size = 4
+
+[CMakeLists.txt,*.cmake]
+indent_style = space
+indent_size = 2</code></pre></div></section><section class="detached"><h3 id="-1775583846#git-ignore-para-ides" data-toc="git-ignore-para-ides#ide-setup.md-git-ignore-para-ides">Git Ignore para IDEs</h3><p id="-1775583846#-jq4iiz_197">Adicione ao <span class="inline-code" id="-1775583846#-jq4iiz_199">.gitignore</span>:</p><div class="detached code-block" id="-1775583846#-jq4iiz_198"><pre><code class="language-gitignore"># IDEs
+.vscode/
+.idea/
+*.user
+*.pro.user*
+.cproject
+.project
+.settings/
+*.cbp</code></pre></div></section></section><section class="detached"><h2 id="-1775583846#comandos-teis-por-ide" data-toc="comandos-teis-por-ide#ide-setup.md-comandos-teis-por-ide"><span class="no-bold">🚀</span> Comandos &Uacute;teis por IDE</h2><section class="detached"><h3 id="-1775583846#vs-code" data-toc="vs-code#ide-setup.md-vs-code">VS Code</h3><ul class="list" id="-1775583846#-jq4iiz_203" start="1"><li class="list-item" id="-1775583846#-jq4iiz_204"><p id="-1775583846#-jq4iiz_208"><span class="control" id="-1775583846#-jq4iiz_209">Build</span>: <span class="inline-code" id="-1775583846#-jq4iiz_210">Ctrl+Shift+P</span> &rarr; &quot;CMake: Build&quot;</p></li><li class="list-item" id="-1775583846#-jq4iiz_205"><p id="-1775583846#-jq4iiz_211"><span class="control" id="-1775583846#-jq4iiz_212">Run</span>: <span class="inline-code" id="-1775583846#-jq4iiz_213">Ctrl+F5</span></p></li><li class="list-item" id="-1775583846#-jq4iiz_206"><p id="-1775583846#-jq4iiz_214"><span class="control" id="-1775583846#-jq4iiz_215">Debug</span>: <span class="inline-code" id="-1775583846#-jq4iiz_216">F5</span></p></li><li class="list-item" id="-1775583846#-jq4iiz_207"><p id="-1775583846#-jq4iiz_217"><span class="control" id="-1775583846#-jq4iiz_218">Terminal</span>: <span class="inline-code" id="-1775583846#-jq4iiz_219">Ctrl+`` </span> (backtick)</p></li></ul></section><section class="detached"><h3 id="-1775583846#clion" data-toc="clion#ide-setup.md-clion">CLion</h3><ul class="list" id="-1775583846#-jq4iiz_220" start="1"><li class="list-item" id="-1775583846#-jq4iiz_221"><p id="-1775583846#-jq4iiz_225"><span class="control" id="-1775583846#-jq4iiz_226">Build</span>: <span class="inline-code" id="-1775583846#-jq4iiz_227">Ctrl+F9</span></p></li><li class="list-item" id="-1775583846#-jq4iiz_222"><p id="-1775583846#-jq4iiz_228"><span class="control" id="-1775583846#-jq4iiz_229">Run</span>: <span class="inline-code" id="-1775583846#-jq4iiz_230">Shift+F10</span></p></li><li class="list-item" id="-1775583846#-jq4iiz_223"><p id="-1775583846#-jq4iiz_231"><span class="control" id="-1775583846#-jq4iiz_232">Debug</span>: <span class="inline-code" id="-1775583846#-jq4iiz_233">Shift+F9</span></p></li><li class="list-item" id="-1775583846#-jq4iiz_224"><p id="-1775583846#-jq4iiz_234"><span class="control" id="-1775583846#-jq4iiz_235">Terminal</span>: <span class="inline-code" id="-1775583846#-jq4iiz_236">Alt+F12</span></p></li></ul></section><section class="detached"><h3 id="-1775583846#visual-studio" data-toc="visual-studio#ide-setup.md-visual-studio">Visual Studio</h3><ul class="list" id="-1775583846#-jq4iiz_237" start="1"><li class="list-item" id="-1775583846#-jq4iiz_238"><p id="-1775583846#-jq4iiz_242"><span class="control" id="-1775583846#-jq4iiz_243">Build</span>: <span class="inline-code" id="-1775583846#-jq4iiz_244">Ctrl+Shift+B</span></p></li><li class="list-item" id="-1775583846#-jq4iiz_239"><p id="-1775583846#-jq4iiz_245"><span class="control" id="-1775583846#-jq4iiz_246">Run</span>: <span class="inline-code" id="-1775583846#-jq4iiz_247">Ctrl+F5</span></p></li><li class="list-item" id="-1775583846#-jq4iiz_240"><p id="-1775583846#-jq4iiz_248"><span class="control" id="-1775583846#-jq4iiz_249">Debug</span>: <span class="inline-code" id="-1775583846#-jq4iiz_250">F5</span></p></li><li class="list-item" id="-1775583846#-jq4iiz_241"><p id="-1775583846#-jq4iiz_251"><span class="control" id="-1775583846#-jq4iiz_252">Terminal</span>: View &rarr; Terminal</p></li></ul></section></section><section class="detached"><h2 id="-1775583846#dicas-gerais" data-toc="dicas-gerais#ide-setup.md-dicas-gerais"><span class="no-bold">🎯</span> Dicas Gerais</h2><section class="detached"><h3 id="-1775583846#performance" data-toc="performance#ide-setup.md-performance">Performance</h3><ul class="list" id="-1775583846#-jq4iiz_256" start="1"><li class="list-item" id="-1775583846#-jq4iiz_257"><p id="-1775583846#-jq4iiz_260"><span class="control" id="-1775583846#-jq4iiz_261">Use SSD</span> para diret&oacute;rio de build</p></li><li class="list-item" id="-1775583846#-jq4iiz_258"><p id="-1775583846#-jq4iiz_262"><span class="control" id="-1775583846#-jq4iiz_263">Configure RAM adequada</span> (m&iacute;nimo 8GB)</p></li><li class="list-item" id="-1775583846#-jq4iiz_259"><p id="-1775583846#-jq4iiz_264"><span class="control" id="-1775583846#-jq4iiz_265">Feche programas desnecess&aacute;rios</span> durante compila&ccedil;&atilde;o</p></li></ul></section><section class="detached"><h3 id="-1775583846#produtividade" data-toc="produtividade#ide-setup.md-produtividade">Produtividade</h3><ul class="list" id="-1775583846#-jq4iiz_266" start="1"><li class="list-item" id="-1775583846#-jq4iiz_267"><p id="-1775583846#-jq4iiz_271"><span class="control" id="-1775583846#-jq4iiz_272">Configure atalhos</span> personalizados</p></li><li class="list-item" id="-1775583846#-jq4iiz_268"><p id="-1775583846#-jq4iiz_273"><span class="control" id="-1775583846#-jq4iiz_274">Use templates</span> para novos arquivos</p></li><li class="list-item" id="-1775583846#-jq4iiz_269"><p id="-1775583846#-jq4iiz_275"><span class="control" id="-1775583846#-jq4iiz_276">Configure snippets</span> para c&oacute;digo comum</p></li><li class="list-item" id="-1775583846#-jq4iiz_270"><p id="-1775583846#-jq4iiz_277"><span class="control" id="-1775583846#-jq4iiz_278">Use git integration</span></p></li></ul></section><section class="detached"><h3 id="-1775583846#debug" data-toc="debug#ide-setup.md-debug">Debug</h3><ul class="list" id="-1775583846#-jq4iiz_279" start="1"><li class="list-item" id="-1775583846#-jq4iiz_280"><p id="-1775583846#-jq4iiz_283"><span class="control" id="-1775583846#-jq4iiz_284">Configure breakpoints</span> nos pontos cr&iacute;ticos</p></li><li class="list-item" id="-1775583846#-jq4iiz_281"><p id="-1775583846#-jq4iiz_285"><span class="control" id="-1775583846#-jq4iiz_286">Use watch variables</span> para monitorar estado</p></li><li class="list-item" id="-1775583846#-jq4iiz_282"><p id="-1775583846#-jq4iiz_287"><span class="control" id="-1775583846#-jq4iiz_288">Ative optimiza&ccedil;&atilde;o</span> apenas em release</p></li></ul></section></section><section class="detached"><h2 id="-1775583846#pr-ximos-passos" data-toc="pr-ximos-passos#ide-setup.md-pr-ximos-passos"><span class="no-bold">🎯</span> Pr&oacute;ximos Passos</h2><p id="-1775583846#-jq4iiz_289">Ap&oacute;s configurar sua IDE:</p><ol class="list list-decimal" id="-1775583846#-jq4iiz_290" type="1" start="1"><li class="list-item" id="-1775583846#-jq4iiz_295"><p id="-1775583846#-jq4iiz_298">Prossiga para Configura&ccedil;&atilde;o Final (<a href="#-971479485">Configura&ccedil;&atilde;o Final do Ambiente</a>)</p></li><li class="list-item" id="-1775583846#-jq4iiz_296"><p id="-1775583846#-jq4iiz_300">Ou teste com </p></li><li class="list-item" id="-1775583846#-jq4iiz_297"><p id="-1775583846#-jq4iiz_302">Volte para Configura&ccedil;&atilde;o do Ambiente (<a href="#-864305365">Configura&ccedil;&atilde;o do Ambiente</a>)</p></li></ol><p id="-1775583846#-jq4iiz_291">Se tiver problemas:</p><ol class="list list-decimal" id="-1775583846#-jq4iiz_292" type="1" start="1"><li class="list-item" id="-1775583846#-jq4iiz_304"><p id="-1775583846#-jq4iiz_306">Consulte o Troubleshooting (<a href="#1579521354">Troubleshooting</a>)</p></li><li class="list-item" id="-1775583846#-jq4iiz_305"><p id="-1775583846#-jq4iiz_308">Verifique se SFML e CMake est&atilde;o funcionando</p></li></ol><p id="-1775583846#-jq4iiz_294"><span class="control" id="-1775583846#-jq4iiz_309">Dica</span>: Se &eacute; iniciante, comece com VS Code. Se quer m&aacute;xima produtividade, use CLion. Para projetos simples, Code::Blocks &eacute; suficiente!</p></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-971479485">Configura&ccedil;&atilde;o Final do Ambiente</h1><p id="-971479485#gc5xbg_3">Este &eacute; o &uacute;ltimo passo da configura&ccedil;&atilde;o do ambiente. Aqui vamos integrar tudo o que foi instalado e fazer os testes finais. <span class="no-bold">🏁</span></p><section class="detached"><h2 id="-971479485#checklist-pr-requisitos" data-toc="checklist-pr-requisitos#environment-setup.md-checklist-pr-requisitos"><span class="no-bold">📋</span> Checklist Pr&eacute;-Requisitos</h2><p id="-971479485#gc5xbg_15">Antes de continuar, confirme que voc&ecirc; j&aacute; tem:</p><ul class="list" id="-971479485#gc5xbg_16" start="1"><li class="list-item" id="-971479485#gc5xbg_17"><p id="-971479485#gc5xbg_21"><span class="no-bold">✅</span> Sistema compat&iacute;vel (<a href="#-362830994">Requisitos do Sistema</a>)</p></li><li class="list-item" id="-971479485#gc5xbg_18"><p id="-971479485#gc5xbg_23"><span class="no-bold">✅</span> SFML instalado (<a href="#249557237">Instala&ccedil;&atilde;o do SFML</a>)</p></li><li class="list-item" id="-971479485#gc5xbg_19"><p id="-971479485#gc5xbg_25"><span class="no-bold">✅</span> CMake instalado (<a href="#-424771146">Instala&ccedil;&atilde;o do CMake</a>)</p></li><li class="list-item" id="-971479485#gc5xbg_20"><p id="-971479485#gc5xbg_27"><span class="no-bold">✅</span> IDE configurada (<a href="#-1775583846">Configura&ccedil;&atilde;o da IDE</a>) (opcional)</p></li></ul></section><section class="detached"><h2 id="-971479485#setup-autom-tico-recomendado" data-toc="setup-autom-tico-recomendado#environment-setup.md-setup-autom-tico-recomendado"><span class="no-bold">🚀</span> Setup Autom&aacute;tico (Recomendado)</h2><p id="-971479485#gc5xbg_29">O m&eacute;todo mais r&aacute;pido e confi&aacute;vel:</p><div class="detached code-block" id="-971479485#gc5xbg_30"><pre><code class="language-bash"># Clonar o repositório
+git clone &lt;repository-url&gt;
+cd 16Games-in-Cpp
+
+# Executar script de configuração
+chmod +x setup.sh
+./setup.sh</code></pre></div><p id="-971479485#gc5xbg_31">O script far&aacute;:</p><ol class="list list-decimal" id="-971479485#gc5xbg_32" type="1" start="1"><li class="list-item" id="-971479485#gc5xbg_34"><p id="-971479485#gc5xbg_38"><span class="no-bold">✅</span> Verifica&ccedil;&atilde;o de depend&ecirc;ncias</p></li><li class="list-item" id="-971479485#gc5xbg_35"><p id="-971479485#gc5xbg_39"><span class="no-bold">✅</span> Configura&ccedil;&atilde;o do CMake</p></li><li class="list-item" id="-971479485#gc5xbg_36"><p id="-971479485#gc5xbg_40"><span class="no-bold">✅</span> Compila&ccedil;&atilde;o de teste</p></li><li class="list-item" id="-971479485#gc5xbg_37"><p id="-971479485#gc5xbg_41"><span class="no-bold">✅</span> Valida&ccedil;&atilde;o do ambiente</p></li></ol><p id="-971479485#gc5xbg_33">Se o script executar sem erros, <span class="control" id="-971479485#gc5xbg_42">seu ambiente est&aacute; pronto!</span> <span class="no-bold">🎉</span></p></section><section class="detached"><h2 id="-971479485#setup-manual" data-toc="setup-manual#environment-setup.md-setup-manual"><span class="no-bold">🔧</span> Setup Manual</h2><p id="-971479485#gc5xbg_43">Se preferir fazer manualmente ou se o script autom&aacute;tico falhar:</p><section class="detached"><h3 id="-971479485#1-clonar-e-preparar-projeto" data-toc="1-clonar-e-preparar-projeto#environment-setup.md-1-clonar-e-preparar-projeto">1. Clonar e Preparar Projeto</h3><div class="detached code-block" id="-971479485#gc5xbg_48"><pre><code class="language-bash"># Clonar repositório
+git clone &lt;repository-url&gt;
+cd 16Games-in-Cpp
+
+# Criar diretório de build
+mkdir -p build
+cd build</code></pre></div></section><section class="detached"><h3 id="-971479485#2-configurar-cmake" data-toc="2-configurar-cmake#environment-setup.md-2-configurar-cmake">2. Configurar CMake</h3><div class="detached code-block" id="-971479485#gc5xbg_49"><pre><code class="language-bash"># Configurar projeto
+cmake ..
+
+# Verificar se não houve erros
+echo $?  # Deve retornar 0</code></pre></div><p id="-971479485#gc5xbg_50"><span class="control" id="-971479485#gc5xbg_52">Sa&iacute;da esperada:</span></p><div class="detached code-block" id="-971479485#gc5xbg_51"><pre><code class="language-none">-- The CXX compiler identification is GNU 9.4.0
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Found PkgConfig: /usr/bin/pkg-config (found version &quot;0.29.2&quot;)
+-- Checking for modules 'sfml-all&gt;=2.5'
+--   Found sfml-all, version 2.5.1
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /path/to/16Games-in-Cpp/build</code></pre></div></section><section class="detached"><h3 id="-971479485#3-teste-de-compila-o" data-toc="3-teste-de-compila-o#environment-setup.md-3-teste-de-compila-o">3. Teste de Compila&ccedil;&atilde;o</h3><div class="detached code-block" id="-971479485#gc5xbg_53"><pre><code class="language-bash"># Compilar um jogo de teste
+make tetris
+
+# Verificar se o executável foi criado
+ls games/tetris/
+# Deve mostrar: tetris (e possivelmente images/)</code></pre></div></section><section class="detached"><h3 id="-971479485#4-teste-de-execu-o" data-toc="4-teste-de-execu-o#environment-setup.md-4-teste-de-execu-o">4. Teste de Execu&ccedil;&atilde;o</h3><div class="detached code-block" id="-971479485#gc5xbg_54"><pre><code class="language-bash"># Executar o jogo
+cd games/tetris
+./tetris
+
+# Ou usar o target cmake
+cd ../../  # voltar para build/
+make run_tetris</code></pre></div><p id="-971479485#gc5xbg_55">Se o jogo abrir uma janela e funcionar, <span class="control" id="-971479485#gc5xbg_56">tudo est&aacute; perfeito!</span> <span class="no-bold">🎮</span></p></section></section><section class="detached"><h2 id="-971479485#valida-o-completa" data-toc="valida-o-completa#environment-setup.md-valida-o-completa"><span class="no-bold">✅</span> Valida&ccedil;&atilde;o Completa</h2><section class="detached"><h3 id="-971479485#teste-todos-os-componentes" data-toc="teste-todos-os-componentes#environment-setup.md-teste-todos-os-componentes">Teste Todos os Componentes</h3><section class="detached"><h4 id="-971479485#1-verificar-todas-as-depend-ncias" data-toc="1-verificar-todas-as-depend-ncias#environment-setup.md-1-verificar-todas-as-depend-ncias">1. Verificar Todas as Depend&ecirc;ncias</h4><div class="detached code-block" id="-971479485#gc5xbg_61"><pre><code class="language-bash"># Script de verificação completa
+cat &gt; check_all.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+echo &quot;🔍 Verificação Completa do Ambiente&quot;
+echo &quot;==================================&quot;
+
+# Verificar compilador
+if g++ --version &amp;&gt;/dev/null; then
+    echo &quot;✅ G++ - $(g++ --version | head -n1)&quot;
+else
+    echo &quot;❌ G++ não encontrado&quot;
+    exit 1
+fi
+
+# Verificar CMake
+if cmake --version &amp;&gt;/dev/null; then
+    echo &quot;✅ CMake - $(cmake --version | head -n1)&quot;
+else
+    echo &quot;❌ CMake não encontrado&quot;
+    exit 1
+fi
+
+# Verificar SFML
+if pkg-config --exists sfml-all; then
+    echo &quot;✅ SFML - $(pkg-config --modversion sfml-all)&quot;
+else
+    echo &quot;❌ SFML não encontrado&quot;
+    exit 1
+fi
+
+# Verificar espaço em disco
+SPACE=$(df -BG . | tail -1 | awk '{print $4}' | sed 's/G//')
+if [ $SPACE -gt 1 ]; then
+    echo &quot;✅ Espaço em disco - ${SPACE}GB disponível&quot;
+else
+    echo &quot;⚠️  Pouco espaço em disco - ${SPACE}GB disponível&quot;
+fi
+
+echo &quot;&quot;
+echo &quot;🎉 Todos os componentes verificados com sucesso!&quot;
+EOF
+
+chmod +x check_all.sh
+./check_all.sh</code></pre></div></section><section class="detached"><h4 id="-971479485#2-compilar-todos-os-jogos" data-toc="2-compilar-todos-os-jogos#environment-setup.md-2-compilar-todos-os-jogos">2. Compilar Todos os Jogos</h4><div class="detached code-block" id="-971479485#gc5xbg_62"><pre><code class="language-bash"># No diretório build/
+make all_games
+
+# Verificar se todos foram compilados
+ls games/
+# Deve mostrar todos os 16 diretórios de jogos</code></pre></div></section><section class="detached"><h4 id="-971479485#3-teste-r-pido-de-m-ltiplos-jogos" data-toc="3-teste-r-pido-de-m-ltiplos-jogos#environment-setup.md-3-teste-r-pido-de-m-ltiplos-jogos">3. Teste R&aacute;pido de M&uacute;ltiplos Jogos</h4><div class="detached code-block" id="-971479485#gc5xbg_63"><pre><code class="language-bash"># Script para testar vários jogos
+cat &gt; test_games.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+games=(&quot;tetris&quot; &quot;snake&quot; &quot;arkanoid&quot; &quot;doodle_jump&quot;)
+
+for game in &quot;${games[@]}&quot;; do
+    echo &quot;🎮 Testando $game...&quot;
+    cd &quot;games/$game&quot;
+    timeout 3s &quot;./$game&quot; &amp;&gt;/dev/null
+    if [ $? -eq 124 ]; then  # timeout (esperado)
+        echo &quot;✅ $game - OK&quot;
+    else
+        echo &quot;❌ $game - ERRO&quot;
+    fi
+    cd &quot;../..&quot;
+done
+EOF
+
+chmod +x test_games.sh
+./test_games.sh</code></pre></div></section></section></section><section class="detached"><h2 id="-971479485#configura-es-opcionais" data-toc="configura-es-opcionais#environment-setup.md-configura-es-opcionais"><span class="no-bold">🎛</span>️ Configura&ccedil;&otilde;es Opcionais</h2><section class="detached"><h3 id="-971479485#vari-veis-de-ambiente-teis" data-toc="vari-veis-de-ambiente-teis#environment-setup.md-vari-veis-de-ambiente-teis">Vari&aacute;veis de Ambiente &Uacute;teis</h3><p id="-971479485#gc5xbg_66">Adicione ao seu <span class="inline-code" id="-971479485#gc5xbg_68">.bashrc</span> ou <span class="inline-code" id="-971479485#gc5xbg_69">.zshrc</span>:</p><div class="detached code-block" id="-971479485#gc5xbg_67"><pre><code class="language-bash"># Alias para o projeto 16 Games
+alias games-build='cd ~/16Games-in-Cpp/build &amp;&amp; make all_games'
+alias games-clean='cd ~/16Games-in-Cpp &amp;&amp; rm -rf build &amp;&amp; mkdir build'
+alias games-run='cd ~/16Games-in-Cpp/build'
+
+# Variáveis para desenvolvimento
+export GAMES_PROJECT_ROOT=&quot;$HOME/16Games-in-Cpp&quot;
+export GAMES_BUILD_DIR=&quot;$GAMES_PROJECT_ROOT/build&quot;
+
+# Função para executar jogos rapidamente
+play_game() {
+    if [ -z &quot;$1&quot; ]; then
+        echo &quot;Uso: play_game &lt;nome_do_jogo&gt;&quot;
+        echo &quot;Jogos disponíveis: tetris, snake, arkanoid, etc.&quot;
+        return 1
+    fi
+    
+    cd &quot;$GAMES_BUILD_DIR/games/$1&quot; &amp;&amp; &quot;./$1&quot;
+}</code></pre></div></section><section class="detached"><h3 id="-971479485#configura-o-de-performance" data-toc="configura-o-de-performance#environment-setup.md-configura-o-de-performance">Configura&ccedil;&atilde;o de Performance</h3><div class="detached code-block" id="-971479485#gc5xbg_70"><pre><code class="language-bash"># Para compilação mais rápida
+export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
+export MAKEFLAGS=&quot;-j$(nproc)&quot;
+
+# Para debug mais detalhado
+export CMAKE_VERBOSE_MAKEFILE=ON</code></pre></div></section></section><section class="detached"><h2 id="-971479485#testando-todos-os-jogos" data-toc="testando-todos-os-jogos#environment-setup.md-testando-todos-os-jogos"><span class="no-bold">🎮</span> Testando Todos os Jogos</h2><section class="detached"><h3 id="-971479485#script-de-teste-completo" data-toc="script-de-teste-completo#environment-setup.md-script-de-teste-completo">Script de Teste Completo</h3><div class="detached code-block" id="-971479485#gc5xbg_72"><pre><code class="language-bash"># Criar script de teste abrangente
+cat &gt; full_test.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+cd &quot;$(dirname &quot;$0&quot;)/build&quot;
+
+echo &quot;🎮 Teste Completo dos 16 Games in C++&quot;
+echo &quot;=======================================&quot;
+
+games=(
+    &quot;tetris&quot; &quot;doodle_jump&quot; &quot;arkanoid&quot; &quot;snake&quot; &quot;minesweeper&quot;
+    &quot;fifteen_puzzle&quot; &quot;racing&quot; &quot;outrun&quot; &quot;xonix&quot; &quot;bejeweled&quot;
+    &quot;netwalk&quot; &quot;mahjong&quot; &quot;tron&quot; &quot;chess&quot; &quot;volleyball&quot; &quot;asteroids&quot;
+)
+
+success=0
+total=${#games[@]}
+
+for game in &quot;${games[@]}&quot;; do
+    echo -n &quot;Testando $game... &quot;
+    
+    if [ -f &quot;games/$game/$game&quot; ]; then
+        echo &quot;✅ Compilado&quot;
+        ((success++))
+    else
+        echo &quot;❌ Não encontrado&quot;
+    fi
+done
+
+echo &quot;&quot;
+echo &quot;📊 Resultado: $success/$total jogos compilados com sucesso&quot;
+
+if [ $success -eq $total ]; then
+    echo &quot;🎉 Todos os jogos estão funcionando perfeitamente!&quot;
+    echo &quot;&quot;
+    echo &quot;🕹️ Comandos para jogar:&quot;
+    echo &quot;  cd build/games/tetris &amp;&amp; ./tetris&quot;
+    echo &quot;  make run_tetris&quot;
+    echo &quot;  # ... e assim por diante&quot;
+else
+    echo &quot;⚠️ Alguns jogos não foram compilados. Execute 'make all_games' novamente.&quot;
+fi
+EOF
+
+chmod +x full_test.sh
+./full_test.sh</code></pre></div></section></section><section class="detached"><h2 id="-971479485#estrutura-final-esperada" data-toc="estrutura-final-esperada#environment-setup.md-estrutura-final-esperada"><span class="no-bold">📁</span> Estrutura Final Esperada</h2><p id="-971479485#gc5xbg_73">Ap&oacute;s a configura&ccedil;&atilde;o completa, sua estrutura deve estar assim:</p><div class="detached code-block" id="-971479485#gc5xbg_74"><pre><code class="language-none">16Games-in-Cpp/
+├── build/                  # Arquivos compilados
+│   ├── games/             # Executáveis dos jogos
+│   │   ├── tetris/
+│   │   │   ├── tetris     # Executável
+│   │   │   └── images/    # Assets copiados
+│   │   ├── snake/
+│   │   └── ... (16 jogos)
+│   └── CMakeCache.txt     # Cache do CMake
+├── 01  Tetris/            # Código fonte
+├── 02  Doodle Jump/
+├── ... (código dos jogos)
+├── CMakeLists.txt         # Configuração CMake
+├── setup.sh              # Script de configuração
+└── README.md</code></pre></div></section><section class="detached"><h2 id="-971479485#comandos-de-manuten-o" data-toc="comandos-de-manuten-o#environment-setup.md-comandos-de-manuten-o"><span class="no-bold">🔧</span> Comandos de Manuten&ccedil;&atilde;o</h2><section class="detached"><h3 id="-971479485#limpeza-e-reconstru-o" data-toc="limpeza-e-reconstru-o#environment-setup.md-limpeza-e-reconstru-o">Limpeza e Reconstru&ccedil;&atilde;o</h3><div class="detached code-block" id="-971479485#gc5xbg_78"><pre><code class="language-bash"># Limpar build completo
+rm -rf build
+mkdir build
+cd build
+cmake ..
+make all_games
+
+# Ou usando script
+../setup.sh</code></pre></div></section><section class="detached"><h3 id="-971479485#atualizar-depend-ncias" data-toc="atualizar-depend-ncias#environment-setup.md-atualizar-depend-ncias">Atualizar Depend&ecirc;ncias</h3><div class="detached code-block" id="-971479485#gc5xbg_79"><pre><code class="language-bash"># Ubuntu/Debian
+sudo apt update &amp;&amp; sudo apt upgrade libsfml-dev cmake
+
+# Fedora
+sudo dnf update SFML-devel cmake
+
+# macOS
+brew update &amp;&amp; brew upgrade sfml cmake</code></pre></div></section><section class="detached"><h3 id="-971479485#verifica-o-de-integridade" data-toc="verifica-o-de-integridade#environment-setup.md-verifica-o-de-integridade">Verifica&ccedil;&atilde;o de Integridade</h3><div class="detached code-block" id="-971479485#gc5xbg_80"><pre><code class="language-bash"># Verificar arquivos corrompidos
+find . -name &quot;*.cpp&quot; -exec g++ -fsyntax-only {} \;
+
+# Verificar links das bibliotecas
+ldd build/games/tetris/tetris  # Linux
+otool -L build/games/tetris/tetris  # macOS</code></pre></div></section></section><section class="detached"><h2 id="-971479485#troubleshooting-final" data-toc="troubleshooting-final#environment-setup.md-troubleshooting-final"><span class="no-bold">❗</span> Troubleshooting Final</h2><section class="detached"><h3 id="-971479485#problema-cmake-n-o-encontra-sfml" data-toc="problema-cmake-n-o-encontra-sfml#environment-setup.md-problema-cmake-n-o-encontra-sfml">Problema: CMake n&atilde;o encontra SFML</h3><div class="detached code-block" id="-971479485#gc5xbg_84"><pre><code class="language-bash"># Verificar onde SFML está instalado
+find /usr -name &quot;*sfml*&quot; 2&gt;/dev/null
+
+# Definir manualmente se necessário
+cmake .. -DSFML_ROOT=/usr/local</code></pre></div></section><section class="detached"><h3 id="-971479485#problema-jogos-n-o-executam" data-toc="problema-jogos-n-o-executam#environment-setup.md-problema-jogos-n-o-executam">Problema: Jogos n&atilde;o executam</h3><div class="detached code-block" id="-971479485#gc5xbg_85"><pre><code class="language-bash"># Verificar dependências
+ldd games/tetris/tetris
+
+# Verificar se assets foram copiados
+ls games/tetris/images/
+
+# Executar com debug
+gdb games/tetris/tetris</code></pre></div></section><section class="detached"><h3 id="-971479485#problema-performance-ruim" data-toc="problema-performance-ruim#environment-setup.md-problema-performance-ruim">Problema: Performance ruim</h3><div class="detached code-block" id="-971479485#gc5xbg_86"><pre><code class="language-bash"># Compilar em modo Release
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make all_games</code></pre></div></section></section><section class="detached"><h2 id="-971479485#pr-ximos-passos" data-toc="pr-ximos-passos#environment-setup.md-pr-ximos-passos"><span class="no-bold">🎯</span> Pr&oacute;ximos Passos</h2><p id="-971479485#gc5xbg_87">Ambiente configurado com sucesso! Agora voc&ecirc; pode:</p><ol class="list list-decimal" id="-971479485#gc5xbg_88" type="1" start="1"><li class="list-item" id="-971479485#gc5xbg_89"><p id="-971479485#gc5xbg_93"><span class="control" id="-971479485#gc5xbg_94">Jogar</span>: Execute <span class="inline-code" id="-971479485#gc5xbg_95">make run_tetris</span> para testar</p></li><li class="list-item" id="-971479485#gc5xbg_90"><p id="-971479485#gc5xbg_96"><span class="control" id="-971479485#gc5xbg_97">Compilar</span>: V&aacute; para </p></li><li class="list-item" id="-971479485#gc5xbg_91"><p id="-971479485#gc5xbg_99"><span class="control" id="-971479485#gc5xbg_100">Desenvolver</span>: Explore a </p></li><li class="list-item" id="-971479485#gc5xbg_92"><p id="-971479485#gc5xbg_102"><span class="control" id="-971479485#gc5xbg_103">Documentar</span>: Veja os  individuais</p></li></ol></section><section class="detached"><h2 id="-971479485#parab-ns" data-toc="parab-ns#environment-setup.md-parab-ns"><span class="no-bold">🎉</span> Parab&eacute;ns!</h2><p id="-971479485#gc5xbg_105">Se chegou at&eacute; aqui com sucesso, voc&ecirc; tem:</p><ul class="list" id="-971479485#gc5xbg_106" start="1"><li class="list-item" id="-971479485#gc5xbg_110"><p id="-971479485#gc5xbg_114"><span class="no-bold">✅</span> Ambiente completamente configurado</p></li><li class="list-item" id="-971479485#gc5xbg_111"><p id="-971479485#gc5xbg_115"><span class="no-bold">✅</span> Todos os 16 jogos compilados</p></li><li class="list-item" id="-971479485#gc5xbg_112"><p id="-971479485#gc5xbg_116"><span class="no-bold">✅</span> Ferramentas de desenvolvimento prontas</p></li><li class="list-item" id="-971479485#gc5xbg_113"><p id="-971479485#gc5xbg_117"><span class="no-bold">✅</span> Scripts de manuten&ccedil;&atilde;o configurados</p></li></ul><p id="-971479485#gc5xbg_107"><span class="control" id="-971479485#gc5xbg_118">Divirta-se jogando e explorando o c&oacute;digo!</span> <span class="no-bold">🎮</span></p><p id="-971479485#gc5xbg_109"><span class="control" id="-971479485#gc5xbg_119">Dica</span>: Mantenha os scripts <span class="inline-code" id="-971479485#gc5xbg_120">setup.sh</span> e <span class="inline-code" id="-971479485#gc5xbg_121">full_test.sh</span> &agrave; m&atilde;o. Eles ser&atilde;o &uacute;teis para manuten&ccedil;&atilde;o futura do ambiente!</p></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-621198526">Compila&ccedil;&atilde;o</h1><p id="-621198526#-jyymdj_3">Este guia completo mostra como compilar, executar e gerenciar o build dos 16 jogos em C++. <span class="no-bold">🔨</span></p><section class="detached"><h2 id="-621198526#vis-o-geral" data-toc="vis-o-geral#compilacao.md-vis-o-geral"><span class="no-bold">🎯</span> Vis&atilde;o Geral</h2><p id="-621198526#-jyymdj_16">O projeto usa <span class="control" id="-621198526#-jyymdj_18">CMake</span> como sistema de build, que oferece:</p><ul class="list" id="-621198526#-jyymdj_17" start="1"><li class="list-item" id="-621198526#-jyymdj_19"><p id="-621198526#-jyymdj_24"><span class="control" id="-621198526#-jyymdj_25">Detec&ccedil;&atilde;o autom&aacute;tica</span> de depend&ecirc;ncias</p></li><li class="list-item" id="-621198526#-jyymdj_20"><p id="-621198526#-jyymdj_26"><span class="control" id="-621198526#-jyymdj_27">Build multiplataforma</span> (Linux, macOS, Windows)</p></li><li class="list-item" id="-621198526#-jyymdj_21"><p id="-621198526#-jyymdj_28"><span class="control" id="-621198526#-jyymdj_29">Gerenciamento de assets</span> (imagens, sons, fonts)</p></li><li class="list-item" id="-621198526#-jyymdj_22"><p id="-621198526#-jyymdj_30"><span class="control" id="-621198526#-jyymdj_31">Targets individuais</span> para cada jogo</p></li><li class="list-item" id="-621198526#-jyymdj_23"><p id="-621198526#-jyymdj_32"><span class="control" id="-621198526#-jyymdj_33">Comandos simplificados</span> de execu&ccedil;&atilde;o</p></li></ul></section><section class="detached"><h2 id="-621198526#compila-o-r-pida" data-toc="compila-o-r-pida#compilacao.md-compila-o-r-pida"><span class="no-bold">⚡</span> Compila&ccedil;&atilde;o R&aacute;pida</h2><section class="detached"><h3 id="-621198526#primeiro-build" data-toc="primeiro-build#compilacao.md-primeiro-build">Primeiro Build</h3><div class="detached code-block" id="-621198526#-jyymdj_36"><pre><code class="language-bash"># Configurar e compilar tudo
+./setup.sh
+
+# Ou manualmente:
+mkdir build &amp;&amp; cd build
+cmake ..
+make all_games</code></pre></div></section><section class="detached"><h3 id="-621198526#builds-subsequentes" data-toc="builds-subsequentes#compilacao.md-builds-subsequentes">Builds Subsequentes</h3><div class="detached code-block" id="-621198526#-jyymdj_37"><pre><code class="language-bash">cd build
+make all_games</code></pre></div></section></section><section class="detached"><h2 id="-621198526#compila-o-por-jogo" data-toc="compila-o-por-jogo#compilacao.md-compila-o-por-jogo"><span class="no-bold">🎮</span> Compila&ccedil;&atilde;o por Jogo</h2><section class="detached"><h3 id="-621198526#jogos-dispon-veis" data-toc="jogos-dispon-veis#compilacao.md-jogos-dispon-veis">Jogos Dispon&iacute;veis</h3><div class="detached code-block" id="-621198526#-jyymdj_41"><pre><code class="language-bash"># Listar todos os targets disponíveis
+make help | grep -E &quot;(tetris|snake|arkanoid)&quot;
+
+# Targets dos jogos:
+tetris, doodle_jump, arkanoid, snake, minesweeper
+fifteen_puzzle, racing, outrun, xonix, bejeweled
+netwalk, mahjong, tron, chess, volleyball, asteroids</code></pre></div></section><section class="detached"><h3 id="-621198526#compilar-jogo-espec-fico" data-toc="compilar-jogo-espec-fico#compilacao.md-compilar-jogo-espec-fico">Compilar Jogo Espec&iacute;fico</h3><div class="detached code-block" id="-621198526#-jyymdj_42"><pre><code class="language-bash"># Compilar apenas o Tetris
+make tetris
+
+# Compilar Snake
+make snake
+
+# Compilar Arkanoid
+make arkanoid</code></pre></div></section><section class="detached"><h3 id="-621198526#executar-jogos" data-toc="executar-jogos#compilacao.md-executar-jogos">Executar Jogos</h3><div class="detached code-block" id="-621198526#-jyymdj_43"><pre><code class="language-bash"># Método 1: Target CMake (recomendado)
+make run_tetris
+make run_snake
+make run_arkanoid
+
+# Método 2: Executar diretamente
+cd games/tetris &amp;&amp; ./tetris
+cd games/snake &amp;&amp; ./snake
+
+# Método 3: A partir do build/
+./games/tetris/tetris
+./games/snake/snake</code></pre></div></section></section><section class="detached"><h2 id="-621198526#op-es-de-build" data-toc="op-es-de-build#compilacao.md-op-es-de-build"><span class="no-bold">🔧</span> Op&ccedil;&otilde;es de Build</h2><section class="detached"><h3 id="-621198526#tipos-de-build" data-toc="tipos-de-build#compilacao.md-tipos-de-build">Tipos de Build</h3><section class="detached"><h4 id="-621198526#debug-padr-o" data-toc="debug-padr-o#compilacao.md-debug-padr-o">Debug (Padr&atilde;o)</h4><div class="detached code-block" id="-621198526#-jyymdj_50"><pre><code class="language-bash">cmake .. -DCMAKE_BUILD_TYPE=Debug
+make all_games
+
+# Características:
+# - Símbolos de debug incluídos
+# - Otimizações desabilitadas  
+# - Assertions habilitadas
+# - Executáveis maiores</code></pre></div></section><section class="detached"><h4 id="-621198526#release" data-toc="release#compilacao.md-release">Release</h4><div class="detached code-block" id="-621198526#-jyymdj_51"><pre><code class="language-bash">cmake .. -DCMAKE_BUILD_TYPE=Release
+make all_games
+
+# Características:
+# - Máxima otimização (-O3)
+# - Sem símbolos de debug
+# - Executáveis menores
+# - Melhor performance</code></pre></div></section><section class="detached"><h4 id="-621198526#relwithdebinfo" data-toc="relwithdebinfo#compilacao.md-relwithdebinfo">RelWithDebInfo</h4><div class="detached code-block" id="-621198526#-jyymdj_52"><pre><code class="language-bash">cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo
+make all_games
+
+# Características:
+# - Otimizado + símbolos debug
+# - Bom para profiling
+# - Compromisso entre debug e performance</code></pre></div></section></section><section class="detached"><h3 id="-621198526#compila-o-paralela" data-toc="compila-o-paralela#compilacao.md-compila-o-paralela">Compila&ccedil;&atilde;o Paralela</h3><div class="detached code-block" id="-621198526#-jyymdj_53"><pre><code class="language-bash"># Usar todos os cores disponíveis
+make -j$(nproc)  # Linux/macOS
+make -j%NUMBER_OF_PROCESSORS%  # Windows
+
+# Ou definir permanentemente
+export MAKEFLAGS=&quot;-j$(nproc)&quot;
+make all_games</code></pre></div></section><section class="detached"><h3 id="-621198526#compila-o-verbose" data-toc="compila-o-verbose#compilacao.md-compila-o-verbose">Compila&ccedil;&atilde;o Verbose</h3><div class="detached code-block" id="-621198526#-jyymdj_54"><pre><code class="language-bash"># Ver comandos completos de compilação
+make VERBOSE=1
+
+# Ou configurar permanentemente
+cmake .. -DCMAKE_VERBOSE_MAKEFILE=ON
+make</code></pre></div></section></section><section class="detached"><h2 id="-621198526#configura-es-avan-adas" data-toc="configura-es-avan-adas#compilacao.md-configura-es-avan-adas"><span class="no-bold">🎛</span>️ Configura&ccedil;&otilde;es Avan&ccedil;adas</h2><section class="detached"><h3 id="-621198526#compilador-espec-fico" data-toc="compilador-espec-fico#compilacao.md-compilador-espec-fico">Compilador Espec&iacute;fico</h3><div class="detached code-block" id="-621198526#-jyymdj_58"><pre><code class="language-bash"># Usar GCC específico
+cmake .. -DCMAKE_CXX_COMPILER=g++-9
+
+# Usar Clang
+cmake .. -DCMAKE_CXX_COMPILER=clang++
+
+# Windows - Visual Studio
+cmake .. -G &quot;Visual Studio 16 2019&quot;</code></pre></div></section><section class="detached"><h3 id="-621198526#flags-de-compila-o-customizadas" data-toc="flags-de-compila-o-customizadas#compilacao.md-flags-de-compila-o-customizadas">Flags de Compila&ccedil;&atilde;o Customizadas</h3><div class="detached code-block" id="-621198526#-jyymdj_59"><pre><code class="language-bash"># Adicionar flags extras
+cmake .. -DCMAKE_CXX_FLAGS=&quot;-Wall -Wextra -Wpedantic&quot;
+
+# Debug com sanitizers
+cmake .. -DCMAKE_BUILD_TYPE=Debug \
+         -DCMAKE_CXX_FLAGS=&quot;-fsanitize=address -fsanitize=undefined&quot;</code></pre></div></section><section class="detached"><h3 id="-621198526#configurar-sfml-manualmente" data-toc="configurar-sfml-manualmente#compilacao.md-configurar-sfml-manualmente">Configurar SFML Manualmente</h3><div class="detached code-block" id="-621198526#-jyymdj_60"><pre><code class="language-bash"># Se SFML não for encontrado automaticamente
+cmake .. -DSFML_ROOT=/usr/local/SFML
+
+# Ou especificar bibliotecas
+cmake .. -DSFML_LIBRARIES=&quot;sfml-system;sfml-window;sfml-graphics;sfml-audio&quot;</code></pre></div></section></section><section class="detached"><h2 id="-621198526#estrutura-de-build" data-toc="estrutura-de-build#compilacao.md-estrutura-de-build"><span class="no-bold">📁</span> Estrutura de Build</h2><section class="detached"><h3 id="-621198526#diret-rios-gerados" data-toc="diret-rios-gerados#compilacao.md-diret-rios-gerados">Diret&oacute;rios Gerados</h3><div class="detached code-block" id="-621198526#-jyymdj_63"><pre><code class="language-none">build/
+├── CMakeCache.txt          # Cache do CMake
+├── CMakeFiles/             # Arquivos internos do CMake
+├── Makefile               # Makefile principal
+├── games/                 # Executáveis e assets
+│   ├── tetris/
+│   │   ├── tetris         # Executável
+│   │   └── images/        # Assets copiados
+│   ├── snake/
+│   │   ├── snake
+│   │   └── images/
+│   └── ... (para cada jogo)
+└── cmake_install.cmake    # Script de instalação</code></pre></div></section><section class="detached"><h3 id="-621198526#assets-automaticamente-gerenciados" data-toc="assets-automaticamente-gerenciados#compilacao.md-assets-automaticamente-gerenciados">Assets Automaticamente Gerenciados</h3><p id="-621198526#-jyymdj_64">O CMake copia automaticamente:</p><ul class="list" id="-621198526#-jyymdj_65" start="1"><li class="list-item" id="-621198526#-jyymdj_66"><p id="-621198526#-jyymdj_69"><span class="control" id="-621198526#-jyymdj_70">images/</span> &rarr; <span class="inline-code" id="-621198526#-jyymdj_71">build/games/&lt;jogo&gt;/images/</span></p></li><li class="list-item" id="-621198526#-jyymdj_67"><p id="-621198526#-jyymdj_72"><span class="control" id="-621198526#-jyymdj_73">fonts/</span> &rarr; <span class="inline-code" id="-621198526#-jyymdj_74">build/games/&lt;jogo&gt;/fonts/</span></p></li><li class="list-item" id="-621198526#-jyymdj_68"><p id="-621198526#-jyymdj_75"><span class="control" id="-621198526#-jyymdj_76">files/</span> &rarr; <span class="inline-code" id="-621198526#-jyymdj_77">build/games/&lt;jogo&gt;/files/</span></p></li></ul></section></section><section class="detached"><h2 id="-621198526#scripts-teis" data-toc="scripts-teis#compilacao.md-scripts-teis"><span class="no-bold">🚀</span> Scripts &Uacute;teis</h2><section class="detached"><h3 id="-621198526#build-script-personalizado" data-toc="build-script-personalizado#compilacao.md-build-script-personalizado">Build Script Personalizado</h3><div class="detached code-block" id="-621198526#-jyymdj_80"><pre><code class="language-bash"># Criar script de build personalizado
+cat &gt; quick_build.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+GAME=&quot;$1&quot;
+BUILD_TYPE=&quot;${2:-Debug}&quot;
+
+if [ -z &quot;$GAME&quot; ]; then
+    echo &quot;Uso: $0 &lt;jogo&gt; [Debug|Release]&quot;
+    echo &quot;Jogos: tetris, snake, arkanoid, etc.&quot;
+    echo &quot;Exemplo: $0 tetris Release&quot;
+    exit 1
+fi
+
+echo &quot;🔨 Compilando $GAME em modo $BUILD_TYPE...&quot;
+
+# Criar/limpar build se necessário
+if [ ! -d &quot;build&quot; ]; then
+    mkdir build
+fi
+
+cd build
+
+# Configurar se necessário
+if [ ! -f &quot;CMakeCache.txt&quot; ] || [ &quot;$BUILD_TYPE&quot; != &quot;$(cat CMakeCache.txt | grep CMAKE_BUILD_TYPE | cut -d'=' -f2)&quot; ]; then
+    echo &quot;⚙️ Configurando CMake...&quot;
+    cmake .. -DCMAKE_BUILD_TYPE=&quot;$BUILD_TYPE&quot;
+fi
+
+# Compilar jogo específico
+echo &quot;🔧 Compilando...&quot;
+make &quot;$GAME&quot; -j$(nproc)
+
+if [ $? -eq 0 ]; then
+    echo &quot;✅ $GAME compilado com sucesso!&quot;
+    echo &quot;🎮 Para executar: make run_$GAME&quot;
+else
+    echo &quot;❌ Erro na compilação!&quot;
+    exit 1
+fi
+EOF
+
+chmod +x quick_build.sh
+
+# Usar o script
+./quick_build.sh tetris Debug
+./quick_build.sh snake Release</code></pre></div></section><section class="detached"><h3 id="-621198526#clean-build-script" data-toc="clean-build-script#compilacao.md-clean-build-script">Clean Build Script</h3><div class="detached code-block" id="-621198526#-jyymdj_81"><pre><code class="language-bash"># Script para limpeza completa
+cat &gt; clean_build.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+echo &quot;🧹 Limpando build anterior...&quot;
+rm -rf build
+
+echo &quot;📁 Criando diretório build...&quot;
+mkdir build
+cd build
+
+echo &quot;⚙️ Configurando CMake...&quot;
+cmake ..
+
+echo &quot;🔨 Compilando todos os jogos...&quot;
+make all_games -j$(nproc)
+
+echo &quot;✅ Build limpo concluído!&quot;
+EOF
+
+chmod +x clean_build.sh
+./clean_build.sh</code></pre></div></section></section><section class="detached"><h2 id="-621198526#debug-e-profiling" data-toc="debug-e-profiling#compilacao.md-debug-e-profiling"><span class="no-bold">🐛</span> Debug e Profiling</h2><section class="detached"><h3 id="-621198526#compilar-para-debug" data-toc="compilar-para-debug#compilacao.md-compilar-para-debug">Compilar para Debug</h3><div class="detached code-block" id="-621198526#-jyymdj_85"><pre><code class="language-bash"># Build com informações de debug
+cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS=&quot;-g3 -O0&quot;
+make tetris
+
+# Executar com GDB
+gdb ./games/tetris/tetris</code></pre></div></section><section class="detached"><h3 id="-621198526#profiling-com-valgrind" data-toc="profiling-com-valgrind#compilacao.md-profiling-com-valgrind">Profiling com Valgrind</h3><div class="detached code-block" id="-621198526#-jyymdj_86"><pre><code class="language-bash"># Compilar com símbolos de debug
+cmake .. -DCMAKE_BUILD_TYPE=Debug
+make tetris
+
+# Executar com Valgrind
+valgrind --tool=memcheck --leak-check=full ./games/tetris/tetris</code></pre></div></section><section class="detached"><h3 id="-621198526#an-lise-de-performance" data-toc="an-lise-de-performance#compilacao.md-an-lise-de-performance">An&aacute;lise de Performance</h3><div class="detached code-block" id="-621198526#-jyymdj_87"><pre><code class="language-bash"># Compilar otimizado com símbolos
+cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo
+make tetris
+
+# Profiling com perf (Linux)
+perf record ./games/tetris/tetris
+perf report</code></pre></div></section></section><section class="detached"><h2 id="-621198526#troubleshooting-de-compila-o" data-toc="troubleshooting-de-compila-o#compilacao.md-troubleshooting-de-compila-o"><span class="no-bold">🔍</span> Troubleshooting de Compila&ccedil;&atilde;o</h2><section class="detached"><h3 id="-621198526#erro-sfml-n-o-encontrado" data-toc="erro-sfml-n-o-encontrado#compilacao.md-erro-sfml-n-o-encontrado">Erro: SFML n&atilde;o encontrado</h3><div class="detached code-block" id="-621198526#-jyymdj_92"><pre><code class="language-bash"># Verificar instalação
+pkg-config --exists sfml-all
+pkg-config --modversion sfml-all
+
+# Limpar cache e reconfigurar
+rm CMakeCache.txt
+cmake .. -DSFML_ROOT=/usr/local</code></pre></div></section><section class="detached"><h3 id="-621198526#erro-compilador-n-o-suporta-c-17" data-toc="erro-compilador-n-o-suporta-c-17#compilacao.md-erro-compilador-n-o-suporta-c-17">Erro: Compilador n&atilde;o suporta C++17</h3><div class="detached code-block" id="-621198526#-jyymdj_93"><pre><code class="language-bash"># Verificar versão do compilador
+g++ --version
+
+# Usar compilador mais novo
+cmake .. -DCMAKE_CXX_COMPILER=g++-9</code></pre></div></section><section class="detached"><h3 id="-621198526#erro-assets-n-o-encontrados" data-toc="erro-assets-n-o-encontrados#compilacao.md-erro-assets-n-o-encontrados">Erro: Assets n&atilde;o encontrados</h3><div class="detached code-block" id="-621198526#-jyymdj_94"><pre><code class="language-bash"># Verificar se assets foram copiados
+ls build/games/tetris/images/
+
+# Recompilar para forçar cópia
+make clean
+make tetris</code></pre></div></section><section class="detached"><h3 id="-621198526#erro-make-command-not-found" data-toc="erro-make-command-not-found#compilacao.md-erro-make-command-not-found">Erro: &quot;make: command not found&quot;</h3><div class="detached code-block" id="-621198526#-jyymdj_95"><pre><code class="language-bash"># Linux - instalar build-essential
+sudo apt install build-essential
+
+# macOS - instalar Xcode Command Line Tools
+xcode-select --install
+
+# Windows - usar cmake --build
+cmake --build . --target all_games</code></pre></div></section></section><section class="detached"><h2 id="-621198526#monitoramento-de-build" data-toc="monitoramento-de-build#compilacao.md-monitoramento-de-build"><span class="no-bold">📊</span> Monitoramento de Build</h2><section class="detached"><h3 id="-621198526#tempo-de-compila-o" data-toc="tempo-de-compila-o#compilacao.md-tempo-de-compila-o">Tempo de Compila&ccedil;&atilde;o</h3><div class="detached code-block" id="-621198526#-jyymdj_99"><pre><code class="language-bash"># Medir tempo total
+time make all_games
+
+# Medir por jogo
+time make tetris</code></pre></div></section><section class="detached"><h3 id="-621198526#uso-de-recursos" data-toc="uso-de-recursos#compilacao.md-uso-de-recursos">Uso de Recursos</h3><div class="detached code-block" id="-621198526#-jyymdj_100"><pre><code class="language-bash"># Monitor durante build
+htop  # Em outro terminal
+
+# Compilação com limite de CPU
+make -j2 all_games  # Usar apenas 2 cores</code></pre></div></section><section class="detached"><h3 id="-621198526#tamanho-dos-execut-veis" data-toc="tamanho-dos-execut-veis#compilacao.md-tamanho-dos-execut-veis">Tamanho dos Execut&aacute;veis</h3><div class="detached code-block" id="-621198526#-jyymdj_101"><pre><code class="language-bash"># Ver tamanho de todos os jogos
+du -sh games/*/
+
+# Detalhes de um jogo específico
+ls -lah games/tetris/tetris
+file games/tetris/tetris</code></pre></div></section></section><section class="detached"><h2 id="-621198526#comandos-de-refer-ncia-r-pida" data-toc="comandos-de-refer-ncia-r-pida#compilacao.md-comandos-de-refer-ncia-r-pida"><span class="no-bold">🎯</span> Comandos de Refer&ecirc;ncia R&aacute;pida</h2><div class="detached code-block" id="-621198526#-jyymdj_102"><pre><code class="language-bash"># Setup inicial
+./setup.sh
+
+# Compilar tudo
+make all_games
+
+# Compilar jogo específico
+make &lt;nome_do_jogo&gt;
+
+# Executar jogo
+make run_&lt;nome_do_jogo&gt;
+
+# Limpar e reconstruir
+rm -rf build &amp;&amp; mkdir build &amp;&amp; cd build &amp;&amp; cmake .. &amp;&amp; make all_games
+
+# Build otimizado
+cmake .. -DCMAKE_BUILD_TYPE=Release &amp;&amp; make all_games
+
+# Build paralelo
+make -j$(nproc) all_games
+
+# Ver comandos disponíveis
+make help</code></pre></div></section><section class="detached"><h2 id="-621198526#pr-ximos-passos" data-toc="pr-ximos-passos#compilacao.md-pr-ximos-passos"><span class="no-bold">🎯</span> Pr&oacute;ximos Passos</h2><p id="-621198526#-jyymdj_103">Agora que voc&ecirc; domina a compila&ccedil;&atilde;o:</p><ol class="list list-decimal" id="-621198526#-jyymdj_104" type="1" start="1"><li class="list-item" id="-621198526#-jyymdj_109"><p id="-621198526#-jyymdj_112">Explore  para execu&ccedil;&atilde;o pr&aacute;tica</p></li><li class="list-item" id="-621198526#-jyymdj_110"><p id="-621198526#-jyymdj_114">Veja  para mais op&ccedil;&otilde;es de execu&ccedil;&atilde;o</p></li><li class="list-item" id="-621198526#-jyymdj_111"><p id="-621198526#-jyymdj_116">Consulte  para entender o c&oacute;digo</p></li></ol><p id="-621198526#-jyymdj_105">Se encontrar problemas:</p><ol class="list list-decimal" id="-621198526#-jyymdj_106" type="1" start="1"><li class="list-item" id="-621198526#-jyymdj_118"><p id="-621198526#-jyymdj_120">Verifique Troubleshooting (<a href="#1579521354">Troubleshooting</a>)</p></li><li class="list-item" id="-621198526#-jyymdj_119"><p id="-621198526#-jyymdj_122">Confirme que seguiu Configura&ccedil;&atilde;o do Ambiente (<a href="#-864305365">Configura&ccedil;&atilde;o do Ambiente</a>)</p></li></ol><p id="-621198526#-jyymdj_108"><span class="control" id="-621198526#-jyymdj_124">Dica</span>: Use <span class="inline-code" id="-621198526#-jyymdj_125">make -j$(nproc)</span> para compila&ccedil;&atilde;o mais r&aacute;pida, e <span class="inline-code" id="-621198526#-jyymdj_126">make run_&lt;jogo&gt;</span> para executar diretamente!</p></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="1579521354">Troubleshooting</h1><p id="1579521354#mim5c5_3">Este guia resolve os problemas mais comuns encontrados durante a configura&ccedil;&atilde;o e execu&ccedil;&atilde;o dos 16 jogos em C++. <span class="no-bold">🔧</span></p><section class="detached"><h2 id="1579521354#problemas-mais-comuns" data-toc="problemas-mais-comuns#troubleshooting-setup.md-problemas-mais-comuns"><span class="no-bold">🚨</span> Problemas Mais Comuns</h2><section class="detached"><h3 id="1579521354#1-sfml-n-o-encontrado" data-toc="1-sfml-n-o-encontrado#troubleshooting-setup.md-1-sfml-n-o-encontrado">1. SFML n&atilde;o encontrado</h3><section class="detached"><h4 id="1579521354#sintomas" data-toc="sintomas#troubleshooting-setup.md-sintomas">Sintomas</h4><div class="detached code-block" id="1579521354#mim5c5_18"><pre><code class="language-none">CMake Error: Could not find SFML
+pkg-config: sfml-all not found</code></pre></div></section><section class="detached"><h4 id="1579521354#solu-es" data-toc="solu-es#troubleshooting-setup.md-solu-es">Solu&ccedil;&otilde;es</h4><p id="1579521354#mim5c5_19"><span class="control" id="1579521354#mim5c5_25">Linux:</span></p><div class="detached code-block" id="1579521354#mim5c5_20"><pre><code class="language-bash"># Ubuntu/Debian
+sudo apt update
+sudo apt install libsfml-dev
+
+# Fedora
+sudo dnf install SFML-devel
+
+# Arch Linux
+sudo pacman -S sfml
+
+# Verificar instalação
+pkg-config --exists sfml-all &amp;&amp; echo &quot;OK&quot; || echo &quot;ERRO&quot;</code></pre></div><p id="1579521354#mim5c5_21"><span class="control" id="1579521354#mim5c5_26">macOS:</span></p><div class="detached code-block" id="1579521354#mim5c5_22"><pre><code class="language-bash"># Usando Homebrew
+brew install sfml
+
+# Se Homebrew não estiver instalado
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</code></pre></div><p id="1579521354#mim5c5_23"><span class="control" id="1579521354#mim5c5_27">Windows:</span></p><ul class="list" id="1579521354#mim5c5_24" start="1"><li class="list-item" id="1579521354#mim5c5_28"><p id="1579521354#mim5c5_31">Baixe SFML do site oficial (<a href="https://www.sfml-dev.org/download.php">https://www.sfml-dev.org/download.php</a>)</p></li><li class="list-item" id="1579521354#mim5c5_29"><p id="1579521354#mim5c5_33">Extraia para <span class="inline-code" id="1579521354#mim5c5_34">C:\SFML</span></p></li><li class="list-item" id="1579521354#mim5c5_30"><p id="1579521354#mim5c5_35">Configure vari&aacute;vel de ambiente <span class="inline-code" id="1579521354#mim5c5_36">SFML_ROOT=C:\SFML</span></p></li></ul></section></section><section class="detached"><h3 id="1579521354#2-cmake-vers-o-muito-antiga" data-toc="2-cmake-vers-o-muito-antiga#troubleshooting-setup.md-2-cmake-vers-o-muito-antiga">2. CMake vers&atilde;o muito antiga</h3><section class="detached"><h4 id="1579521354#sintomas" data-toc="sintomas#troubleshooting-setup.md-sintomas">Sintomas</h4><div class="detached code-block" id="1579521354#mim5c5_39"><pre><code class="language-none">CMake Error: CMake 3.5 or higher is required. You are running version 2.8.12</code></pre></div></section><section class="detached"><h4 id="1579521354#solu-es" data-toc="solu-es#troubleshooting-setup.md-solu-es">Solu&ccedil;&otilde;es</h4><p id="1579521354#mim5c5_40"><span class="control" id="1579521354#mim5c5_44">Ubuntu/Debian:</span></p><div class="detached code-block" id="1579521354#mim5c5_41"><pre><code class="language-bash"># Remover versão antiga
+sudo apt remove cmake
+
+# Adicionar repositório oficial
+wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc | sudo apt-key add -
+sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
+sudo apt update
+sudo apt install cmake</code></pre></div><p id="1579521354#mim5c5_42"><span class="control" id="1579521354#mim5c5_45">Compilar do c&oacute;digo fonte:</span></p><div class="detached code-block" id="1579521354#mim5c5_43"><pre><code class="language-bash">wget https://github.com/Kitware/CMake/releases/download/v3.25.1/cmake-3.25.1.tar.gz
+tar -xzf cmake-3.25.1.tar.gz
+cd cmake-3.25.1
+./bootstrap --prefix=/usr/local
+make -j$(nproc)
+sudo make install</code></pre></div></section></section><section class="detached"><h3 id="1579521354#3-compilador-n-o-suporta-c-17" data-toc="3-compilador-n-o-suporta-c-17#troubleshooting-setup.md-3-compilador-n-o-suporta-c-17">3. Compilador n&atilde;o suporta C++17</h3><section class="detached"><h4 id="1579521354#sintomas" data-toc="sintomas#troubleshooting-setup.md-sintomas">Sintomas</h4><div class="detached code-block" id="1579521354#mim5c5_48"><pre><code class="language-none">error: 'auto' type specifier is a C++11 extension
+error: range-based for loop is a C++11 extension</code></pre></div></section><section class="detached"><h4 id="1579521354#solu-es" data-toc="solu-es#troubleshooting-setup.md-solu-es">Solu&ccedil;&otilde;es</h4><p id="1579521354#mim5c5_49"><span class="control" id="1579521354#mim5c5_53">Ubuntu/Debian:</span></p><div class="detached code-block" id="1579521354#mim5c5_50"><pre><code class="language-bash"># Instalar GCC mais recente
+sudo apt install gcc-9 g++-9
+
+# Configurar como padrão
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 90
+
+# Verificar versão
+g++ --version</code></pre></div><p id="1579521354#mim5c5_51"><span class="control" id="1579521354#mim5c5_54">For&ccedil;ar compilador no CMake:</span></p><div class="detached code-block" id="1579521354#mim5c5_52"><pre><code class="language-bash">cmake .. -DCMAKE_CXX_COMPILER=g++-9</code></pre></div></section></section><section class="detached"><h3 id="1579521354#4-erro-de-linking-com-sfml" data-toc="4-erro-de-linking-com-sfml#troubleshooting-setup.md-4-erro-de-linking-com-sfml">4. Erro de linking com SFML</h3><section class="detached"><h4 id="1579521354#sintomas" data-toc="sintomas#troubleshooting-setup.md-sintomas">Sintomas</h4><div class="detached code-block" id="1579521354#mim5c5_57"><pre><code class="language-none">undefined reference to `sf::RenderWindow::RenderWindow()'
+undefined reference to `sf::Texture::loadFromFile()'</code></pre></div></section><section class="detached"><h4 id="1579521354#solu-es" data-toc="solu-es#troubleshooting-setup.md-solu-es">Solu&ccedil;&otilde;es</h4><p id="1579521354#mim5c5_58"><span class="control" id="1579521354#mim5c5_62">Verificar bibliotecas SFML:</span></p><div class="detached code-block" id="1579521354#mim5c5_59"><pre><code class="language-bash"># Linux
+ldconfig -p | grep sfml
+find /usr -name &quot;*sfml*&quot; 2&gt;/dev/null
+
+# Verificar pkg-config
+pkg-config --cflags --libs sfml-all</code></pre></div><p id="1579521354#mim5c5_60"><span class="control" id="1579521354#mim5c5_63">Reinstalar SFML:</span></p><div class="detached code-block" id="1579521354#mim5c5_61"><pre><code class="language-bash"># Ubuntu/Debian
+sudo apt remove libsfml-dev
+sudo apt autoremove
+sudo apt install libsfml-dev
+
+# Verificar novamente
+pkg-config --modversion sfml-all</code></pre></div></section></section><section class="detached"><h3 id="1579521354#5-jogos-n-o-iniciam-sem-janela" data-toc="5-jogos-n-o-iniciam-sem-janela#troubleshooting-setup.md-5-jogos-n-o-iniciam-sem-janela">5. Jogos n&atilde;o iniciam (sem janela)</h3><section class="detached"><h4 id="1579521354#sintomas" data-toc="sintomas#troubleshooting-setup.md-sintomas">Sintomas</h4><ul class="list" id="1579521354#mim5c5_66" start="1"><li class="list-item" id="1579521354#mim5c5_67"><p id="1579521354#mim5c5_70">Execut&aacute;vel compila mas n&atilde;o abre janela</p></li><li class="list-item" id="1579521354#mim5c5_68"><p id="1579521354#mim5c5_71">Erro &quot;Failed to create OpenGL context&quot;</p></li><li class="list-item" id="1579521354#mim5c5_69"><p id="1579521354#mim5c5_72">Tela preta</p></li></ul></section><section class="detached"><h4 id="1579521354#solu-es" data-toc="solu-es#troubleshooting-setup.md-solu-es">Solu&ccedil;&otilde;es</h4><p id="1579521354#mim5c5_73"><span class="control" id="1579521354#mim5c5_79">Verificar drivers gr&aacute;ficos:</span></p><div class="detached code-block" id="1579521354#mim5c5_74"><pre><code class="language-bash"># Linux - informações da GPU
+lspci | grep -i vga
+glxinfo | grep &quot;OpenGL version&quot;
+
+# Instalar drivers se necessário
+# NVIDIA:
+sudo apt install nvidia-driver-470
+
+# AMD:
+sudo apt install mesa-vulkan-drivers
+
+# Intel:
+sudo apt install intel-media-va-driver</code></pre></div><p id="1579521354#mim5c5_75"><span class="control" id="1579521354#mim5c5_80">Testar OpenGL:</span></p><div class="detached code-block" id="1579521354#mim5c5_76"><pre><code class="language-bash"># Instalar mesa-utils
+sudo apt install mesa-utils
+
+# Testar OpenGL
+glxgears</code></pre></div><p id="1579521354#mim5c5_77"><span class="control" id="1579521354#mim5c5_81">Executar com debug:</span></p><div class="detached code-block" id="1579521354#mim5c5_78"><pre><code class="language-bash"># Executar com informações de debug
+DISPLAY=:0 ./games/tetris/tetris</code></pre></div></section></section><section class="detached"><h3 id="1579521354#6-assets-n-o-encontrados" data-toc="6-assets-n-o-encontrados#troubleshooting-setup.md-6-assets-n-o-encontrados">6. Assets n&atilde;o encontrados</h3><section class="detached"><h4 id="1579521354#sintomas" data-toc="sintomas#troubleshooting-setup.md-sintomas">Sintomas</h4><div class="detached code-block" id="1579521354#mim5c5_84"><pre><code class="language-none">Failed to load image: images/tiles.png
+Failed to load font: fonts/arial.ttf</code></pre></div></section><section class="detached"><h4 id="1579521354#solu-es" data-toc="solu-es#troubleshooting-setup.md-solu-es">Solu&ccedil;&otilde;es</h4><p id="1579521354#mim5c5_85"><span class="control" id="1579521354#mim5c5_89">Verificar estrutura de arquivos:</span></p><div class="detached code-block" id="1579521354#mim5c5_86"><pre><code class="language-bash"># Ver se assets foram copiados
+ls build/games/tetris/
+ls build/games/tetris/images/
+
+# Se não existirem, recompilar
+make clean
+make tetris</code></pre></div><p id="1579521354#mim5c5_87"><span class="control" id="1579521354#mim5c5_90">Executar do diret&oacute;rio correto:</span></p><div class="detached code-block" id="1579521354#mim5c5_88"><pre><code class="language-bash"># CORRETO - executar de dentro do diretório do jogo
+cd build/games/tetris
+./tetris
+
+# INCORRETO - executar de outro lugar
+cd build
+./games/tetris/tetris  # Pode não encontrar assets</code></pre></div></section></section><section class="detached"><h3 id="1579521354#7-erro-de-permiss-o" data-toc="7-erro-de-permiss-o#troubleshooting-setup.md-7-erro-de-permiss-o">7. Erro de permiss&atilde;o</h3><section class="detached"><h4 id="1579521354#sintomas" data-toc="sintomas#troubleshooting-setup.md-sintomas">Sintomas</h4><div class="detached code-block" id="1579521354#mim5c5_93"><pre><code class="language-none">Permission denied
+make: *** [CMakeFiles/tetris.dir/all] Error 2</code></pre></div></section><section class="detached"><h4 id="1579521354#solu-es" data-toc="solu-es#troubleshooting-setup.md-solu-es">Solu&ccedil;&otilde;es</h4><p id="1579521354#mim5c5_94"><span class="control" id="1579521354#mim5c5_98">Corrigir permiss&otilde;es:</span></p><div class="detached code-block" id="1579521354#mim5c5_95"><pre><code class="language-bash"># Dar permissão de execução aos scripts
+chmod +x setup.sh
+chmod +x *.sh
+
+# Corrigir permissões do projeto
+chmod -R 755 .</code></pre></div><p id="1579521354#mim5c5_96"><span class="control" id="1579521354#mim5c5_99">Problemas de sudo:</span></p><div class="detached code-block" id="1579521354#mim5c5_97"><pre><code class="language-bash"># Se instalou com sudo, corrigir ownership
+sudo chown -R $USER:$USER ~/.cmake
+sudo chown -R $USER:$USER ./build</code></pre></div></section></section></section><section class="detached"><h2 id="1579521354#problemas-espec-ficos-por-sistema" data-toc="problemas-espec-ficos-por-sistema#troubleshooting-setup.md-problemas-espec-ficos-por-sistema"><span class="no-bold">🐛</span> Problemas Espec&iacute;ficos por Sistema</h2><section class="detached"><h3 id="1579521354#ubuntu-debian-espec-ficos" data-toc="ubuntu-debian-espec-ficos#troubleshooting-setup.md-ubuntu-debian-espec-ficos">Ubuntu/Debian Espec&iacute;ficos</h3><section class="detached"><h4 id="1579521354#erro-package-sfml-all-was-not-found" data-toc="erro-package-sfml-all-was-not-found#troubleshooting-setup.md-erro-package-sfml-all-was-not-found">Erro: &quot;Package sfml-all was not found&quot;</h4><div class="detached code-block" id="1579521354#mim5c5_106"><pre><code class="language-bash"># Atualizar lista de pacotes
+sudo apt update
+
+# Verificar se universe repository está habilitado
+sudo add-apt-repository universe
+sudo apt update
+
+# Instalar SFML
+sudo apt install libsfml-dev</code></pre></div></section><section class="detached"><h4 id="1579521354#erro-unable-to-locate-package" data-toc="erro-unable-to-locate-package#troubleshooting-setup.md-erro-unable-to-locate-package">Erro: &quot;Unable to locate package&quot;</h4><div class="detached code-block" id="1579521354#mim5c5_107"><pre><code class="language-bash"># Verificar versão do Ubuntu
+lsb_release -a
+
+# Ubuntu muito antigo - usar PPA
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt update</code></pre></div></section></section><section class="detached"><h3 id="1579521354#fedora-centos-espec-ficos" data-toc="fedora-centos-espec-ficos#troubleshooting-setup.md-fedora-centos-espec-ficos">Fedora/CentOS Espec&iacute;ficos</h3><section class="detached"><h4 id="1579521354#erro-no-package-sfml-devel-available" data-toc="erro-no-package-sfml-devel-available#troubleshooting-setup.md-erro-no-package-sfml-devel-available">Erro: &quot;No package SFML-devel available&quot;</h4><div class="detached code-block" id="1579521354#mim5c5_109"><pre><code class="language-bash"># Fedora - habilitar RPM Fusion
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+
+# CentOS - habilitar EPEL
+sudo dnf install epel-release</code></pre></div></section></section><section class="detached"><h3 id="1579521354#macos-espec-ficos" data-toc="macos-espec-ficos#troubleshooting-setup.md-macos-espec-ficos">macOS Espec&iacute;ficos</h3><section class="detached"><h4 id="1579521354#erro-xcrun-error-invalid-active-developer-path" data-toc="erro-xcrun-error-invalid-active-developer-path#troubleshooting-setup.md-erro-xcrun-error-invalid-active-developer-path">Erro: &quot;xcrun: error: invalid active developer path&quot;</h4><div class="detached code-block" id="1579521354#mim5c5_112"><pre><code class="language-bash"># Instalar Command Line Tools
+xcode-select --install
+
+# Se já instalado, resetar
+sudo xcode-select --reset</code></pre></div></section><section class="detached"><h4 id="1579521354#homebrew-n-o-funciona" data-toc="homebrew-n-o-funciona#troubleshooting-setup.md-homebrew-n-o-funciona">Homebrew n&atilde;o funciona</h4><div class="detached code-block" id="1579521354#mim5c5_113"><pre><code class="language-bash"># Reinstalar Homebrew
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+
+# Adicionar ao PATH
+echo 'export PATH=&quot;/opt/homebrew/bin:$PATH&quot;' &gt;&gt; ~/.zshrc
+source ~/.zshrc</code></pre></div></section></section><section class="detached"><h3 id="1579521354#windows-espec-ficos" data-toc="windows-espec-ficos#troubleshooting-setup.md-windows-espec-ficos">Windows Espec&iacute;ficos</h3><section class="detached"><h4 id="1579521354#visual-studio-n-o-encontra-sfml" data-toc="visual-studio-n-o-encontra-sfml#troubleshooting-setup.md-visual-studio-n-o-encontra-sfml">Visual Studio n&atilde;o encontra SFML</h4><div class="detached code-block" id="1579521354#mim5c5_116"><pre><code class="language-cmake"># No CMakeLists.txt, adicionar:
+set(SFML_ROOT &quot;C:/SFML&quot;)
+find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)</code></pre></div></section><section class="detached"><h4 id="1579521354#mingw-problemas-de-linking" data-toc="mingw-problemas-de-linking#troubleshooting-setup.md-mingw-problemas-de-linking">MinGW problemas de linking</h4><div class="detached code-block" id="1579521354#mim5c5_117"><pre><code class="language-bash"># Usar bibliotecas estáticas
+cmake .. -DSFML_STATIC_LIBRARIES=TRUE</code></pre></div></section></section></section><section class="detached"><h2 id="1579521354#ferramentas-de-diagn-stico" data-toc="ferramentas-de-diagn-stico#troubleshooting-setup.md-ferramentas-de-diagn-stico"><span class="no-bold">🔍</span> Ferramentas de Diagn&oacute;stico</h2><section class="detached"><h3 id="1579521354#script-de-diagn-stico-completo" data-toc="script-de-diagn-stico-completo#troubleshooting-setup.md-script-de-diagn-stico-completo">Script de Diagn&oacute;stico Completo</h3><div class="detached code-block" id="1579521354#mim5c5_120"><pre><code class="language-bash"># Criar script de diagnóstico
+cat &gt; diagnose.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+echo &quot;🔍 Diagnóstico do Sistema - 16 Games in C++&quot;
+echo &quot;=============================================&quot;
+
+# Sistema operacional
+echo &quot;📱 Sistema:&quot;
+uname -a
+echo &quot;&quot;
+
+# Compilador
+echo &quot;🔧 Compilador:&quot;
+if command -v g++ &amp;&gt; /dev/null; then
+    g++ --version | head -1
+    echo &quot;✅ G++ disponível&quot;
+else
+    echo &quot;❌ G++ não encontrado&quot;
+fi
+
+if command -v clang++ &amp;&gt; /dev/null; then
+    clang++ --version | head -1
+    echo &quot;✅ Clang++ disponível&quot;
+else
+    echo &quot;❌ Clang++ não encontrado&quot;
+fi
+echo &quot;&quot;
+
+# CMake
+echo &quot;🏗️ CMake:&quot;
+if command -v cmake &amp;&gt; /dev/null; then
+    cmake --version | head -1
+    echo &quot;✅ CMake disponível&quot;
+else
+    echo &quot;❌ CMake não encontrado&quot;
+fi
+echo &quot;&quot;
+
+# SFML
+echo &quot;🎮 SFML:&quot;
+if pkg-config --exists sfml-all; then
+    echo &quot;✅ SFML $(pkg-config --modversion sfml-all) encontrado&quot;
+    echo &quot;📍 Flags: $(pkg-config --cflags --libs sfml-all)&quot;
+else
+    echo &quot;❌ SFML não encontrado via pkg-config&quot;
+    
+    # Procurar manualmente
+    if find /usr -name &quot;*sfml*&quot; 2&gt;/dev/null | head -5; then
+        echo &quot;💡 SFML pode estar instalado mas não configurado para pkg-config&quot;
+    fi
+fi
+echo &quot;&quot;
+
+# OpenGL
+echo &quot;🖥️ OpenGL:&quot;
+if command -v glxinfo &amp;&gt; /dev/null; then
+    echo &quot;OpenGL: $(glxinfo | grep &quot;OpenGL version&quot; | cut -d':' -f2)&quot;
+    echo &quot;✅ OpenGL disponível&quot;
+else
+    echo &quot;⚠️ glxinfo não disponível (instale mesa-utils)&quot;
+fi
+echo &quot;&quot;
+
+# Espaço em disco
+echo &quot;💾 Espaço em disco:&quot;
+df -h . | tail -1
+echo &quot;&quot;
+
+# Resumo
+echo &quot;📋 Resumo:&quot;
+echo &quot;==========&quot;
+
+issues=0
+
+if ! command -v g++ &amp;&gt; /dev/null &amp;&amp; ! command -v clang++ &amp;&gt; /dev/null; then
+    echo &quot;❌ Nenhum compilador C++ encontrado&quot;
+    ((issues++))
+fi
+
+if ! command -v cmake &amp;&gt; /dev/null; then
+    echo &quot;❌ CMake não encontrado&quot;
+    ((issues++))
+fi
+
+if ! pkg-config --exists sfml-all; then
+    echo &quot;❌ SFML não encontrado&quot;
+    ((issues++))
+fi
+
+if [ $issues -eq 0 ]; then
+    echo &quot;🎉 Sistema parece estar configurado corretamente!&quot;
+    echo &quot;💡 Se ainda há problemas, execute: ./setup.sh&quot;
+else
+    echo &quot;⚠️ $issues problema(s) encontrado(s)&quot;
+    echo &quot;💡 Consulte a documentação para resolver os problemas acima&quot;
+fi
+EOF
+
+chmod +x diagnose.sh
+./diagnose.sh</code></pre></div></section><section class="detached"><h3 id="1579521354#verifica-o-de-build" data-toc="verifica-o-de-build#troubleshooting-setup.md-verifica-o-de-build">Verifica&ccedil;&atilde;o de Build</h3><div class="detached code-block" id="1579521354#mim5c5_121"><pre><code class="language-bash"># Script para verificar build específico
+cat &gt; check_build.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+if [ ! -d &quot;build&quot; ]; then
+    echo &quot;❌ Diretório build não existe&quot;
+    echo &quot;Execute: mkdir build &amp;&amp; cd build &amp;&amp; cmake ..&quot;
+    exit 1
+fi
+
+cd build
+
+if [ ! -f &quot;CMakeCache.txt&quot; ]; then
+    echo &quot;❌ CMake não foi configurado&quot;
+    echo &quot;Execute: cmake ..&quot;
+    exit 1
+fi
+
+echo &quot;✅ Build configurado&quot;
+echo &quot;📁 Jogos compilados:&quot;
+
+count=0
+for game_dir in games/*/; do
+    if [ -d &quot;$game_dir&quot; ]; then
+        game_name=$(basename &quot;$game_dir&quot;)
+        if [ -f &quot;$game_dir/$game_name&quot; ]; then
+            echo &quot;  ✅ $game_name&quot;
+            ((count++))
+        else
+            echo &quot;  ❌ $game_name (não compilado)&quot;
+        fi
+    fi
+done
+
+echo &quot;&quot;
+echo &quot;📊 Total: $count jogos compilados&quot;
+
+if [ $count -eq 0 ]; then
+    echo &quot;💡 Execute: make all_games&quot;
+fi
+EOF
+
+chmod +x check_build.sh
+./check_build.sh</code></pre></div></section></section><section class="detached"><h2 id="1579521354#ltimos-recursos" data-toc="ltimos-recursos#troubleshooting-setup.md-ltimos-recursos"><span class="no-bold">🆘</span> &Uacute;ltimos Recursos</h2><section class="detached"><h3 id="1579521354#resetar-ambiente-completamente" data-toc="resetar-ambiente-completamente#troubleshooting-setup.md-resetar-ambiente-completamente">Resetar Ambiente Completamente</h3><div class="detached code-block" id="1579521354#mim5c5_124"><pre><code class="language-bash"># Script de reset total
+cat &gt; reset_environment.sh &lt;&lt; 'EOF'
+#!/bin/bash
+
+echo &quot;🚨 RESETANDO AMBIENTE COMPLETAMENTE&quot;
+echo &quot;====================================&quot;
+
+# Fazer backup se necessário
+if [ -d &quot;build&quot; ]; then
+    echo &quot;📦 Fazendo backup do build atual...&quot;
+    mv build build_backup_$(date +%Y%m%d_%H%M%S)
+fi
+
+# Limpar completamente
+echo &quot;🧹 Limpando arquivos temporários...&quot;
+rm -rf build
+rm -rf .cache
+find . -name &quot;*.o&quot; -delete
+find . -name &quot;*.cmake&quot; -delete 2&gt;/dev/null
+
+# Recriar build
+echo &quot;📁 Recriando estrutura...&quot;
+mkdir build
+cd build
+
+# Configurar do zero
+echo &quot;⚙️ Configurando CMake do zero...&quot;
+cmake .. -DCMAKE_BUILD_TYPE=Debug
+
+# Compilar teste
+echo &quot;🔨 Testando compilação...&quot;
+make tetris
+
+if [ $? -eq 0 ]; then
+    echo &quot;✅ Reset concluído com sucesso!&quot;
+    echo &quot;🎮 Teste: make run_tetris&quot;
+else
+    echo &quot;❌ Ainda há problemas após reset&quot;
+    echo &quot;💡 Execute o diagnóstico: ../diagnose.sh&quot;
+fi
+EOF
+
+chmod +x reset_environment.sh</code></pre></div></section><section class="detached"><h3 id="1579521354#suporte-da-comunidade" data-toc="suporte-da-comunidade#troubleshooting-setup.md-suporte-da-comunidade">Suporte da Comunidade</h3><p id="1579521354#mim5c5_125">Se nenhuma solu&ccedil;&atilde;o funcionou:</p><ol class="list list-decimal" id="1579521354#mim5c5_126" type="1" start="1"><li class="list-item" id="1579521354#mim5c5_127"><p id="1579521354#mim5c5_131"><span class="control" id="1579521354#mim5c5_132">Execute o diagn&oacute;stico completo</span>: <span class="inline-code" id="1579521354#mim5c5_133">./diagnose.sh</span></p></li><li class="list-item" id="1579521354#mim5c5_128"><p id="1579521354#mim5c5_134"><span class="control" id="1579521354#mim5c5_135">Tente o reset total</span>: <span class="inline-code" id="1579521354#mim5c5_136">./reset_environment.sh</span></p></li><li class="list-item" id="1579521354#mim5c5_129"><p id="1579521354#mim5c5_137"><span class="control" id="1579521354#mim5c5_139">Procure ajuda online</span>:</p><ul class="list" id="1579521354#mim5c5_138" start="1"><li class="list-item" id="1579521354#mim5c5_140"><p id="1579521354#mim5c5_143">Stack Overflow: tag <span class="inline-code" id="1579521354#mim5c5_144">sfml</span> + <span class="inline-code" id="1579521354#mim5c5_145">cmake</span></p></li><li class="list-item" id="1579521354#mim5c5_141"><p id="1579521354#mim5c5_146">Reddit: r/cpp, r/gamedev</p></li><li class="list-item" id="1579521354#mim5c5_142"><p id="1579521354#mim5c5_147">Discord: servidores de C++ e game dev</p></li></ul></li><li class="list-item" id="1579521354#mim5c5_130"><p id="1579521354#mim5c5_148"><span class="control" id="1579521354#mim5c5_150">Documente seu problema</span>:</p><ul class="list" id="1579521354#mim5c5_149" start="1"><li class="list-item" id="1579521354#mim5c5_151"><p id="1579521354#mim5c5_155">Sistema operacional e vers&atilde;o</p></li><li class="list-item" id="1579521354#mim5c5_152"><p id="1579521354#mim5c5_156">Sa&iacute;da do script de diagn&oacute;stico</p></li><li class="list-item" id="1579521354#mim5c5_153"><p id="1579521354#mim5c5_157">Mensagens de erro completas</p></li><li class="list-item" id="1579521354#mim5c5_154"><p id="1579521354#mim5c5_158">Passos que j&aacute; tentou</p></li></ul></li></ol></section></section><section class="detached"><h2 id="1579521354#preven-o-de-problemas" data-toc="preven-o-de-problemas#troubleshooting-setup.md-preven-o-de-problemas"><span class="no-bold">🎯</span> Preven&ccedil;&atilde;o de Problemas</h2><section class="detached"><h3 id="1579521354#manuten-o-regular" data-toc="manuten-o-regular#troubleshooting-setup.md-manuten-o-regular">Manuten&ccedil;&atilde;o Regular</h3><div class="detached code-block" id="1579521354#mim5c5_161"><pre><code class="language-bash"># Atualizar dependências mensalmente
+sudo apt update &amp;&amp; sudo apt upgrade  # Linux
+brew update &amp;&amp; brew upgrade          # macOS
+
+# Limpar builds antigos
+find . -name &quot;build*&quot; -type d -mtime +30 -exec rm -rf {} \;</code></pre></div></section><section class="detached"><h3 id="1579521354#backup-de-configura-o" data-toc="backup-de-configura-o#troubleshooting-setup.md-backup-de-configura-o">Backup de Configura&ccedil;&atilde;o</h3><div class="detached code-block" id="1579521354#mim5c5_162"><pre><code class="language-bash"># Backup da configuração funcionando
+tar -czf working_config_$(date +%Y%m%d).tar.gz \
+    CMakeLists.txt setup.sh build/CMakeCache.txt</code></pre></div><p id="1579521354#mim5c5_164"><span class="control" id="1579521354#mim5c5_165">Lembre-se</span>: A maioria dos problemas pode ser resolvida com <span class="inline-code" id="1579521354#mim5c5_166">./setup.sh</span>. Em caso de d&uacute;vida, sempre comece pelo diagn&oacute;stico autom&aacute;tico!</p></section></section></article></div></section></div></body></html>
