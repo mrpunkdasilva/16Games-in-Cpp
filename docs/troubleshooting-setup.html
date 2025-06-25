@@ -1,5 +1,5 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
-<html lang="en-US" data-preset="contrast" data-primary-color="#1B9F8E"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-06-23T21:47:29.978743204"><title>Troubleshooting | 16 Games in C++</title><script type="application/json" id="virtual-toc-data">[{"id":"problemas-mais-comuns","level":0,"title":"🚨 Problemas Mais Comuns","anchor":"#problemas-mais-comuns"},{"id":"problemas-espec-ficos-por-sistema","level":0,"title":"🐛 Problemas Específicos por Sistema","anchor":"#problemas-espec-ficos-por-sistema"},{"id":"ferramentas-de-diagn-stico","level":0,"title":"🔍 Ferramentas de Diagnóstico","anchor":"#ferramentas-de-diagn-stico"},{"id":"ltimos-recursos","level":0,"title":"🆘 Últimos Recursos","anchor":"#ltimos-recursos"},{"id":"preven-o-de-problemas","level":0,"title":"🎯 Prevenção de Problemas","anchor":"#preven-o-de-problemas"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Troubleshooting | 16 Games in C++"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="16 Games in C++ Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/troubleshooting-setup.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Troubleshooting | 16 Games in C++"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+<html lang="en-US" data-preset="contrast" data-primary-color="#1B9F8E"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-06-25T10:53:54.312723303"><title>Troubleshooting | 16 Games in C++</title><script type="application/json" id="virtual-toc-data">[{"id":"problemas-mais-comuns","level":0,"title":"🚨 Problemas Mais Comuns","anchor":"#problemas-mais-comuns"},{"id":"problemas-espec-ficos-por-sistema","level":0,"title":"🐛 Problemas Específicos por Sistema","anchor":"#problemas-espec-ficos-por-sistema"},{"id":"ferramentas-de-diagn-stico","level":0,"title":"🔍 Ferramentas de Diagnóstico","anchor":"#ferramentas-de-diagn-stico"},{"id":"ltimos-recursos","level":0,"title":"🆘 Últimos Recursos","anchor":"#ltimos-recursos"},{"id":"preven-o-de-problemas","level":0,"title":"🎯 Prevenção de Problemas","anchor":"#preven-o-de-problemas"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Troubleshooting | 16 Games in C++"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="16 Games in C++ Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/troubleshooting-setup.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Troubleshooting | 16 Games in C++"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
     "@context": "http://schema.org",
     "@type": "WebPage",
     "@id": "writerside-documentation/troubleshooting-setup.html#webpage",
@@ -13,10 +13,10 @@
     "@id": "writerside-documentation/#website",
     "url": "writerside-documentation/",
     "name": "16 Games in C++ Help"
-}</script><!-- End Schema.org --></head><body data-id="troubleshooting-setup" data-main-title="Troubleshooting" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs=""><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>16 Games in C++  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="troubleshooting-setup" id="troubleshooting-setup.md">Troubleshooting</h1><p id="z9u0cfi_3">Este guia resolve os problemas mais comuns encontrados durante a configura&ccedil;&atilde;o e execu&ccedil;&atilde;o dos 16 jogos em C++. 🔧</p><section class="chapter"><h2 id="problemas-mais-comuns" data-toc="problemas-mais-comuns">🚨 Problemas Mais Comuns</h2><section class="chapter"><h3 id="1-sfml-n-o-encontrado" data-toc="1-sfml-n-o-encontrado">1. SFML n&atilde;o encontrado</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
+}</script><!-- End Schema.org --></head><body data-id="troubleshooting-setup" data-main-title="Troubleshooting" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs=""><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>16 Games in C++  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="troubleshooting-setup" id="troubleshooting-setup.md">Troubleshooting</h1><p id="po8thu_3">Este guia resolve os problemas mais comuns encontrados durante a configura&ccedil;&atilde;o e execu&ccedil;&atilde;o dos 16 jogos em C++. 🔧</p><section class="chapter"><h2 id="problemas-mais-comuns" data-toc="problemas-mais-comuns">🚨 Problemas Mais Comuns</h2><section class="chapter"><h3 id="1-sfml-n-o-encontrado" data-toc="1-sfml-n-o-encontrado">1. SFML n&atilde;o encontrado</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
 CMake Error: Could not find SFML
 pkg-config: sfml-all not found
-</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="z9u0cfi_19"><span class="control" id="z9u0cfi_25">Linux:</span></p><div class="code-block" data-lang="bash">
+</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="po8thu_19"><span class="control" id="po8thu_25">Linux:</span></p><div class="code-block" data-lang="bash">
 # Ubuntu/Debian
 sudo apt update
 sudo apt install libsfml-dev
@@ -29,15 +29,15 @@ sudo pacman -S sfml
 
 # Verificar instalação
 pkg-config --exists sfml-all &amp;&amp; echo &quot;OK&quot; || echo &quot;ERRO&quot;
-</div><p id="z9u0cfi_21"><span class="control" id="z9u0cfi_26">macOS:</span></p><div class="code-block" data-lang="bash">
+</div><p id="po8thu_21"><span class="control" id="po8thu_26">macOS:</span></p><div class="code-block" data-lang="bash">
 # Usando Homebrew
 brew install sfml
 
 # Se Homebrew não estiver instalado
 /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
-</div><p id="z9u0cfi_23"><span class="control" id="z9u0cfi_27">Windows:</span></p><ul class="list _bullet" id="z9u0cfi_24"><li class="list__item" id="z9u0cfi_28"><p id="z9u0cfi_31">Baixe SFML do <a href="https://www.sfml-dev.org/download.php" id="z9u0cfi_32" data-external="true" rel="noopener noreferrer" target="_blank">site oficial</a></p></li><li class="list__item" id="z9u0cfi_29"><p id="z9u0cfi_33">Extraia para <code class="code" id="z9u0cfi_34">C:\SFML</code></p></li><li class="list__item" id="z9u0cfi_30"><p id="z9u0cfi_35">Configure vari&aacute;vel de ambiente <code class="code" id="z9u0cfi_36">SFML_ROOT=C:\SFML</code></p></li></ul></section></section><section class="chapter"><h3 id="2-cmake-vers-o-muito-antiga" data-toc="2-cmake-vers-o-muito-antiga">2. CMake vers&atilde;o muito antiga</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
+</div><p id="po8thu_23"><span class="control" id="po8thu_27">Windows:</span></p><ul class="list _bullet" id="po8thu_24"><li class="list__item" id="po8thu_28"><p id="po8thu_31">Baixe SFML do <a href="https://www.sfml-dev.org/download.php" id="po8thu_32" data-external="true" rel="noopener noreferrer" target="_blank">site oficial</a></p></li><li class="list__item" id="po8thu_29"><p id="po8thu_33">Extraia para <code class="code" id="po8thu_34">C:\SFML</code></p></li><li class="list__item" id="po8thu_30"><p id="po8thu_35">Configure vari&aacute;vel de ambiente <code class="code" id="po8thu_36">SFML_ROOT=C:\SFML</code></p></li></ul></section></section><section class="chapter"><h3 id="2-cmake-vers-o-muito-antiga" data-toc="2-cmake-vers-o-muito-antiga">2. CMake vers&atilde;o muito antiga</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
 CMake Error: CMake 3.5 or higher is required. You are running version 2.8.12
-</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="z9u0cfi_40"><span class="control" id="z9u0cfi_44">Ubuntu/Debian:</span></p><div class="code-block" data-lang="bash">
+</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="po8thu_40"><span class="control" id="po8thu_44">Ubuntu/Debian:</span></p><div class="code-block" data-lang="bash">
 # Remover versão antiga
 sudo apt remove cmake
 
@@ -46,7 +46,7 @@ wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc | sudo apt-key
 sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
 sudo apt update
 sudo apt install cmake
-</div><p id="z9u0cfi_42"><span class="control" id="z9u0cfi_45">Compilar do c&oacute;digo fonte:</span></p><div class="code-block" data-lang="bash">
+</div><p id="po8thu_42"><span class="control" id="po8thu_45">Compilar do c&oacute;digo fonte:</span></p><div class="code-block" data-lang="bash">
 wget https://github.com/Kitware/CMake/releases/download/v3.25.1/cmake-3.25.1.tar.gz
 tar -xzf cmake-3.25.1.tar.gz
 cd cmake-3.25.1
@@ -56,7 +56,7 @@ sudo make install
 </div></section></section><section class="chapter"><h3 id="3-compilador-n-o-suporta-c-17" data-toc="3-compilador-n-o-suporta-c-17">3. Compilador n&atilde;o suporta C++17</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
 error: 'auto' type specifier is a C++11 extension
 error: range-based for loop is a C++11 extension
-</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="z9u0cfi_49"><span class="control" id="z9u0cfi_53">Ubuntu/Debian:</span></p><div class="code-block" data-lang="bash">
+</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="po8thu_49"><span class="control" id="po8thu_53">Ubuntu/Debian:</span></p><div class="code-block" data-lang="bash">
 # Instalar GCC mais recente
 sudo apt install gcc-9 g++-9
 
@@ -66,19 +66,19 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 90
 
 # Verificar versão
 g++ --version
-</div><p id="z9u0cfi_51"><span class="control" id="z9u0cfi_54">For&ccedil;ar compilador no CMake:</span></p><div class="code-block" data-lang="bash">
+</div><p id="po8thu_51"><span class="control" id="po8thu_54">For&ccedil;ar compilador no CMake:</span></p><div class="code-block" data-lang="bash">
 cmake .. -DCMAKE_CXX_COMPILER=g++-9
 </div></section></section><section class="chapter"><h3 id="4-erro-de-linking-com-sfml" data-toc="4-erro-de-linking-com-sfml">4. Erro de linking com SFML</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
 undefined reference to `sf::RenderWindow::RenderWindow()'
 undefined reference to `sf::Texture::loadFromFile()'
-</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="z9u0cfi_58"><span class="control" id="z9u0cfi_62">Verificar bibliotecas SFML:</span></p><div class="code-block" data-lang="bash">
+</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="po8thu_58"><span class="control" id="po8thu_62">Verificar bibliotecas SFML:</span></p><div class="code-block" data-lang="bash">
 # Linux
 ldconfig -p | grep sfml
 find /usr -name &quot;*sfml*&quot; 2&gt;/dev/null
 
 # Verificar pkg-config
 pkg-config --cflags --libs sfml-all
-</div><p id="z9u0cfi_60"><span class="control" id="z9u0cfi_63">Reinstalar SFML:</span></p><div class="code-block" data-lang="bash">
+</div><p id="po8thu_60"><span class="control" id="po8thu_63">Reinstalar SFML:</span></p><div class="code-block" data-lang="bash">
 # Ubuntu/Debian
 sudo apt remove libsfml-dev
 sudo apt autoremove
@@ -86,7 +86,7 @@ sudo apt install libsfml-dev
 
 # Verificar novamente
 pkg-config --modversion sfml-all
-</div></section></section><section class="chapter"><h3 id="5-jogos-n-o-iniciam-sem-janela" data-toc="5-jogos-n-o-iniciam-sem-janela">5. Jogos n&atilde;o iniciam (sem janela)</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><ul class="list _bullet" id="z9u0cfi_66"><li class="list__item" id="z9u0cfi_67"><p id="z9u0cfi_70">Execut&aacute;vel compila mas n&atilde;o abre janela</p></li><li class="list__item" id="z9u0cfi_68"><p id="z9u0cfi_71">Erro &quot;Failed to create OpenGL context&quot;</p></li><li class="list__item" id="z9u0cfi_69"><p id="z9u0cfi_72">Tela preta</p></li></ul></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="z9u0cfi_73"><span class="control" id="z9u0cfi_79">Verificar drivers gr&aacute;ficos:</span></p><div class="code-block" data-lang="bash">
+</div></section></section><section class="chapter"><h3 id="5-jogos-n-o-iniciam-sem-janela" data-toc="5-jogos-n-o-iniciam-sem-janela">5. Jogos n&atilde;o iniciam (sem janela)</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><ul class="list _bullet" id="po8thu_66"><li class="list__item" id="po8thu_67"><p id="po8thu_70">Execut&aacute;vel compila mas n&atilde;o abre janela</p></li><li class="list__item" id="po8thu_68"><p id="po8thu_71">Erro &quot;Failed to create OpenGL context&quot;</p></li><li class="list__item" id="po8thu_69"><p id="po8thu_72">Tela preta</p></li></ul></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="po8thu_73"><span class="control" id="po8thu_79">Verificar drivers gr&aacute;ficos:</span></p><div class="code-block" data-lang="bash">
 # Linux - informações da GPU
 lspci | grep -i vga
 glxinfo | grep &quot;OpenGL version&quot;
@@ -100,19 +100,19 @@ sudo apt install mesa-vulkan-drivers
 
 # Intel:
 sudo apt install intel-media-va-driver
-</div><p id="z9u0cfi_75"><span class="control" id="z9u0cfi_80">Testar OpenGL:</span></p><div class="code-block" data-lang="bash">
+</div><p id="po8thu_75"><span class="control" id="po8thu_80">Testar OpenGL:</span></p><div class="code-block" data-lang="bash">
 # Instalar mesa-utils
 sudo apt install mesa-utils
 
 # Testar OpenGL
 glxgears
-</div><p id="z9u0cfi_77"><span class="control" id="z9u0cfi_81">Executar com debug:</span></p><div class="code-block" data-lang="bash">
+</div><p id="po8thu_77"><span class="control" id="po8thu_81">Executar com debug:</span></p><div class="code-block" data-lang="bash">
 # Executar com informações de debug
 DISPLAY=:0 ./games/tetris/tetris
 </div></section></section><section class="chapter"><h3 id="6-assets-n-o-encontrados" data-toc="6-assets-n-o-encontrados">6. Assets n&atilde;o encontrados</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
 Failed to load image: images/tiles.png
 Failed to load font: fonts/arial.ttf
-</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="z9u0cfi_85"><span class="control" id="z9u0cfi_89">Verificar estrutura de arquivos:</span></p><div class="code-block" data-lang="bash">
+</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="po8thu_85"><span class="control" id="po8thu_89">Verificar estrutura de arquivos:</span></p><div class="code-block" data-lang="bash">
 # Ver se assets foram copiados
 ls build/games/tetris/
 ls build/games/tetris/images/
@@ -120,7 +120,7 @@ ls build/games/tetris/images/
 # Se não existirem, recompilar
 make clean
 make tetris
-</div><p id="z9u0cfi_87"><span class="control" id="z9u0cfi_90">Executar do diret&oacute;rio correto:</span></p><div class="code-block" data-lang="bash">
+</div><p id="po8thu_87"><span class="control" id="po8thu_90">Executar do diret&oacute;rio correto:</span></p><div class="code-block" data-lang="bash">
 # CORRETO - executar de dentro do diretório do jogo
 cd build/games/tetris
 ./tetris
@@ -131,14 +131,14 @@ cd build
 </div></section></section><section class="chapter"><h3 id="7-erro-de-permiss-o" data-toc="7-erro-de-permiss-o">7. Erro de permiss&atilde;o</h3><section class="chapter"><h4 id="sintomas" data-toc="sintomas">Sintomas</h4><div class="code-block" data-lang="none">
 Permission denied
 make: *** [CMakeFiles/tetris.dir/all] Error 2
-</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="z9u0cfi_94"><span class="control" id="z9u0cfi_98">Corrigir permiss&otilde;es:</span></p><div class="code-block" data-lang="bash">
+</div></section><section class="chapter"><h4 id="solu-es" data-toc="solu-es">Solu&ccedil;&otilde;es</h4><p id="po8thu_94"><span class="control" id="po8thu_98">Corrigir permiss&otilde;es:</span></p><div class="code-block" data-lang="bash">
 # Dar permissão de execução aos scripts
 chmod +x setup.sh
 chmod +x *.sh
 
 # Corrigir permissões do projeto
 chmod -R 755 .
-</div><p id="z9u0cfi_96"><span class="control" id="z9u0cfi_99">Problemas de sudo:</span></p><div class="code-block" data-lang="bash">
+</div><p id="po8thu_96"><span class="control" id="po8thu_99">Problemas de sudo:</span></p><div class="code-block" data-lang="bash">
 # Se instalou com sudo, corrigir ownership
 sudo chown -R $USER:$USER ~/.cmake
 sudo chown -R $USER:$USER ./build
@@ -376,7 +376,7 @@ fi
 EOF
 
 chmod +x reset_environment.sh
-</div></section><section class="chapter"><h3 id="suporte-da-comunidade" data-toc="suporte-da-comunidade">Suporte da Comunidade</h3><p id="z9u0cfi_125">Se nenhuma solu&ccedil;&atilde;o funcionou:</p><ol class="list _decimal" id="z9u0cfi_126" type="1"><li class="list__item" id="z9u0cfi_127"><p id="z9u0cfi_131"><span class="control" id="z9u0cfi_132">Execute o diagn&oacute;stico completo</span>: <code class="code" id="z9u0cfi_133">./diagnose.sh</code></p></li><li class="list__item" id="z9u0cfi_128"><p id="z9u0cfi_134"><span class="control" id="z9u0cfi_135">Tente o reset total</span>: <code class="code" id="z9u0cfi_136">./reset_environment.sh</code></p></li><li class="list__item" id="z9u0cfi_129"><p id="z9u0cfi_137"><span class="control" id="z9u0cfi_139">Procure ajuda online</span>:</p><ul class="list _bullet" id="z9u0cfi_138"><li class="list__item" id="z9u0cfi_140"><p id="z9u0cfi_143">Stack Overflow: tag <code class="code" id="z9u0cfi_144">sfml</code> + <code class="code" id="z9u0cfi_145">cmake</code></p></li><li class="list__item" id="z9u0cfi_141"><p id="z9u0cfi_146">Reddit: r/cpp, r/gamedev</p></li><li class="list__item" id="z9u0cfi_142"><p id="z9u0cfi_147">Discord: servidores de C++ e game dev</p></li></ul></li><li class="list__item" id="z9u0cfi_130"><p id="z9u0cfi_148"><span class="control" id="z9u0cfi_150">Documente seu problema</span>:</p><ul class="list _bullet" id="z9u0cfi_149"><li class="list__item" id="z9u0cfi_151"><p id="z9u0cfi_155">Sistema operacional e vers&atilde;o</p></li><li class="list__item" id="z9u0cfi_152"><p id="z9u0cfi_156">Sa&iacute;da do script de diagn&oacute;stico</p></li><li class="list__item" id="z9u0cfi_153"><p id="z9u0cfi_157">Mensagens de erro completas</p></li><li class="list__item" id="z9u0cfi_154"><p id="z9u0cfi_158">Passos que j&aacute; tentou</p></li></ul></li></ol></section></section><section class="chapter"><h2 id="preven-o-de-problemas" data-toc="preven-o-de-problemas">🎯 Preven&ccedil;&atilde;o de Problemas</h2><section class="chapter"><h3 id="manuten-o-regular" data-toc="manuten-o-regular">Manuten&ccedil;&atilde;o Regular</h3><div class="code-block" data-lang="bash">
+</div></section><section class="chapter"><h3 id="suporte-da-comunidade" data-toc="suporte-da-comunidade">Suporte da Comunidade</h3><p id="po8thu_125">Se nenhuma solu&ccedil;&atilde;o funcionou:</p><ol class="list _decimal" id="po8thu_126" type="1"><li class="list__item" id="po8thu_127"><p id="po8thu_131"><span class="control" id="po8thu_132">Execute o diagn&oacute;stico completo</span>: <code class="code" id="po8thu_133">./diagnose.sh</code></p></li><li class="list__item" id="po8thu_128"><p id="po8thu_134"><span class="control" id="po8thu_135">Tente o reset total</span>: <code class="code" id="po8thu_136">./reset_environment.sh</code></p></li><li class="list__item" id="po8thu_129"><p id="po8thu_137"><span class="control" id="po8thu_139">Procure ajuda online</span>:</p><ul class="list _bullet" id="po8thu_138"><li class="list__item" id="po8thu_140"><p id="po8thu_143">Stack Overflow: tag <code class="code" id="po8thu_144">sfml</code> + <code class="code" id="po8thu_145">cmake</code></p></li><li class="list__item" id="po8thu_141"><p id="po8thu_146">Reddit: r/cpp, r/gamedev</p></li><li class="list__item" id="po8thu_142"><p id="po8thu_147">Discord: servidores de C++ e game dev</p></li></ul></li><li class="list__item" id="po8thu_130"><p id="po8thu_148"><span class="control" id="po8thu_150">Documente seu problema</span>:</p><ul class="list _bullet" id="po8thu_149"><li class="list__item" id="po8thu_151"><p id="po8thu_155">Sistema operacional e vers&atilde;o</p></li><li class="list__item" id="po8thu_152"><p id="po8thu_156">Sa&iacute;da do script de diagn&oacute;stico</p></li><li class="list__item" id="po8thu_153"><p id="po8thu_157">Mensagens de erro completas</p></li><li class="list__item" id="po8thu_154"><p id="po8thu_158">Passos que j&aacute; tentou</p></li></ul></li></ol></section></section><section class="chapter"><h2 id="preven-o-de-problemas" data-toc="preven-o-de-problemas">🎯 Preven&ccedil;&atilde;o de Problemas</h2><section class="chapter"><h3 id="manuten-o-regular" data-toc="manuten-o-regular">Manuten&ccedil;&atilde;o Regular</h3><div class="code-block" data-lang="bash">
 # Atualizar dependências mensalmente
 sudo apt update &amp;&amp; sudo apt upgrade  # Linux
 brew update &amp;&amp; brew upgrade          # macOS
@@ -387,4 +387,4 @@ find . -name &quot;build*&quot; -type d -mtime +30 -exec rm -rf {} \;
 # Backup da configuração funcionando
 tar -czf working_config_$(date +%Y%m%d).tar.gz \
     CMakeLists.txt setup.sh build/CMakeCache.txt
-</div><p id="z9u0cfi_164"><span class="control" id="z9u0cfi_165">Lembre-se</span>: A maioria dos problemas pode ser resolvida com <code class="code" id="z9u0cfi_166">./setup.sh</code>. Em caso de d&uacute;vida, sempre comece pelo diagn&oacute;stico autom&aacute;tico!</p></section></section><div class="last-modified">22 June 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="snake.html" class="navigation-links__prev">Snake</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>
+</div><p id="po8thu_164"><span class="control" id="po8thu_165">Lembre-se</span>: A maioria dos problemas pode ser resolvida com <code class="code" id="po8thu_166">./setup.sh</code>. Em caso de d&uacute;vida, sempre comece pelo diagn&oacute;stico autom&aacute;tico!</p></section></section><div class="last-modified">22 June 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="snake.html" class="navigation-links__prev">Snake</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>
