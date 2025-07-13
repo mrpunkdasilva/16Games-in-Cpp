@@ -12,4 +12,10 @@
         </variables>
     </build-profile>
 
+    <sitemap change-frequency="daily" priority="0.5" />
+    <footer>
+        <copyright>© PunkDomus 2025</copyright>
+    </footer>
+    <llms-txt single-file="true"/>
+
 </buildprofiles>

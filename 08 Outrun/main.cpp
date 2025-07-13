@@ -70,7 +70,7 @@ int main() {
 	Texture t[50];
 	Sprite object[50];
 	for(int i=1; i<=7; i++) {
-		t[i].loadFromFile("images/"+ i +".png");
+		t[i].loadFromFile("images/" + std::to_string(i) + ".png");
 		t[i].setSmooth(true);
 		object[i].setTexture(t[i]);
 	}

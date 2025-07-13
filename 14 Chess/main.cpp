@@ -79,7 +79,7 @@ int main()
 {
     RenderWindow window(VideoMode(504, 504), "The Chess! (press SPACE)");
 
-    ConnectToEngine("stockfish.exe");    
+    ConnectToEngine(const_cast<char*>("stockfish.exe"));    
 
     Texture t1,t2;
     t1.loadFromFile("images/figures.png"); 

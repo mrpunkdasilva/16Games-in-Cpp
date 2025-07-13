@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Find SFML
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SFML REQUIRED sfml-all>=2.5)
+find_package(Box2D)
 
 # Set SFML compile flags
 add_compile_options(${SFML_CFLAGS})
@@ -23,6 +24,9 @@ function(add_game GAME_NAME GAME_DIR)
         
         # Link SFML libraries
         target_link_libraries(${GAME_NAME} ${SFML_LIBRARIES})
+        if("${GAME_NAME}" STREQUAL "volleyball" AND Box2D_FOUND)
+            target_link_libraries(${GAME_NAME} Box2D::Box2D)
+        endif()
         
         # Set output directory
         set_target_properties(${GAME_NAME} PROPERTIES
@@ -38,6 +42,11 @@ function(add_game GAME_NAME GAME_DIR)
         if(EXISTS "${CMAKE_SOURCE_DIR}/${GAME_DIR}/files")
             file(COPY "${CMAKE_SOURCE_DIR}/${GAME_DIR}/files/" 
                  DESTINATION "${CMAKE_BINARY_DIR}/games/${GAME_NAME}/files")
+        endif()
+        
+        if(EXISTS "${CMAKE_SOURCE_DIR}/${GAME_DIR}/fonts")
+            file(COPY "${CMAKE_SOURCE_DIR}/${GAME_DIR}/fonts/" 
+                 DESTINATION "${CMAKE_BINARY_DIR}/games/${GAME_NAME}/fonts")
         endif()
         
         if(EXISTS "${CMAKE_SOURCE_DIR}/${GAME_DIR}/fonts")
