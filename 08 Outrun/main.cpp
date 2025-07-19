@@ -111,6 +111,14 @@ int main() {
 			line.spriteX=-1.2;
 			line.sprite=object[7];
 		}
+		if (i>100 && i%100==0) { // Add a car every 100 segments after the first 100
+			line.spriteX=0.5; // Position the car slightly to the right of the center
+			line.sprite=object[1]; // Use object[1] as a placeholder for the car
+		}
+		if (i>200 && i%150==0) { // Add another car every 150 segments after the first 200
+			line.spriteX=-0.5; // Position the car slightly to the left of the center
+			line.sprite=object[1]; // Use object[1] as a placeholder for the car
+		}
 
 		if (i>750) line.y = sin(i/30.0)*1500;
 
@@ -136,8 +144,6 @@ int main() {
 		if (Keyboard::isKeyPressed(Keyboard::Up)) speed=200;
 		if (Keyboard::isKeyPressed(Keyboard::Down)) speed=-200;
 		if (Keyboard::isKeyPressed(Keyboard::Tab)) speed*=3;
-		if (Keyboard::isKeyPressed(Keyboard::W)) H+=100;
-		if (Keyboard::isKeyPressed(Keyboard::S)) H-=100;
 
 		pos+=speed;
 		while (pos >= N*segL) pos-=N*segL;
@@ -154,9 +160,9 @@ int main() {
 		float x=0,dx=0;
 
 		///////draw road////////
-		for(int n = startPos; n<startPos+300; n++) {
+		for(int n = startPos; n < startPos+300; n++) {
 			Line &l = lines[n%N];
-			l.project(playerX*roadW-x, camH, startPos*segL - (n>=N?N*segL:0));
+			l.project(playerX*roadW - x, camH, pos - (n >= N ? N*segL : 0));
 			x+=dx;
 			dx+=l.curve;
 
@@ -168,7 +174,7 @@ int main() {
 			Color rumble = (n/3)%2?Color(255,255,255):Color(0,0,0);
 			Color road   = (n/3)%2?Color(107,107,107):Color(105,105,105);
 
-			Line p = lines[(n-1)%N]; //previous line
+			Line p = lines[(n-1+N)%N]; //previous line
 
 			drawQuad(app, grass, 0, p.Y, width, 0, l.Y, width);
 			drawQuad(app, rumble,p.X, p.Y, p.W*1.2, l.X, l.Y, l.W*1.2);

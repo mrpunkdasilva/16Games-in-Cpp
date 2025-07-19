@@ -1,0 +1,212 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#1B9F8E"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-07-19T17:29:35.368334905"><title>Outrun | 16 Games in C++</title><script type="application/json" id="virtual-toc-data">[{"id":"o-que-outrun","level":0,"title":"O que é Outrun","anchor":"#o-que-outrun"},{"id":"a-base-do-jogo-segmentos-da-estrada-e-proje-o-3d","level":0,"title":"A Base do Jogo: Segmentos da Estrada e Projeção 3D","anchor":"#a-base-do-jogo-segmentos-da-estrada-e-proje-o-3d"},{"id":"o-loop-principal-do-jogo","level":0,"title":"O Loop Principal do Jogo","anchor":"#o-loop-principal-do-jogo"},{"id":"carros-oponentes","level":0,"title":"Carros Oponentes","anchor":"#carros-oponentes"},{"id":"extens-es-poss-veis","level":0,"title":"Extensões Possíveis","anchor":"#extens-es-poss-veis"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Outrun | 16 Games in C++"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="16 Games in C++ Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/outrun.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Outrun | 16 Games in C++"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/outrun.html#webpage",
+    "url": "writerside-documentation/outrun.html",
+    "name": "Outrun | 16 Games in C++",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "16 Games in C++ Help"
+}</script><!-- End Schema.org --></head><body data-id="outrun" data-main-title="Outrun" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="jogos.md|Jogos"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>16 Games in C++  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="outrun" id="outrun.md">Outrun</h1><p id="-62cde4_3">Este tutorial detalha a implementa&ccedil;&atilde;o do jogo &quot;Outrun&quot;, um simulador de corrida com perspectiva 3D, desenvolvido em C++ e SFML. Abordaremos os conceitos fundamentais por tr&aacute;s da cria&ccedil;&atilde;o de uma estrada infinita e da proje&ccedil;&atilde;o de objetos para simular um ambiente tridimensional.</p><section class="chapter"><h2 id="o-que-outrun" data-toc="o-que-outrun">O que &eacute; Outrun</h2><p id="-62cde4_9">&quot;Outrun&quot; &eacute; um jogo de corrida cl&aacute;ssico onde o jogador controla um carro em uma estrada que se estende ao horizonte, criando uma ilus&atilde;o de profundidade e movimento. O objetivo &eacute; dirigir pela estrada, desviando de obst&aacute;culos e outros ve&iacute;culos, enquanto a paisagem se move para simular velocidade.</p><p id="-62cde4_10">As principais caracter&iacute;sticas que exploraremos s&atilde;o:</p><ul class="list _bullet" id="-62cde4_11"><li class="list__item" id="-62cde4_12"><p id="-62cde4_16"><span class="control" id="-62cde4_17">Perspectiva 3D:</span> Como a estrada e os objetos s&atilde;o renderizados para simular uma vis&atilde;o em tr&ecirc;s dimens&otilde;es.</p></li><li class="list__item" id="-62cde4_13"><p id="-62cde4_18"><span class="control" id="-62cde4_19">Gera&ccedil;&atilde;o de Estrada:</span> A cria&ccedil;&atilde;o de uma estrada &quot;infinita&quot; com curvas e eleva&ccedil;&otilde;es.</p></li><li class="list__item" id="-62cde4_14"><p id="-62cde4_20"><span class="control" id="-62cde4_21">Controle de Ve&iacute;culo:</span> A movimenta&ccedil;&atilde;o do carro do jogador e o controle de velocidade.</p></li><li class="list__item" id="-62cde4_15"><p id="-62cde4_22"><span class="control" id="-62cde4_23">Objetos na Estrada:</span> A inclus&atilde;o de elementos como &aacute;rvores e carros oponentes.</p></li></ul></section><section class="chapter"><h2 id="a-base-do-jogo-segmentos-da-estrada-e-proje-o-3d" data-toc="a-base-do-jogo-segmentos-da-estrada-e-proje-o-3d">A Base do Jogo: Segmentos da Estrada e Proje&ccedil;&atilde;o 3D</h2><p id="-62cde4_24">O cora&ccedil;&atilde;o do &quot;Outrun&quot; &eacute; a forma como ele simula um ambiente 3D usando segmentos de estrada e proje&ccedil;&atilde;o. Em vez de um modelo 3D complexo, o jogo desenha a estrada como uma s&eacute;rie de quadril&aacute;teros, cada um representando um pequeno segmento da pista.</p><section class="chapter"><h3 id="a-estrutura-line" data-toc="a-estrutura-line">A Estrutura <code class="code" id="-62cde4_31">Line</code></h3><p id="-62cde4_28">Cada segmento da estrada &eacute; representado por uma inst&acirc;ncia da estrutura <code class="code" id="-62cde4_32">Line</code>. Esta estrutura armazena as coordenadas 3D do centro do segmento (<code class="code" id="-62cde4_33">x</code>, <code class="code" id="-62cde4_34">y</code>, <code class="code" id="-62cde4_35">z</code>), bem como suas propriedades na tela ap&oacute;s a proje&ccedil;&atilde;o (<code class="code" id="-62cde4_36">X</code>, <code class="code" id="-62cde4_37">Y</code>, <code class="code" id="-62cde4_38">W</code>).</p><div class="code-block" data-lang="cpp">
+struct Line {
+	float x,y,z; // 3d center of line
+	float X,Y,W; // screen coord
+	float curve,spriteX,clip,scale;
+	Sprite sprite;
+
+	Line() {
+		spriteX=curve=x=y=z=0;
+	}
+
+	void project(int camX,int camY,int camZ) {
+		scale = camD/(z-camZ);
+		X = (1 + scale*(x - camX)) * width/2;
+		Y = (1 - scale*(y - camY)) * height/2;
+		W = scale * roadW  * width/2;
+	}
+
+	void drawSprite(RenderWindow &amp;app) {
+		Sprite s = sprite;
+		int w = s.getTextureRect().width;
+		int h = s.getTextureRect().height;
+
+		float destX = X + scale * spriteX * width/2;
+		float destY = Y + 4;
+		float destW  = w * W / 266;
+		float destH  = h * W / 266;
+
+		destX += destW * spriteX; // offsetX
+		destY += destH * (-1);    // offsetY
+
+		float clipH = destY+destH-clip;
+		if (clipH&lt;0) clipH=0;
+
+		if (clipH&gt;=destH) return;
+		s.setTextureRect(IntRect(0,0,w,h-h*clipH/destH));
+		s.setScale(destW/w,destH/h);
+		s.setPosition(destX, destY);
+		app.draw(s);
+	}
+};
+</div><ul class="list _bullet" id="-62cde4_30"><li class="list__item" id="-62cde4_39"><p id="-62cde4_45"><span class="control" id="-62cde4_46"><code class="code" id="-62cde4_50">x, y, z</code></span>: Coordenadas 3D do centro do segmento. <code class="code" id="-62cde4_47">z</code> &eacute; a profundidade, <code class="code" id="-62cde4_48">y</code> a eleva&ccedil;&atilde;o e <code class="code" id="-62cde4_49">x</code> a posi&ccedil;&atilde;o horizontal.</p></li><li class="list__item" id="-62cde4_40"><p id="-62cde4_51"><span class="control" id="-62cde4_52"><code class="code" id="-62cde4_56">X, Y, W</code></span>: Coordenadas na tela ap&oacute;s a proje&ccedil;&atilde;o. <code class="code" id="-62cde4_53">X</code> &eacute; a posi&ccedil;&atilde;o horizontal, <code class="code" id="-62cde4_54">Y</code> a vertical e <code class="code" id="-62cde4_55">W</code> a largura do segmento na tela.</p></li><li class="list__item" id="-62cde4_41"><p id="-62cde4_57"><span class="control" id="-62cde4_58"><code class="code" id="-62cde4_59">curve</code></span>: Determina a curvatura do segmento da estrada. Um valor positivo curva para a direita, negativo para a esquerda.</p></li><li class="list__item" id="-62cde4_42"><p id="-62cde4_60"><span class="control" id="-62cde4_61"><code class="code" id="-62cde4_62">spriteX</code></span>: Posi&ccedil;&atilde;o horizontal de um sprite associado a este segmento (por exemplo, uma &aacute;rvore ou um carro oponente).</p></li><li class="list__item" id="-62cde4_43"><p id="-62cde4_63"><span class="control" id="-62cde4_64"><code class="code" id="-62cde4_74">project(camX, camY, camZ)</code></span>: Este m&eacute;todo &eacute; a chave para a proje&ccedil;&atilde;o 3D. Ele calcula as coordenadas <code class="code" id="-62cde4_65">X</code>, <code class="code" id="-62cde4_66">Y</code> e <code class="code" id="-62cde4_67">W</code> na tela com base na posi&ccedil;&atilde;o da c&acirc;mera (<code class="code" id="-62cde4_68">camX</code>, <code class="code" id="-62cde4_69">camY</code>, <code class="code" id="-62cde4_70">camZ</code>) e na profundidade (<code class="code" id="-62cde4_71">z</code>) do segmento. Quanto maior <code class="code" id="-62cde4_72">z</code> (mais distante), menor o <code class="code" id="-62cde4_73">scale</code> e, consequentemente, menor o segmento na tela, criando a ilus&atilde;o de profundidade.</p></li><li class="list__item" id="-62cde4_44"><p id="-62cde4_75"><span class="control" id="-62cde4_76"><code class="code" id="-62cde4_77">drawSprite(RenderWindow &amp;app)</code></span>: Desenha um sprite associado a este segmento na posi&ccedil;&atilde;o correta na tela, levando em conta a perspectiva.</p></li></ul></section><section class="chapter"><h3 id="desenhando-a-estrada-drawquad" data-toc="desenhando-a-estrada-drawquad">Desenhando a Estrada: <code class="code" id="-62cde4_82">drawQuad</code></h3><p id="-62cde4_79">A fun&ccedil;&atilde;o <code class="code" id="-62cde4_83">drawQuad</code> &eacute; respons&aacute;vel por desenhar os quadril&aacute;teros que comp&otilde;em a estrada. Ela recebe as coordenadas de dois pontos (superior e inferior) e suas respectivas larguras, e desenha um <code class="code" id="-62cde4_84">ConvexShape</code> (um quadril&aacute;tero) entre eles.</p><div class="code-block" data-lang="cpp">
+void drawQuad(RenderWindow &amp;w, Color c, int x1,int y1,int w1,int x2,int y2,int w2) {
+	ConvexShape shape(4);
+	shape.setFillColor(c);
+	shape.setPoint(0, Vector2f(x1-w1,y1));
+	shape.setPoint(1, Vector2f(x2-w2,y2));
+	shape.setPoint(2, Vector2f(x2+w2,y2));
+	shape.setPoint(3, Vector2f(x1+w1,y1));
+	w.draw(shape);
+}
+</div><p id="-62cde4_81">No loop principal do jogo, esta fun&ccedil;&atilde;o &eacute; chamada repetidamente para desenhar a grama, o acostamento e a pista, com cores diferentes para cada parte.</p></section></section><section class="chapter"><h2 id="o-loop-principal-do-jogo" data-toc="o-loop-principal-do-jogo">O Loop Principal do Jogo</h2><p id="-62cde4_85">O <code class="code" id="-62cde4_91">main</code> function cont&eacute;m o loop principal do jogo, onde a l&oacute;gica &eacute; atualizada e a tela &eacute; redesenhada a cada frame.</p><div class="code-block" data-lang="cpp">
+int main() {
+	RenderWindow app(VideoMode(width, height), &quot;Outrun Racing!&quot;);
+	app.setFramerateLimit(60);
+
+	// Carregamento de Texturas e Sprites
+	Texture t[50];
+	Sprite object[50];
+	for(int i=1; i&lt;=7; i++) {
+		t[i].loadFromFile(&quot;images/&quot; + std::to_string(i) + &quot;.png&quot;);
+		t[i].setSmooth(true);
+		object[i].setTexture(t[i]);
+	}
+
+	Texture bg;
+	bg.loadFromFile(&quot;images/bg.png&quot;);
+	bg.setRepeated(true);
+	Sprite sBackground(bg);
+	sBackground.setTextureRect(IntRect(0,0,5000,411));
+	sBackground.setPosition(-2000,0);
+
+	// Geração da Estrada (linhas)
+	std::vector&lt;Line&gt; lines;
+
+	for(int i=0; i&lt;1600; i++) {
+		Line line;
+		line.z = i*segL;
+
+		if (i&gt;300 &amp;&amp; i&lt;700) line.curve=0.5;
+		if (i&gt;1100) line.curve=-0.7;
+
+		// Adição de Sprites (árvores, carros oponentes, etc.)
+		if (i&lt;300 &amp;&amp; i%20==0) {
+			line.spriteX=-2.5;
+			line.sprite=object[5];
+		}
+		if (i%17==0)          {
+			line.spriteX=2.0;
+			line.sprite=object[6];
+		}
+		if (i&gt;300 &amp;&amp; i%20==0) {
+			line.spriteX=-0.7;
+			line.sprite=object[4];
+		}
+		if (i&gt;800 &amp;&amp; i%20==0) {
+			line.spriteX=-1.2;
+			line.sprite=object[1];
+		}
+		if (i==400)           {
+			line.spriteX=-1.2;
+			line.sprite=object[7];
+		}
+		// Carros oponentes adicionados
+		if (i&gt;100 &amp;&amp; i%100==0) {
+			line.spriteX=0.5;
+			line.sprite=object[1];
+		}
+		if (i&gt;200 &amp;&amp; i%150==0) {
+			line.spriteX=-0.5;
+			line.sprite=object[1];
+		}
+
+		if (i&gt;750) line.y = sin(i/30.0)*1500; // Elevação da estrada
+
+		lines.push_back(line);
+	}
+
+	int N = static_cast&lt;int&gt;(lines.size());
+	float playerX = 0;
+	int pos = 0;
+	int H = 1500; // Altura da câmera
+
+	while (app.isOpen()) {
+		Event e;
+		while (app.pollEvent(e)) {
+			if (e.type == Event::Closed)
+				app.close();
+		}
+
+		int speed=0;
+
+		// Input do Jogador
+		if (Keyboard::isKeyPressed(Keyboard::Right)) playerX+=0.1;
+		if (Keyboard::isKeyPressed(Keyboard::Left)) playerX-=0.1;
+		if (Keyboard::isKeyPressed(Keyboard::Up)) speed=200;
+		if (Keyboard::isKeyPressed(Keyboard::Down)) speed=-200;
+		if (Keyboard::isKeyPressed(Keyboard::Tab)) speed*=3;
+
+		// Atualização da Posição na Estrada
+		pos+=speed;
+		while (pos &gt;= N*segL) pos-=N*segL;
+		while (pos &lt; 0) pos += N*segL;
+
+		app.clear(Color(105,205,4));
+		app.draw(sBackground);
+
+		int startPos = pos/segL;
+		int camH = lines[startPos].y + H; // Altura da câmera ajustada pela elevação da estrada
+		if (speed&gt;0) sBackground.move(-lines[startPos].curve*2,0);
+		if (speed&lt;0) sBackground.move( lines[startPos].curve*2,0);
+
+		int maxy = height;
+		float x=0,dx=0;
+
+		/////// Desenho da Estrada ////////
+		for(int n = startPos; n &lt; startPos+300; n++) {
+			Line &amp;l = lines[n%N];
+			l.project(playerX*roadW - x, camH, pos - (n &gt;= N ? N*segL : 0));
+			x+=dx;
+			dx+=l.curve;
+
+			l.clip=maxy;
+			if (l.Y&gt;=maxy) continue;
+			maxy = l.Y;
+
+			Color grass  = (n/3)%2?Color(16,200,16):Color(0,154,0);
+			Color rumble = (n/3)%2?Color(255,255,255):Color(0,0,0);
+			Color road   = (n/3)%2?Color(107,107,107):Color(105,105,105);
+
+			Line p = lines[(n-1+N)%N]; // previous line
+
+			drawQuad(app, grass, 0, p.Y, width, 0, l.Y, width);
+			drawQuad(app, rumble,p.X, p.Y, p.W*1.2, l.X, l.Y, l.W*1.2);
+			drawQuad(app, road,  p.X, p.Y, p.W, l.X, l.Y, l.W);
+		}
+
+		//////// Desenho de Objetos ////////
+		for(int n=startPos+300; n&gt;startPos; n--)
+			lines[n%N].drawSprite(app);
+
+		app.display();
+	}
+
+	return 0;
+}
+</div><section class="chapter"><h3 id="gera-o-da-estrada" data-toc="gera-o-da-estrada">Gera&ccedil;&atilde;o da Estrada</h3><p id="-62cde4_92">A estrada &eacute; gerada como um vetor de objetos <code class="code" id="-62cde4_93">Line</code>. Cada <code class="code" id="-62cde4_94">Line</code> tem uma posi&ccedil;&atilde;o <code class="code" id="-62cde4_95">z</code> (profundidade) e pode ter uma <code class="code" id="-62cde4_96">curve</code> (curvatura) e <code class="code" id="-62cde4_97">y</code> (eleva&ccedil;&atilde;o) para criar um percurso variado. Sprites (&aacute;rvores, carros oponentes) s&atilde;o adicionados a segmentos espec&iacute;ficos da estrada.</p></section><section class="chapter"><h3 id="input-do-jogador" data-toc="input-do-jogador">Input do Jogador</h3><p id="-62cde4_98">O jogo responde &agrave;s teclas de seta para controlar a posi&ccedil;&atilde;o horizontal do jogador (<code class="code" id="-62cde4_99">playerX</code>) e a velocidade (<code class="code" id="-62cde4_100">speed</code>). A tecla <code class="code" id="-62cde4_101">Tab</code> atua como um &quot;boost&quot; de velocidade.</p></section><section class="chapter"><h3 id="atualiza-o-da-posi-o" data-toc="atualiza-o-da-posi-o">Atualiza&ccedil;&atilde;o da Posi&ccedil;&atilde;o</h3><p id="-62cde4_102">A vari&aacute;vel <code class="code" id="-62cde4_103">pos</code> representa a posi&ccedil;&atilde;o atual do jogador na estrada. Ela &eacute; incrementada pela <code class="code" id="-62cde4_104">speed</code> a cada frame. O uso do operador <code class="code" id="-62cde4_105">%</code> (<code class="code" id="-62cde4_106">pos % (N*segL)</code>) garante que a estrada seja &quot;infinita&quot;, reciclando os segmentos quando o jogador atinge o final.</p></section><section class="chapter"><h3 id="desenho-da-estrada-e-objetos" data-toc="desenho-da-estrada-e-objetos">Desenho da Estrada e Objetos</h3><p id="-62cde4_107">O loop de desenho itera sobre os segmentos da estrada vis&iacute;veis. Para cada segmento, ele:</p><ol class="list _decimal" id="-62cde4_108" type="1"><li class="list__item" id="-62cde4_110"><p id="-62cde4_114"><span class="control" id="-62cde4_115">Projeta</span> o segmento para as coordenadas da tela usando <code class="code" id="-62cde4_116">l.project()</code>.</p></li><li class="list__item" id="-62cde4_111"><p id="-62cde4_117"><span class="control" id="-62cde4_118">Calcula</span> a curvatura acumulada (<code class="code" id="-62cde4_119">x</code> e <code class="code" id="-62cde4_120">dx</code>) para simular a perspectiva da estrada.</p></li><li class="list__item" id="-62cde4_112"><p id="-62cde4_121"><span class="control" id="-62cde4_122">Desenha</span> a grama, o acostamento e a pista usando <code class="code" id="-62cde4_123">drawQuad</code>, com cores alternadas para criar um efeito de faixas.</p></li><li class="list__item" id="-62cde4_113"><p id="-62cde4_124"><span class="control" id="-62cde4_125">Desenha os sprites</span> associados a cada segmento (&aacute;rvores, carros oponentes) usando <code class="code" id="-62cde4_126">lines[n%N].drawSprite(app)</code>.</p></li></ol><p id="-62cde4_109">O desenho dos objetos &eacute; feito em ordem inversa (<code class="code" id="-62cde4_127">n=startPos+300; n&gt;startPos; n--</code>) para garantir que os objetos mais distantes sejam desenhados primeiro, e os mais pr&oacute;ximos por cima, mantendo a ordem de profundidade correta.</p></section></section><section class="chapter"><h2 id="carros-oponentes" data-toc="carros-oponentes">Carros Oponentes</h2><p id="-62cde4_128">Os carros oponentes s&atilde;o implementados como sprites associados a segmentos espec&iacute;ficos da estrada. Eles s&atilde;o adicionados durante a fase de gera&ccedil;&atilde;o da estrada:</p><div class="code-block" data-lang="cpp">
+		// Carros oponentes adicionados
+		if (i&gt;100 &amp;&amp; i%100==0) { // Adiciona um carro a cada 100 segmentos após os primeiros 100
+			line.spriteX=0.5; // Posição horizontal do carro
+			line.sprite=object[1]; // Sprite do carro (placeholder)
+		}
+		if (i&gt;200 &amp;&amp; i%150==0) { // Adiciona outro carro a cada 150 segmentos após os primeiros 200
+			line.spriteX=-0.5; // Posição horizontal do carro
+			line.sprite=object[1]; // Sprite do carro (placeholder)
+		}
+</div><p id="-62cde4_130">Atualmente, eles usam <code class="code" id="-62cde4_131">object[1]</code> como um sprite placeholder e s&atilde;o posicionados em diferentes faixas da estrada usando <code class="code" id="-62cde4_132">spriteX</code>.</p></section><section class="chapter"><h2 id="extens-es-poss-veis" data-toc="extens-es-poss-veis">Extens&otilde;es Poss&iacute;veis</h2><p id="-62cde4_133">Este jogo serve como uma excelente base para futuras extens&otilde;es:</p><ul class="list _bullet" id="-62cde4_134"><li class="list__item" id="-62cde4_136"><p id="-62cde4_142"><span class="control" id="-62cde4_143">Detec&ccedil;&atilde;o de Colis&atilde;o:</span> Implementar a l&oacute;gica para detectar quando o carro do jogador colide com os carros oponentes ou outros objetos na estrada.</p></li><li class="list__item" id="-62cde4_137"><p id="-62cde4_144"><span class="control" id="-62cde4_145">Sistema de Pontua&ccedil;&atilde;o:</span> Adicionar um sistema de pontua&ccedil;&atilde;o baseado na dist&acirc;ncia percorrida, velocidade ou desvio de obst&aacute;culos.</p></li><li class="list__item" id="-62cde4_138"><p id="-62cde4_146"><span class="control" id="-62cde4_147">Tipos de Oponentes Variados:</span> Introduzir diferentes tipos de carros oponentes com comportamentos distintos.</p></li><li class="list__item" id="-62cde4_139"><p id="-62cde4_148"><span class="control" id="-62cde4_149">M&uacute;ltiplas Pistas/Cen&aacute;rios:</span> Criar diferentes ambientes e layouts de estrada para aumentar a variedade.</p></li><li class="list__item" id="-62cde4_140"><p id="-62cde4_150"><span class="control" id="-62cde4_151">Efeitos Sonoros:</span> Adicionar sons para o motor, colis&otilde;es e m&uacute;sica de fundo.</p></li><li class="list__item" id="-62cde4_141"><p id="-62cde4_152"><span class="control" id="-62cde4_153">Interface de Usu&aacute;rio:</span> Exibir informa&ccedil;&otilde;es como velocidade, pontua&ccedil;&atilde;o e dist&acirc;ncia percorrida.</p></li></ul><p id="-62cde4_135">Este tutorial cobriu os aspectos fundamentais da implementa&ccedil;&atilde;o do jogo &quot;Outrun&quot;, desde a proje&ccedil;&atilde;o 3D da estrada at&eacute; a inclus&atilde;o de objetos e o controle do jogador. Com esta base, &eacute; poss&iacute;vel expandir o jogo com diversas funcionalidades para torn&aacute;-lo mais rico e interativo.</p></section><div class="last-modified">19 July 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="racing.html" class="navigation-links__prev">Racing Game Top-Down</a><a href="troubleshooting-setup.html" class="navigation-links__next">Troubleshooting</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>
