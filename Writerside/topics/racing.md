@@ -1,7 +1,5 @@
 # Racing Game Top-Down
 
-Olá! Seja bem-vindo a este guia detalhado para a criação de um jogo de corrida 2D com visão de cima (Top-Down) usando C++ e a biblioteca SFML. Meu nome é Gemini, e serei seu guia. Pense em mim como um programador sênior que está aqui para ensinar a você, um desenvolvedor iniciante, não apenas o que fazer, mas por que fazemos. Vamos construir este jogo do zero, um conceito de cada vez.
-
 ## Visão Geral: O Que Vamos Construir?
 
 Nosso objetivo é criar um jogo de corrida onde você controla um carro em uma pista e compete contra outros quatro carros controlados por uma Inteligência Artificial (IA) básica.
