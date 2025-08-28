@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SFML REQUIRED sfml-all>=2.5)
 find_package(Box2D)
+find_package(SQLite3 REQUIRED) # Added for SQLite integration
 
 # Set SFML compile flags
 add_compile_options(${SFML_CFLAGS})
@@ -18,42 +19,45 @@ link_directories(${SFML_LIBRARY_DIRS})
 function(add_game GAME_NAME GAME_DIR)
     # Get all cpp files in the directory
     file(GLOB_RECURSE GAME_SOURCES "${GAME_DIR}/*.cpp" "${GAME_DIR}/*.hpp")
-    
+
     if(GAME_SOURCES)
         add_executable(${GAME_NAME} ${GAME_SOURCES})
-        
+
         # Link SFML libraries
         target_link_libraries(${GAME_NAME} ${SFML_LIBRARIES})
         if("${GAME_NAME}" STREQUAL "volleyball" AND Box2D_FOUND)
             target_link_libraries(${GAME_NAME} Box2D::Box2D)
         endif()
-        
+        if("${GAME_NAME}" STREQUAL "bejeweled") # Added for Bejeweled SQLite integration
+            target_link_libraries(${GAME_NAME} SQLite::SQLite3)
+        endif()
+
         # Set output directory
         set_target_properties(${GAME_NAME} PROPERTIES
             RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/games/${GAME_NAME}"
         )
-        
+
         # Copy assets if they exist - each game gets its own asset directory
         if(EXISTS "${CMAKE_SOURCE_DIR}/${GAME_DIR}/images")
             file(COPY "${CMAKE_SOURCE_DIR}/${GAME_DIR}/images/" 
                  DESTINATION "${CMAKE_BINARY_DIR}/games/${GAME_NAME}/images")
         endif()
-        
+
         if(EXISTS "${CMAKE_SOURCE_DIR}/${GAME_DIR}/files")
             file(COPY "${CMAKE_SOURCE_DIR}/${GAME_DIR}/files/" 
                  DESTINATION "${CMAKE_BINARY_DIR}/games/${GAME_NAME}/files")
         endif()
-        
+
         if(EXISTS "${CMAKE_SOURCE_DIR}/${GAME_DIR}/fonts")
             file(COPY "${CMAKE_SOURCE_DIR}/${GAME_DIR}/fonts/" 
                  DESTINATION "${CMAKE_BINARY_DIR}/games/${GAME_NAME}/fonts")
         endif()
-        
+
         if(EXISTS "${CMAKE_SOURCE_DIR}/${GAME_DIR}/fonts")
             file(COPY "${CMAKE_SOURCE_DIR}/${GAME_DIR}/fonts/" 
                  DESTINATION "${CMAKE_BINARY_DIR}/games/${GAME_NAME}/fonts")
         endif()
-        
+
         # Add custom target to run the game
         add_custom_target(run_${GAME_NAME}
             COMMAND ${CMAKE_BINARY_DIR}/games/${GAME_NAME}/${GAME_NAME}
@@ -61,7 +65,7 @@ function(add_game GAME_NAME GAME_DIR)
             WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/games/${GAME_NAME}
             COMMENT "Running ${GAME_NAME}"
         )
-        
+
         message(STATUS "Added game: ${GAME_NAME}")
     else()
         message(WARNING "No source files found for ${GAME_NAME} in ${GAME_DIR}")
@@ -87,7 +91,7 @@ add_game(volleyball "15 Volleyball")
 add_game(asteroids "16 Asteroids")
 
 # Create a target to build all games
-add_custom_target(all_games DEPENDS 
+add_custom_target(all_games DEPENDS
     tetris doodle_jump arkanoid snake minesweeper fifteen_puzzle
     racing outrun xonix bejeweled netwalk mahjong tron chess volleyball asteroids
 )

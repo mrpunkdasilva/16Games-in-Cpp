@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip> // For std::fixed and std::setprecision
+#include <sqlite3.h>
 
 using namespace sf;
 
@@ -15,7 +16,7 @@ struct piece
   piece(){match=0; alpha=255; special=0;}
 } grid[10][10];
 
-enum GameState { MainMenu, Playing, GameOver };
+enum GameState { MainMenu, Playing, GameOver, HighScores };
 
 void swap(piece p1,piece p2)
 {
@@ -27,6 +28,7 @@ void swap(piece p1,piece p2)
 }
 
 float gameTimer;
+sqlite3 *db;
 
 void resetGame() {
     for (int i=1;i<=8;i++)
@@ -42,6 +44,67 @@ void resetGame() {
           grid[i][j].special = 0;
       }
     gameTimer = 60.0f; // 60 seconds for the game
+}
+
+// SQLite functions
+void openDatabase() {
+    int rc = sqlite3_open("bejeweled_scores.db", &db);
+    if (rc) {
+        std::cerr << "Can't open database: " << sqlite3_errmsg(db) << std::endl;
+    } else {
+        std::cout << "Opened database successfully" << std::endl;
+    }
+}
+
+void createTable() {
+    char *errMsg = 0;
+    const char *sql = "CREATE TABLE IF NOT EXISTS highscores (id INTEGER PRIMARY KEY AUTOINCREMENT, score INTEGER, timestamp TEXT);";
+    int rc = sqlite3_exec(db, sql, 0, 0, &errMsg);
+    if (rc != SQLITE_OK) {
+        std::cerr << "SQL error: " << errMsg << std::endl;
+        sqlite3_free(errMsg);
+    } else {
+        std::cout << "Table created successfully or already exists" << std::endl;
+    }
+}
+
+void saveHighScore(int score) {
+    char sql[256];
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+    char timestamp[20];
+    strftime(timestamp, 20, "%Y-%m-%d %H:%M:%S", ltm);
+
+    sprintf(sql, "INSERT INTO highscores (score, timestamp) VALUES (%d, '%s');", score, timestamp);
+
+    char *errMsg = 0;
+    int rc = sqlite3_exec(db, sql, 0, 0, &errMsg);
+    if (rc != SQLITE_OK) {
+        std::cerr << "SQL error: " << errMsg << std::endl;
+        sqlite3_free(errMsg);
+    } else {
+        std::cout << "Score saved successfully" << std::endl;
+    }
+}
+
+std::vector<std::pair<int, std::string>> highScores;
+
+static int callback(void *data, int argc, char **argv, char **azColName) {
+    highScores.push_back({std::stoi(argv[0]), argv[1]});
+    return 0;
+}
+
+void loadHighScores() {
+    highScores.clear();
+    char *errMsg = 0;
+    const char *sql = "SELECT score, timestamp FROM highscores ORDER BY score DESC LIMIT 10;";
+    int rc = sqlite3_exec(db, sql, callback, 0, &errMsg);
+    if (rc != SQLITE_OK) {
+        std::cerr << "SQL error: " << errMsg << std::endl;
+        sqlite3_free(errMsg);
+    } else {
+        std::cout << "High scores loaded successfully" << std::endl;
+    }
 }
 
 int main()
@@ -70,9 +133,13 @@ int main()
     playText.setFillColor(Color::White);
     playText.setPosition(740 / 2 - playText.getGlobalBounds().width / 2, 200);
 
+    Text highScoresButtonText("Melhores Pontuacoes", font, 30);
+    highScoresButtonText.setFillColor(Color::White);
+    highScoresButtonText.setPosition(740 / 2 - highScoresButtonText.getGlobalBounds().width / 2, 300);
+
     Text exitText("Sair", font, 30);
     exitText.setFillColor(Color::White);
-    exitText.setPosition(740 / 2 - exitText.getGlobalBounds().width / 2, 250);
+    exitText.setPosition(740 / 2 - exitText.getGlobalBounds().width / 2, 350);
 
     Text scoreText("Score: 0", font, 30);
     scoreText.setFillColor(Color::White);
@@ -98,12 +165,22 @@ int main()
     playAgainText.setFillColor(Color::White);
     playAgainText.setPosition(740 / 2 - playAgainText.getGlobalBounds().width / 2, 250);
 
+    Text highScoresTitleText("Melhores Pontuacoes", font, 40);
+    highScoresTitleText.setFillColor(Color::White);
+    highScoresTitleText.setPosition(740 / 2 - highScoresTitleText.getGlobalBounds().width / 2, 50);
+
+    Text backToMenuText("Voltar ao Menu", font, 30);
+    backToMenuText.setFillColor(Color::White);
+    backToMenuText.setPosition(740 / 2 - backToMenuText.getGlobalBounds().width / 2, 400);
+
     GameState gameState = MainMenu;
     int score = 0;
 
     int x0,y0,x,y; int click=0; Vector2i pos;
     bool isSwap=false, isMoving=false;
 
+    openDatabase();
+    createTable();
     resetGame(); // Initial call to set up the board and timer
 
     Clock gameClock; // Clock for delta time
@@ -128,6 +205,10 @@ int main()
                             score = 0;
                             gameState = Playing;
                         }
+                        if (highScoresButtonText.getGlobalBounds().contains(pos.x, pos.y)) {
+                            loadHighScores();
+                            gameState = HighScores;
+                        }
                         if (exitText.getGlobalBounds().contains(pos.x, pos.y)) {
                             app.close();
                         }
@@ -148,6 +229,10 @@ int main()
                         if (exitText.getGlobalBounds().contains(pos.x, pos.y)) {
                             app.close();
                         }
+                    } else if (gameState == HighScores) {
+                        if (backToMenuText.getGlobalBounds().contains(pos.x, pos.y)) {
+                            gameState = MainMenu;
+                        }
                     }
                 }
             }
@@ -158,6 +243,7 @@ int main()
             if (gameTimer <= 0) {
                 gameTimer = 0;
                 gameState = GameOver;
+                saveHighScore(score);
                 finalScoreText.setString("Sua Pontuacao: " + std::to_string(score));
             }
             timerText.setString("Time: " + std::to_string(static_cast<int>(gameTimer)));
@@ -309,6 +395,7 @@ int main()
             app.draw(overlay);
             app.draw(titleText);
             app.draw(playText);
+            app.draw(highScoresButtonText);
             app.draw(exitText);
         } else if (gameState == GameOver) {
             RectangleShape overlay(Vector2f(740, 480));
@@ -318,9 +405,24 @@ int main()
             app.draw(finalScoreText);
             app.draw(playAgainText);
             app.draw(exitText);
+        } else if (gameState == HighScores) {
+            RectangleShape overlay(Vector2f(740, 480));
+            overlay.setFillColor(Color(0, 0, 0, 150));
+            app.draw(overlay);
+            app.draw(highScoresTitleText);
+            
+            // Display high scores
+            for (size_t i = 0; i < highScores.size(); ++i) {
+                Text scoreEntry(std::to_string(i + 1) + ". " + std::to_string(highScores[i].first) + " - " + highScores[i].second, font, 20);
+                scoreEntry.setFillColor(Color::White);
+                scoreEntry.setPosition(740 / 2 - scoreEntry.getGlobalBounds().width / 2, 100 + i * 30);
+                app.draw(scoreEntry);
+            }
+            app.draw(backToMenuText);
         }
 
         app.display();
     }
+    sqlite3_close(db);
     return 0;
 }
