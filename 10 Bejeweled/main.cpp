@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <time.h>
 #include <vector>
+#include <iostream>
 
 using namespace sf;
 
@@ -8,8 +9,8 @@ int ts = 54; //tile size
 Vector2i offset(48,24);
 
 struct piece
-{ int x,y,col,row,kind,match,alpha;
-  piece(){match=0; alpha=255;}
+{ int x,y,col,row,kind,match,alpha,special;
+  piece(){match=0; alpha=255; special=0;}
 } grid[10][10];
 
 enum GameState { MainMenu, Playing };
@@ -34,6 +35,7 @@ void resetGame() {
           grid[i][j].y = i*ts;
           grid[i][j].match = 0;
           grid[i][j].alpha = 255;
+          grid[i][j].special = 0;
       }
 }
 
@@ -80,6 +82,8 @@ int main()
 
     int x0,y0,x,y; int click=0; Vector2i pos;
     bool isSwap=false, isMoving=false;
+
+    resetGame();
 
     while (app.isOpen())
     {
@@ -131,16 +135,43 @@ int main()
             }
 
             //Match finding
-            for(int i=1;i<=8;i++)
-            for(int j=1;j<=8;j++)
-            {
-                if (grid[i][j].kind==grid[i+1][j].kind)
-                if (grid[i][j].kind==grid[i-1][j].kind)
-                for(int n=-1;n<=1;n++) grid[i+n][j].match++;
+            bool hasMatches = false;
+            for(int i=1;i<=8;i++) {
+                for(int j=1;j<=8;j++) {
+                    if (j<=6 && grid[i][j].kind==grid[i][j+1].kind && grid[i][j].kind==grid[i][j+2].kind) {
+                        int matchLen = 3;
+                        if (j<=5 && grid[i][j].kind==grid[i][j+3].kind) matchLen = 4;
+                        for(int k=0;k<matchLen;k++) grid[i][j+k].match = 1;
+                        if (isSwap && matchLen == 4) grid[y][x].special = 1;
+                        hasMatches = true;
+                    }
+                    if (i<=6 && grid[i][j].kind==grid[i+1][j].kind && grid[i][j].kind==grid[i+2][j].kind) {
+                        int matchLen = 3;
+                        if (i<=5 && grid[i][j].kind==grid[i+3][j].kind) matchLen = 4;
+                        for(int k=0;k<matchLen;k++) grid[i+k][j].match = 1;
+                        if (isSwap && matchLen == 4) grid[y][x].special = 1;
+                        hasMatches = true;
+                    }
+                }
+            }
 
-                if (grid[i][j].kind==grid[i][j+1].kind)
-                if (grid[i][j].kind==grid[i][j-1].kind)
-                for(int n=-1;n<=1;n++) grid[i][j+n].match++;
+            // Bomb activation
+            if (hasMatches) {
+                for(int i=1; i<=8; i++) {
+                    for(int j=1; j<=8; j++) {
+                        if (grid[i][j].match && grid[i][j].special == 1) {
+                            grid[i][j].match = 0; // Bomb itself is consumed, not matched
+                            grid[i][j].special = 0;
+                            for(int r=i-1; r<=i+1; r++) {
+                                for(int c=j-1; c<=j+1; c++) {
+                                    if (r>=1 && r<=8 && c>=1 && c<=8) {
+                                        grid[r][c].match = 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             //Moving animation
@@ -158,7 +189,7 @@ int main()
                 if (dx||dy) isMoving=1;
                 }
 
-            //Deleting amimation
+            //Deleting animation
             if (!isMoving)
                 for (int i=1;i<=8;i++)
                 for (int j=1;j<=8;j++)
@@ -168,11 +199,10 @@ int main()
             int currentMatchScore=0;
             for (int i=1;i<=8;i++)
                 for (int j=1;j<=8;j++)
-                currentMatchScore+=grid[i][j].match;
+                    if(grid[i][j].match) currentMatchScore++;
             
             if (isSwap && !isMoving)
-            {if (!currentMatchScore) swap(grid[y0][x0],grid[y][x]); else score += currentMatchScore; isSwap=0;}
-
+            {if (!hasMatches) swap(grid[y0][x0],grid[y][x]); else score += currentMatchScore * 10; isSwap=0;}
 
             //Update grid
             if (!isMoving)
@@ -191,11 +221,11 @@ int main()
                         grid[i][j].y = -ts*n++;
                         grid[i][j].match=0;
                         grid[i][j].alpha = 255;
+                        grid[i][j].special = 0;
                     }
             }
             scoreText.setString("Score: " + std::to_string(score));
         }
-
 
         //////draw///////
         app.draw(background);
@@ -210,6 +240,16 @@ int main()
                 gems.setPosition(p.x,p.y);
                 gems.move(offset.x-ts,offset.y-ts);
                 app.draw(gems);
+
+                if (p.special == 1) {
+                    RectangleShape border(Vector2f(49,49));
+                    border.setFillColor(Color::Transparent);
+                    border.setOutlineColor(Color::White);
+                    border.setOutlineThickness(3);
+                    border.setPosition(p.x, p.y);
+                    border.move(offset.x-ts,offset.y-ts);
+                    app.draw(border);
+                }
             }
             
             RectangleShape uiPanel(Vector2f(200, 120));
