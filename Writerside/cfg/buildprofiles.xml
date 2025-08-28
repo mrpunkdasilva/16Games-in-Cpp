@@ -9,10 +9,14 @@
         <variables>
             <noindex-content>true</noindex-content>
             <primary-color>emerald</primary-color>
+            <header-logo>logo.svg</header-logo>
+            <custom-favicons>
+                logo.svg
+            </custom-favicons>
         </variables>
     </build-profile>
 
-    <sitemap change-frequency="daily" priority="0.5" />
+    <sitemap change-frequency="daily" priority="0.5"/>
     <footer>
         <copyright>© PunkDomus 2025</copyright>
     </footer>
