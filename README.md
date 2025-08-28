@@ -33,6 +33,7 @@ To embark on this pixelated adventure, you'll need a few tools:
 
 - **C++ Compiler** (supporting C++11 or later)
 - **SFML Library** (Simple and Fast Multimedia Library)
+- **SQLite3 Library** (for games requiring data persistence)
 - **CMake** (optional, but highly recommended for building)
 
 ### Installing SFML
@@ -124,6 +125,7 @@ The top-level directories include:
 A peek behind the pixelated curtain:
 
 - All games are crafted using **SFML** for seamless graphics, audio, and input handling.
+- Some games utilize **SQLite3** for data persistence, such as high scores.
 - Each game follows a consistent structure, featuring robust game loops, efficient event handling, and smooth rendering.
 - Most games boast charming sprite-based graphics, powered by their respective image assets.
 - Keep an eye out! Some games might require additional files like custom fonts or unique sound effects to complete the experience.

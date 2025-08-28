@@ -8,6 +8,7 @@ Antes de continuar, confirme que você já tem:
 
 - ✅ [Sistema compatível](system-requirements.md)
 - ✅ [SFML instalado](sfml-installation.md) 
+- ✅ [SQLite3 instalado](sqlite-installation.md)
 - ✅ [CMake instalado](cmake-installation.md)
 - ✅ [IDE configurada](ide-setup.md) (opcional)
 
@@ -127,6 +128,14 @@ if pkg-config --exists sfml-all; then
     echo "✅ SFML - $(pkg-config --modversion sfml-all)"
 else
     echo "❌ SFML não encontrado"
+    exit 1
+fi
+
+# Verificar SQLite3
+if pkg-config --exists sqlite3; then
+    echo "✅ SQLite3 - $(pkg-config --modversion sqlite3)"
+else
+    echo "❌ SQLite3 não encontrado"
     exit 1
 fi
 

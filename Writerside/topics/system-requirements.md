@@ -70,16 +70,22 @@ g++ --version
   - sfml-audio
   - sfml-network (opcional)
 
+### SQLite3
+- **Versão mínima**: 3.0.0
+- **Recomendada**: Mais recente estável
+- **Módulos necessários**:
+  - sqlite3
+
 ### Bibliotecas do Sistema (Linux)
 ```bash
 # Ubuntu/Debian
-sudo apt-get install libsfml-dev cmake build-essential
+sudo apt-get install libsfml-dev cmake build-essential libsqlite3-dev
 
 # Fedora
-sudo dnf install SFML-devel cmake gcc-c++
+sudo dnf install SFML-devel cmake gcc-c++ sqlite-devel
 
 # Arch Linux
-sudo pacman -S sfml cmake gcc
+sudo pacman -S sfml cmake gcc sqlite
 ```
 
 ## 💾 Espaço em Disco

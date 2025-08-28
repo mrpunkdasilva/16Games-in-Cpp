@@ -52,7 +52,7 @@ Este projeto inclui 16 jogos clássicos, cada um demonstrando diferentes conceit
 | **Fifteen Puzzle** | ✅ | ✅ | ⭐⭐ | Algoritmos, Shuffling |
 | **Racing** | ✅ | ✅ | ⭐⭐⭐ | Movimento, Colisão |
 | **Xonix** | ✅ | ✅ | ⭐⭐⭐ | Flood Fill, Territory |
-| **Bejeweled** | ✅ | ✅ | ⭐⭐⭐ | Match-3, Animações |
+| **Bejeweled** | ✅ | ✅ | ⭐⭐⭐ | Match-3, Animações, Persistência de Dados (SQLite) |
 | **NetWalk** | ✅ | ✅ | ⭐⭐⭐ | Conectividade, Rotação |
 | **Mahjong** | ✅ | ✅ | ⭐⭐⭐ | 3D Stacking, Matching |
 | **Asteroids** | ✅ | ✅ | ⭐⭐⭐⭐ | Vetores, Rotação |

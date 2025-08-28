@@ -105,6 +105,51 @@ cmake .. -DCMAKE_CXX_COMPILER=g++-9
 
 ### 4. Erro de linking com SFML
 
+### 5. SQLite3 não encontrado ou erro de linking
+
+#### Sintomas
+```
+CMake Error: Could not find SQLite3
+undefined reference to `sqlite3_open'
+```
+
+#### Soluções
+
+**Linux:**
+```bash
+# Ubuntu/Debian
+sudo apt update
+sudo apt install libsqlite3-dev
+
+# Fedora
+sudo dnf install sqlite-devel
+
+# Arch Linux
+sudo pacman -S sqlite
+```
+
+**macOS (com Homebrew):**
+```bash
+brew install sqlite
+```
+
+**Windows (com vcpkg):**
+```bash
+vcpkg install sqlite3:x64-windows
+```
+
+**Verificar instalação:**
+```bash
+pkg-config --exists sqlite3 && echo "✅ SQLite3 OK" || echo "❌ SQLite3 não encontrado"
+```
+
+**Forçar CMake a encontrar SQLite3 (se instalado manualmente):**
+```bash
+cmake .. -DSQLITE3_INCLUDE_DIR=/path/to/sqlite3/include -DSQLITE3_LIBRARY=/path/to/sqlite3/lib/libsqlite3.so
+```
+
+### 6. Jogos não iniciam (sem janela)
+
 #### Sintomas
 ```
 undefined reference to `sf::RenderWindow::RenderWindow()'
@@ -134,7 +179,7 @@ sudo apt install libsfml-dev
 pkg-config --modversion sfml-all
 ```
 
-### 5. Jogos não iniciam (sem janela)
+### 6. Jogos não iniciam (sem janela)
 
 #### Sintomas
 - Executável compila mas não abre janela
@@ -175,7 +220,7 @@ glxgears
 DISPLAY=:0 ./games/tetris/tetris
 ```
 
-### 6. Assets não encontrados
+### 7. Assets não encontrados
 
 #### Sintomas
 ```
@@ -207,7 +252,7 @@ cd build
 ./games/tetris/tetris  # Pode não encontrar assets
 ```
 
-### 7. Erro de permissão
+### 8. Erro de permissão
 
 #### Sintomas
 ```

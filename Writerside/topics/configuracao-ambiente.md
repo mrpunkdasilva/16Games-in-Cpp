@@ -8,9 +8,10 @@ Para executar este projeto, você precisará instalar e configurar:
 
 1. **[Requisitos do Sistema](system-requirements.md)** - Verificar compatibilidade
 2. **[SFML](sfml-installation.md)** - Biblioteca gráfica principal
-3. **[CMake](cmake-installation.md)** - Sistema de build
-4. **[IDE](ide-setup.md)** - Ambiente de desenvolvimento (opcional)
-5. **[Configuração Final](environment-setup.md)** - Testes e validação
+3. **[SQLite3](sqlite-installation.md)** - Biblioteca de banco de dados para persistência
+4. **[CMake](cmake-installation.md)** - Sistema de build
+5. **[IDE](ide-setup.md)** - Ambiente de desenvolvimento (opcional)
+6. **[Configuração Final](environment-setup.md)** - Testes e validação
 
 ## 🚀 Setup Automático (Recomendado)
 
@@ -60,6 +61,9 @@ Após a instalação, execute estes comandos para verificar se tudo está funcio
 ```bash
 # Verificar SFML
 pkg-config --exists sfml-all && echo "✅ SFML OK" || echo "❌ SFML não encontrado"
+
+# Verificar SQLite3
+pkg-config --exists sqlite3 && echo "✅ SQLite3 OK" || echo "❌ SQLite3 não encontrado"
 
 # Verificar CMake
 cmake --version && echo "✅ CMake OK" || echo "❌ CMake não encontrado"
