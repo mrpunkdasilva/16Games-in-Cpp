@@ -1,4 +1,4 @@
-# Bejeweled: Da Concepção ao Código
+# Bejeweled
 
 Este tutorial explora a fundo a criação do jogo Bejeweled, um clássico "match-3", utilizando C++ e SFML. Abordaremos desde os conceitos fundamentais do design de jogos até a implementação de mecânicas complexas e a integração com um sistema de pontuação persistente usando SQLite.
 
