@@ -1,0 +1,19 @@
+<svg width="70" height="90" viewBox="0 0 70 90" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <!-- Pixelated Emerald Gem Logo -->
+  <!-- Main Emerald Green Body -->
+  <rect x="20" y="10" width="30" height="10" fill="#50C878" />
+  <rect x="10" y="20" width="50" height="10" fill="#50C878" />
+  <rect x="0" y="30" width="70" height="10" fill="#50C878" />
+  <rect x="0" y="40" width="70" height="10" fill="#50C878" />
+  <rect x="0" y="50" width="70" height="10" fill="#50C878" />
+  <rect x="10" y="60" width="50" height="10" fill="#50C878" />
+  <rect x="20" y="70" width="30" height="10" fill="#50C878" />
+
+  <!-- Darker shades for facets/depth -->
+  <rect x="10" y="30" width="10" height="30" fill="#3D995B" />
+  <rect x="50" y="30" width="10" height="30" fill="#3D995B" />
+  <rect x="20" y="20" width="10" height="10" fill="#3D995B" />
+  <rect x="40" y="20" width="10" height="10" fill="#3D995B" />
+  <rect x="20" y="60" width="10" height="10" fill="#3D995B" />
+  <rect x="40" y="60" width="10" height="10" fill="#3D995B" />
+</svg>
