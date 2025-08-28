@@ -2,6 +2,8 @@
 #include <time.h>
 #include <vector>
 #include <iostream>
+#include <string>
+#include <iomanip> // For std::fixed and std::setprecision
 
 using namespace sf;
 
@@ -13,7 +15,7 @@ struct piece
   piece(){match=0; alpha=255; special=0;}
 } grid[10][10];
 
-enum GameState { MainMenu, Playing };
+enum GameState { MainMenu, Playing, GameOver };
 
 void swap(piece p1,piece p2)
 {
@@ -23,6 +25,8 @@ void swap(piece p1,piece p2)
   grid[p1.row][p1.col]=p1;
   grid[p2.row][p2.col]=p2;
 }
+
+float gameTimer;
 
 void resetGame() {
     for (int i=1;i<=8;i++)
@@ -37,6 +41,7 @@ void resetGame() {
           grid[i][j].alpha = 255;
           grid[i][j].special = 0;
       }
+    gameTimer = 60.0f; // 60 seconds for the game
 }
 
 int main()
@@ -77,16 +82,37 @@ int main()
     newGameText.setFillColor(Color::White);
     newGameText.setPosition(550, 100);
 
+    Text timerText("Time: 60", font, 30);
+    timerText.setFillColor(Color::White);
+    timerText.setPosition(550, 150);
+
+    Text gameOverText("Fim de Jogo!", font, 50);
+    gameOverText.setFillColor(Color::Red);
+    gameOverText.setPosition(740 / 2 - gameOverText.getGlobalBounds().width / 2, 100);
+
+    Text finalScoreText("Sua Pontuacao: 0", font, 30);
+    finalScoreText.setFillColor(Color::White);
+    finalScoreText.setPosition(740 / 2 - finalScoreText.getGlobalBounds().width / 2, 200);
+
+    Text playAgainText("Jogar Novamente", font, 30);
+    playAgainText.setFillColor(Color::White);
+    playAgainText.setPosition(740 / 2 - playAgainText.getGlobalBounds().width / 2, 250);
+
     GameState gameState = MainMenu;
     int score = 0;
 
     int x0,y0,x,y; int click=0; Vector2i pos;
     bool isSwap=false, isMoving=false;
 
-    resetGame();
+    resetGame(); // Initial call to set up the board and timer
+
+    Clock gameClock; // Clock for delta time
 
     while (app.isOpen())
     {
+        float deltaTime = gameClock.getElapsedTime().asSeconds();
+        gameClock.restart();
+
         Event e;
         while (app.pollEvent(e))
         {
@@ -113,12 +139,29 @@ int main()
                              if (!isSwap && !isMoving) click++;
                              pos = Mouse::getPosition(app)-offset;
                         }
+                    } else if (gameState == GameOver) {
+                        if (playAgainText.getGlobalBounds().contains(pos.x, pos.y)) {
+                            resetGame();
+                            score = 0;
+                            gameState = Playing;
+                        }
+                        if (exitText.getGlobalBounds().contains(pos.x, pos.y)) {
+                            app.close();
+                        }
                     }
                 }
             }
          }
 
         if (gameState == Playing) {
+            gameTimer -= deltaTime;
+            if (gameTimer <= 0) {
+                gameTimer = 0;
+                gameState = GameOver;
+                finalScoreText.setString("Sua Pontuacao: " + std::to_string(score));
+            }
+            timerText.setString("Time: " + std::to_string(static_cast<int>(gameTimer)));
+
             // mouse click
             if (click==1)
             {
@@ -252,19 +295,28 @@ int main()
                 }
             }
             
-            RectangleShape uiPanel(Vector2f(200, 120));
+            RectangleShape uiPanel(Vector2f(200, 170)); // Increased height for timer
             uiPanel.setPosition(530, 40);
             uiPanel.setFillColor(Color(0, 0, 0, 150));
             app.draw(uiPanel);
 
             app.draw(scoreText);
             app.draw(newGameText);
+            app.draw(timerText);
         } else if (gameState == MainMenu) {
             RectangleShape overlay(Vector2f(740, 480));
             overlay.setFillColor(Color(0, 0, 0, 150));
             app.draw(overlay);
             app.draw(titleText);
             app.draw(playText);
+            app.draw(exitText);
+        } else if (gameState == GameOver) {
+            RectangleShape overlay(Vector2f(740, 480));
+            overlay.setFillColor(Color(0, 0, 0, 150));
+            app.draw(overlay);
+            app.draw(gameOverText);
+            app.draw(finalScoreText);
+            app.draw(playAgainText);
             app.draw(exitText);
         }
 
