@@ -53,11 +53,6 @@ function(add_game GAME_NAME GAME_DIR)
                  DESTINATION "${CMAKE_BINARY_DIR}/games/${GAME_NAME}/fonts")
         endif()
 
-        if(EXISTS "${CMAKE_SOURCE_DIR}/${GAME_DIR}/fonts")
-            file(COPY "${CMAKE_SOURCE_DIR}/${GAME_DIR}/fonts/" 
-                 DESTINATION "${CMAKE_BINARY_DIR}/games/${GAME_NAME}/fonts")
-        endif()
-
         # Add custom target to run the game
         add_custom_target(run_${GAME_NAME}
             COMMAND ${CMAKE_BINARY_DIR}/games/${GAME_NAME}/${GAME_NAME}
