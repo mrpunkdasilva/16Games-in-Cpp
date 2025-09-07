@@ -1,4 +1,4 @@
-# Guia de Desenvolvimento do Jogo NetWalk
+# NetWalk
 
 ## Introdução
 

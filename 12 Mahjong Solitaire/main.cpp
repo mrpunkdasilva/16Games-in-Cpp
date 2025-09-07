@@ -86,6 +86,7 @@ int main() {
     t1.loadFromFile("files/tiles.png");
     t2.loadFromFile("files/background.png");
     Sprite s(t1), sBackground(t2);
+    sBackground.setScale(940.0f / t2.getSize().x, 570.0f / t2.getSize().y); // Scale background to fit window
     int w = 48, h = 66;
     int stepX = w / 2 - 2, stepY = h / 2 - 2;
     float offX = 4.6, offY = 7.1; // z offset
@@ -130,7 +131,7 @@ int main() {
                 app.close();
 
             if (gameState == MENU) {
-                if (e.type == Event::MouseButtonPressed && e.key.code == Mouse::Left) {
+                if (e.type == Event::MouseButtonPressed && e.mouseButton.button == Mouse::Left) {
                     Vector2i pos = Mouse::getPosition(app);
                     if (menuText.getGlobalBounds().contains(pos.x, pos.y)) {
                         gameState = PLAYING;
@@ -139,7 +140,7 @@ int main() {
                 }
             } else if (gameState == PLAYING) {
                 // Move back
-                if (e.type == Event::MouseButtonReleased && e.key.code == Mouse::Right) {
+                if (e.type == Event::MouseButtonReleased && e.mouseButton.button == Mouse::Right) {
                     int n = moves.size();
                     if (n > 0) {
                         f(moves[n - 1]) *= -1;
@@ -150,7 +151,7 @@ int main() {
                     }
                 }
 
-                if (e.type == Event::MouseButtonPressed && e.key.code == Mouse::Left) {
+                if (e.type == Event::MouseButtonPressed && e.mouseButton.button == Mouse::Left) {
                     for (int z = 0; z < 10; z++) {
                         Vector2i pos = Mouse::getPosition(app) - Vector2i(30, 0); // 30 - desk offset
                         int x = (pos.x - z * offX) / stepX;
@@ -175,7 +176,7 @@ int main() {
                     }
                 }
             } else if (gameState == GAME_OVER) {
-                if (e.type == Event::MouseButtonPressed && e.key.code == Mouse::Left) {
+                if (e.type == Event::MouseButtonPressed && e.mouseButton.button == Mouse::Left) {
                     Vector2i pos = Mouse::getPosition(app);
                     if (gameOverText.getGlobalBounds().contains(pos.x, pos.y)) {
                         resetGame(score, timer, moves);
