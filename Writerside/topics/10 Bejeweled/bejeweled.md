@@ -93,7 +93,7 @@ void swap(piece p1,piece p2)
 **Fluxo da Troca de Gemas (Tentar e Desfazer):**
 ```mermaid
 graph TD
-    A[Jogador Clica Gema 1] --> B[Jogador Clica Gema 2 (Adjacente)];
+    A[Jogador Clica Gema 1] --> B[Jogador Clica Gema 2 Adjacente];
     B --> C{Trocar Gemas Logicamente};
     C --> D[Detectar Combinações];
     D{Combinações Encontradas?};

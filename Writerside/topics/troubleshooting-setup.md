@@ -12,7 +12,7 @@ CMake Error: Could not find SFML
 pkg-config: sfml-all not found
 ```
 
-#### Soluções
+#### Soluções {id="solu-es_7"}
 
 **Linux:**
 ```bash
@@ -46,12 +46,12 @@ brew install sfml
 
 ### 2. CMake versão muito antiga
 
-#### Sintomas
+#### Sintomas {id="sintomas_1"}
 ```
 CMake Error: CMake 3.5 or higher is required. You are running version 2.8.12
 ```
 
-#### Soluções
+#### Soluções {id="solu-es_6"}
 
 **Ubuntu/Debian:**
 ```bash
@@ -77,13 +77,13 @@ sudo make install
 
 ### 3. Compilador não suporta C++17
 
-#### Sintomas
+#### Sintomas {id="sintomas_2"}
 ```
 error: 'auto' type specifier is a C++11 extension
 error: range-based for loop is a C++11 extension
 ```
 
-#### Soluções
+#### Soluções {id="solu-es_5"}
 
 **Ubuntu/Debian:**
 ```bash
@@ -107,13 +107,13 @@ cmake .. -DCMAKE_CXX_COMPILER=g++-9
 
 ### 5. SQLite3 não encontrado ou erro de linking
 
-#### Sintomas
+#### Sintomas {id="sintomas_3"}
 ```
 CMake Error: Could not find SQLite3
 undefined reference to `sqlite3_open'
 ```
 
-#### Soluções
+#### Soluções {id="solu-es_4"}
 
 **Linux:**
 ```bash
@@ -148,15 +148,15 @@ pkg-config --exists sqlite3 && echo "✅ SQLite3 OK" || echo "❌ SQLite3 não e
 cmake .. -DSQLITE3_INCLUDE_DIR=/path/to/sqlite3/include -DSQLITE3_LIBRARY=/path/to/sqlite3/lib/libsqlite3.so
 ```
 
-### 6. Jogos não iniciam (sem janela)
+### 6. Jogos não iniciam (sem janela) {id="6-jogos-n-o-iniciam-sem-janela_1"}
 
-#### Sintomas
+#### Sintomas {id="sintomas_4"}
 ```
 undefined reference to `sf::RenderWindow::RenderWindow()'
 undefined reference to `sf::Texture::loadFromFile()'
 ```
 
-#### Soluções
+#### Soluções {id="solu-es_3"}
 
 **Verificar bibliotecas SFML:**
 ```bash
@@ -181,7 +181,7 @@ pkg-config --modversion sfml-all
 
 ### 6. Jogos não iniciam (sem janela)
 
-#### Sintomas
+#### Sintomas {id="sintomas_5"}
 - Executável compila mas não abre janela
 - Erro "Failed to create OpenGL context"
 - Tela preta
@@ -222,13 +222,13 @@ DISPLAY=:0 ./games/tetris/tetris
 
 ### 7. Assets não encontrados
 
-#### Sintomas
+#### Sintomas {id="sintomas_6"}
 ```
 Failed to load image: images/tiles.png
 Failed to load font: fonts/arial.ttf
 ```
 
-#### Soluções
+#### Soluções {id="solu-es_2"}
 
 **Verificar estrutura de arquivos:**
 ```bash
@@ -254,13 +254,13 @@ cd build
 
 ### 8. Erro de permissão
 
-#### Sintomas
+#### Sintomas {id="sintomas_7"}
 ```
 Permission denied
 make: *** [CMakeFiles/tetris.dir/all] Error 2
 ```
 
-#### Soluções
+#### Soluções {id="solu-es_1"}
 
 **Corrigir permissões:**
 ```bash
