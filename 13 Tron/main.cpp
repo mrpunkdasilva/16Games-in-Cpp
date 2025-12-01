@@ -6,7 +6,7 @@
 using namespace sf;
 
 // GameState enum
-enum GameState { MainMenu, Playing, GameOver };
+enum GameState { MainMenu, Playing, GameOver, Instructions };
 
 // Player struct
 struct Player {
@@ -83,16 +83,15 @@ int main() {
     RenderWindow window(VideoMode(W * ts, H * ts), "Tron");
     window.setFramerateLimit(60);
 
-    Texture t;
-    // Using a placeholder color if background fails to load
-    Image bgImage;
-    bgImage.create(W*ts, H*ts, Color::Black);
-    t.loadFromImage(bgImage);
-
-    if (t.loadFromFile("images/background.png")) {
-        // success
-    }
-    Sprite sBackground(t);
+    // No background image, just clear to black
+    // Texture t;
+    // Image bgImage;
+    // bgImage.create(W*ts, H*ts, Color::Black);
+    // t.loadFromImage(bgImage);
+    // if (t.loadFromFile("images/background.png")) {
+    //     // success
+    // }
+    // Sprite sBackground(t);
 
     Font font;
     if (!font.loadFromFile("fonts/Carlito-Regular.ttf")) {
@@ -106,11 +105,15 @@ int main() {
 
     Text playText("Jogar", font, 50);
     playText.setFillColor(Color::White);
-    playText.setPosition(W*ts/2.0f - playText.getGlobalBounds().width/2.0f, 300);
+    playText.setPosition(W*ts/2.0f - playText.getGlobalBounds().width/2.0f, 250);
+
+    Text instructionsText("Como Jogar", font, 50);
+    instructionsText.setFillColor(Color::White);
+    instructionsText.setPosition(W*ts/2.0f - instructionsText.getGlobalBounds().width/2.0f, 350);
 
     Text exitText("Sair", font, 50);
     exitText.setFillColor(Color::White);
-    exitText.setPosition(W*ts/2.0f - exitText.getGlobalBounds().width/2.0f, 400);
+    exitText.setPosition(W*ts/2.0f - exitText.getGlobalBounds().width/2.0f, 450);
 
     // Game Over Text
     Text gameOverText("", font, 70);
@@ -121,6 +124,20 @@ int main() {
     
     Text backToMenuText("Voltar ao Menu", font, 50);
     backToMenuText.setFillColor(Color::White);
+
+    // Instructions Text
+    Text instructionsTitle("Como Jogar", font, 60);
+    instructionsTitle.setFillColor(Color::White);
+    instructionsTitle.setPosition(W*ts/2.0f - instructionsTitle.getGlobalBounds().width/2.0f, 50);
+
+    Text instructionsContent(
+        "Jogador 1: Use W, A, S, D para mover.\n"
+        "Jogador 2: Use as setas para mover.\n\n"
+        "O objetivo e fazer seu oponente colidir com sua trilha\n"
+        "ou com as bordas da tela. Nao colida com sua propria trilha!\n\n"
+        "Ultrapasse seu oponente e seja o ultimo a sobreviver!", font, 30);
+    instructionsContent.setFillColor(Color::White);
+    instructionsContent.setPosition(50, 150);
 
 
     resetGame();
@@ -160,6 +177,9 @@ int main() {
                             gameState = Playing;
                             resetGame();
                         }
+                        if (instructionsText.getGlobalBounds().contains(pos.x, pos.y)) {
+                            gameState = Instructions;
+                        }
                         if (exitText.getGlobalBounds().contains(pos.x, pos.y)) {
                             window.close();
                         }
@@ -168,6 +188,10 @@ int main() {
                             gameState = Playing;
                             resetGame();
                         }
+                        if (backToMenuText.getGlobalBounds().contains(pos.x, pos.y)) {
+                            gameState = MainMenu;
+                        }
+                    } else if (gameState == Instructions) {
                         if (backToMenuText.getGlobalBounds().contains(pos.x, pos.y)) {
                             gameState = MainMenu;
                         }
@@ -185,15 +209,14 @@ int main() {
         }
 
         // Drawing
-        window.clear();
+        window.clear(Color::Black); // Clear to black instead of drawing background sprite
         
         if (gameState == MainMenu) {
-            window.draw(sBackground);
             window.draw(titleText);
             window.draw(playText);
+            window.draw(instructionsText);
             window.draw(exitText);
         } else if (gameState == Playing || gameState == GameOver) {
-            window.draw(sBackground);
             for (int i=0; i<W; i++) {
                 for (int j=0; j<H; j++) {
                     if (field[i][j] == 0) continue;
@@ -219,6 +242,11 @@ int main() {
                 window.draw(playAgainText);
                 window.draw(backToMenuText);
             }
+        } else if (gameState == Instructions) {
+            window.draw(instructionsTitle);
+            window.draw(instructionsContent);
+            backToMenuText.setPosition(W*ts/2.0f - backToMenuText.getGlobalBounds().width/2.0f, H*ts - 100); // Adjust position for instructions screen
+            window.draw(backToMenuText);
         }
 
         window.display();
