@@ -11,14 +11,29 @@ pkg_check_modules(SFML REQUIRED sfml-all>=2.5)
 find_package(Box2D)
 find_package(SQLite3 REQUIRED) # Added for SQLite integration
 
+# Find WebSocketPP
+find_package(websocketpp CONFIG) # Try to find websocketpp via config file
+if(NOT websocketpp_FOUND)
+    pkg_check_modules(WEBSOCKETPP websocketpp) # Fallback to pkg-config
+    if(NOT WEBSOCKETPP_FOUND)
+        message(WARNING "websocketpp not found. Tron multiplayer features will be disabled.")
+    endif()
+endif()
+
 # Set SFML compile flags
 add_compile_options(${SFML_CFLAGS})
 link_directories(${SFML_LIBRARY_DIRS})
 
 # Function to create game executable
 function(add_game GAME_NAME GAME_DIR)
-    # Get all cpp files in the directory
-    file(GLOB_RECURSE GAME_SOURCES "${GAME_DIR}/*.cpp" "${GAME_DIR}/*.hpp")
+    # Determine source files
+    set(GAME_SOURCES "")
+    if("${GAME_NAME}" STREQUAL "tron")
+        set(GAME_SOURCES "${GAME_DIR}/main.cpp")
+    else()
+        file(GLOB_RECURSE GAME_SOURCES_GLOB "${GAME_DIR}/*.cpp" "${GAME_DIR}/*.hpp")
+        set(GAME_SOURCES ${GAME_SOURCES_GLOB})
+    endif()
 
     if(GAME_SOURCES)
         add_executable(${GAME_NAME} ${GAME_SOURCES})
@@ -30,6 +45,13 @@ function(add_game GAME_NAME GAME_DIR)
         endif()
         if("${GAME_NAME}" STREQUAL "bejeweled") # Added for Bejeweled SQLite integration
             target_link_libraries(${GAME_NAME} SQLite::SQLite3)
+        endif()
+        if("${GAME_NAME}" STREQUAL "tron") # Link websocketpp for Tron
+            if(websocketpp_FOUND)
+                target_link_libraries(${GAME_NAME} websocketpp::websocketpp)
+            elseif(WEBSOCKETPP_FOUND)
+                target_link_libraries(${GAME_NAME} ${WEBSOCKETPP_LIBRARIES})
+            endif()
         endif()
 
         # Set output directory
@@ -66,6 +88,17 @@ function(add_game GAME_NAME GAME_DIR)
         message(WARNING "No source files found for ${GAME_NAME} in ${GAME_DIR}")
     endif()
 endfunction()
+
+# Add Tron server executable
+add_executable(tron_server "13 Tron/server.cpp")
+target_link_libraries(tron_server websocketpp::websocketpp)
+
+add_custom_target(run_tron_server
+    COMMAND ${CMAKE_BINARY_DIR}/tron_server
+    DEPENDS tron_server
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    COMMENT "Running Tron Server"
+)
 
 # Add all games
 add_game(tetris "01  Tetris")
